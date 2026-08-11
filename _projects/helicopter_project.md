@@ -5,6 +5,7 @@ description: Flight phase state machine logic, deterministic transition algorith
 img: assets/img/1.jpg
 importance: 1
 category: work
+related_publications: false
 ---
 
 ## Project Overview
