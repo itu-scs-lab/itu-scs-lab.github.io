@@ -11,22 +11,16 @@ nav_order: 7
 ## Principal Investigator
 
 <div class="card mt-3 mb-4">
-  <div class="row no-gutters align-items-center">
-    <div class="col-md-3 text-center p-3">
-    </div>
-    <div class="col-md-9">
-      <div class="card-body">
-        <h3 class="card-title mb-1">İlker Üstoğlu, Ph.D.</h3>
-        <p class="text-muted mb-2"><em>Assoc. Professor / Lab Director</em></p>
-        <p class="card-text small">
-          Focus: Autonomous Flight Control, Safety-Critical Control Systems, Robust & Predictive Control, Railway Systems, Mechatronic Systems.
-        </p>
-        <div class="social-icons">
-          <a href="mailto:info@scs-lab.itu.edu.tr" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-envelope"></i> Email</a>
-          <a href="https://scholar.google.com" target="_blank" class="btn btn-sm btn-outline-secondary"><i class="ai ai-google-scholar"></i> Scholar</a>
-          <a href="https://github.com/itu-scs-lab" target="_blank" class="btn btn-sm btn-outline-secondary"><i class="fa-brands fa-github"></i> GitHub</a>
-        </div>
-      </div>
+  <div class="card-body">
+    <h3 class="card-title mb-1">Dr. [PI Name]</h3>
+    <p class="text-muted mb-2"><em>Assistant Professor / Lab Director</em></p>
+    <p class="card-text small">
+      Focus: Autonomous Flight Control, Safety-Critical Control Systems, Robust & Predictive Control.
+    </p>
+    <div class="social-icons mt-3">
+      <a href="mailto:info@scs-lab.itu.edu.tr" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-envelope"></i> Email</a>
+      <a href="https://scholar.google.com" target="_blank" class="btn btn-sm btn-outline-secondary"><i class="ai ai-google-scholar"></i> Scholar</a>
+      <a href="https://github.com/itu-scs-lab" target="_blank" class="btn btn-sm btn-outline-secondary"><i class="fa-brands fa-github"></i> GitHub</a>
     </div>
   </div>
 </div>
@@ -38,7 +32,7 @@ nav_order: 7
 
 <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
 
-  <!-- Researcher 1: Talha Ulukır -->
+  <!-- Researcher: Talha Ulukır -->
   <div class="col">
     <div class="card h-100 p-2">
       <div class="card-body">
@@ -55,25 +49,6 @@ nav_order: 7
       </div>
     </div>
   </div>
-
-  <div class="col">
-    <div class="card h-100 p-2">
-      <div class="card-body">
-        <h4 class="card-title mb-1">Ömer Faruk Polat, Ms.C (Cand)</h4>
-        <p class="text-muted small mb-2"><em>Control Systems Engineer & Researcher</em></p>
-        <p class="card-text small">
-          Specialization: Data-Driven Predictive Control (DeePC), Iterative Learning Control (ILC).
-        </p>
-        <div class="mt-3">
-          <a href="https://github.com/itu-scs-lab" target="_blank" class="card-link small"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a href="https://scholar.google.com" target="_blank" class="card-link small"><i class="ai ai-google-scholar"></i> Scholar</a>
-          <a href="https://linkedin.com" target="_blank" class="card-link small"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Yeni bir araştırmacı eklemek istediğinizde yukarıdaki <div class="col">...</div> bloğunu kopyalayıp buraya ekleyebilirsiniz -->
 
 </div>
 
