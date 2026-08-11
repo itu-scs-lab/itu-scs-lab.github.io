@@ -1,10 +1,10 @@
 ---
 layout: profiles
-title: People
+title: people
 permalink: /people/
 description: Members and researchers at ITU SCS Lab.
 nav: true
-nav_order: 3
+nav_order: 7
 ---
 
 <!-- PRINCIPAL INVESTIGATOR -->
