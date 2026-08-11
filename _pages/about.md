@@ -6,7 +6,7 @@ subtitle: Safety-Critical Systems Laboratory (ITU SCS Lab)
 
 profile:
   align: right
-  image: prof_pic.jpg # İleride assets/img/ içine lab logonuzu atıp buraya adını yazabilirsiniz
+  image: group_logo.png# İleride assets/img/ içine lab logonuzu atıp buraya adını yazabilirsiniz
   image_circular: false # Logonuz yuvarlak değilse false kalması daha iyi
 
 news: true 
