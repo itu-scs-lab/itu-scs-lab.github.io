@@ -5,6 +5,7 @@ description: Implementing DeePC, MPC, and Control Barrier Functions (CBF) for au
 img: assets/img/3.jpg
 importance: 2
 category: work
+related_publications: false
 ---
 
 ## Project Overview
