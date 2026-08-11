@@ -1,6 +1,6 @@
 ---
 layout: about
-title: About
+title: about
 permalink: /
 subtitle: Safety-Critical Systems Laboratory (ITU SCS Lab)
 
