@@ -5,6 +5,7 @@ description: Low-cost rapid prototyping framework combining SimpleFOC and comput
 img: assets/img/12.jpg
 importance: 4
 category: work
+related_publications: false
 ---
 
 ## Project Overview
