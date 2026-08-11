@@ -28,7 +28,7 @@ nav_order: 7
 <hr>
 
 <!-- RESEARCHERS & PHD STUDENTS -->
-## Researchers & PhD Students
+## Researchers
 
 <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
   <div class="col">
