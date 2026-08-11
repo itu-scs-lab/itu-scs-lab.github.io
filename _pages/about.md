@@ -1,34 +1,26 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Safety-Critical Systems Laboratory (ITU SCS Lab)
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  image: prof_pic.jpg # İleride assets/img/ içine lab logonuzu atıp buraya adını yazabilirsiniz
+  image_circular: false # Logonuz yuvarlak değilse false kalması daha iyi
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
-
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+news: true 
+latest_posts: false
+selected_papers: true
+social: true
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Welcome to the **Safety-Critical & Autonomous Control Systems Laboratory (SCS Lab)** at Istanbul Technical University. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Our research group focuses on the intersection of advanced control theory and autonomous systems. We aim to develop algorithms that guarantee safety, reliability, and high performance for complex dynamic systems, particularly in aerospace engineering and flight control.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+### Primary Research Areas
+* **Predictive Control:** Data-Driven Predictive Control (DeePC) and Model Predictive Control (MPC) architectures.
+* **Nonlinear Flight Control:** Incremental Nonlinear Dynamic Inversion (INDI) and autopilot design for UAVs, unmanned helicopters, and spacecraft.
+* **System Identification & Validation:** Utilizing specialized tools like CIFER and CONDUIT to transition theoretical algorithms into real-world flight tests.
+* **Safety-Critical Systems:** Developing robust frameworks for autonomous transitions and deterministic state machine logic.
