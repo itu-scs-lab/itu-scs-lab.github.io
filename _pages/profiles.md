@@ -12,7 +12,7 @@ nav_order: 7
 
 <div class="card mt-3 mb-4">
   <div class="card-body">
-    <h3 class="card-title mb-1">Dr. İlker Üstoglu</h3>
+    <h3 class="card-title mb-1">Dr. İlker Üstoğlu</h3>
     <p class="text-muted mb-2"><em>Assoc. Professor / Lab Director</em></p>
     <p class="card-text small">
       Focus: Autonomous Flight Control, Safety-Critical Control Systems, Robust & Predictive Control, Railway Systems, Mechatronic Systems.
@@ -27,10 +27,9 @@ nav_order: 7
 
 <hr>
 
-<!-- RESEARCHERS & PHD STUDENTS -->
+<!-- RESEARCHERS -->
 ## Researchers
 
-<!-- row-cols-1 (Mobil), row-cols-md-2 (Masaüstü ve Tablette MAX 2 Sütun) -->
 <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
 
   <!-- Researcher 1: Talha Ulukır -->
@@ -69,31 +68,4 @@ nav_order: 7
     </div>
   </div>
 
-  <!-- Researcher 3: (Örnek 3. kişi - İleride kopyalayarak çoğaltabilirsiniz) -->
-  <div class="col">
-    <div class="card h-100 p-2">
-      <div class="card-body d-flex flex-column">
-        <h4 class="card-title mb-1">Researcher Name, M.Sc.</h4>
-        <p class="text-muted small mb-2"><em>Control Systems Researcher</em></p>
-        <p class="card-text small">
-          Specialization: Safety-Critical Control, Control Barrier Functions (CBF), Robust Flight Control.
-        </p>
-        <div class="mt-auto pt-3">
-          <a href="https://github.com/itu-scs-lab" target="_blank" class="card-link small"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a href="https://scholar.google.com" target="_blank" class="card-link small"><i class="ai ai-google-scholar"></i> Scholar</a>
-          <a href="https://linkedin.com" target="_blank" class="card-link small"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>
-
-<hr>
-
-<!-- ALUMNI -->
-## Alumni
-
-<ul>
-  <li><strong>Former Student Name</strong> - M.Sc. (2024–2026) &rarr; <em>Next Position / Company</em></li>
-</ul>
