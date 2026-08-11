@@ -12,10 +12,10 @@ nav_order: 7
 
 <div class="card mt-3 mb-4">
   <div class="card-body">
-    <h3 class="card-title mb-1">Dr. [PI Name]</h3>
-    <p class="text-muted mb-2"><em>Assistant Professor / Lab Director</em></p>
+    <h3 class="card-title mb-1">Dr. İlker Üstoglu</h3>
+    <p class="text-muted mb-2"><em>Assoc. Professor / Lab Director</em></p>
     <p class="card-text small">
-      Focus: Autonomous Flight Control, Safety-Critical Control Systems, Robust & Predictive Control.
+      Focus: Autonomous Flight Control, Safety-Critical Control Systems, Robust & Predictive Control, Railway Systems, Mechatronic Systems.
     </p>
     <div class="social-icons mt-3">
       <a href="mailto:info@scs-lab.itu.edu.tr" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-envelope"></i> Email</a>
