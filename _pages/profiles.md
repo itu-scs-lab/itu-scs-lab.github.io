@@ -1,5 +1,5 @@
 ---
-layout: profiles
+layout: page
 title: people
 permalink: /people/
 description: Members and researchers at ITU SCS Lab.
