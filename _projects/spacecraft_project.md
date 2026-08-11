@@ -5,6 +5,7 @@ description: Robust nonlinear control algorithms for attitude dynamics and orbit
 img: assets/img/7.jpg
 importance: 3
 category: work
+related_publications: false
 ---
 
 ## Project Overview
