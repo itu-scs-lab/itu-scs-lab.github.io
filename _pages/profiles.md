@@ -30,8 +30,8 @@ nav_order: 7
 <!-- RESEARCHERS & PHD STUDENTS -->
 ## Researchers
 
-<!-- row-cols-1 (Mobil), row-cols-sm-2 (Tablet/Küçük Ekran), row-cols-lg-3 (Masaüstü 3'lü) -->
-<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mb-4">
+<!-- row-cols-1 (Mobil), row-cols-md-2 (Masaüstü ve Tablette MAX 2 Sütun) -->
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
 
   <!-- Researcher 1: Talha Ulukır -->
   <div class="col">
@@ -69,7 +69,7 @@ nav_order: 7
     </div>
   </div>
 
-  <!-- Researcher 3: (Örnek 3. kişi - İleride burayı güncelleyebilirsiniz) -->
+  <!-- Researcher 3: (Örnek 3. kişi - İleride kopyalayarak çoğaltabilirsiniz) -->
   <div class="col">
     <div class="card h-100 p-2">
       <div class="card-body d-flex flex-column">
