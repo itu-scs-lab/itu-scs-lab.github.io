@@ -54,7 +54,7 @@ nav_order: 7
   <div class="col">
     <div class="card h-100 p-2">
       <div class="card-body">
-        <h4 class="card-title mb-1">Ömer Faruk Polat Ph.D.</h4>
+        <h4 class="card-title mb-1">Ömer Faruk Polat, M.Sc.</h4>
         <p class="text-muted small mb-2"><em>Control Systems Researcher</em></p>
         <p class="card-text small">
           Specialization: Data-Driven Predictive Control (DeePC), Iterative Learning Control (ILC), Repetitive Control.
