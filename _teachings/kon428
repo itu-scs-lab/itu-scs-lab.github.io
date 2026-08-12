@@ -8,7 +8,6 @@ term: Spring
 location: Faculty of Electrical and Electronics Engineering
 time: -
 course_id: kon-428
-category: Undergraduate
 schedule:
   - week: 1
     date: Feb 10
@@ -41,7 +40,7 @@ This course provides a comprehensive introduction to safety-critical control arc
 - Control Systems Theory
 - Logic Design Fundamentals
 
-## Textbooks & References
+## Textbooks
 
 - "Railway Signalling and Interlocking" by Gregor Theiss
 - "Principles of Railway Location and Design" by Siripreet Singh
