@@ -1,6 +1,6 @@
 ---
 layout: page
-title: people
+title: team
 permalink: /people/
 description: Members and researchers at ITU SCS Lab.
 nav: true
@@ -12,8 +12,8 @@ nav_order: 6
 
 <div class="card mt-3 mb-4">
   <div class="card-body">
-    <h3 class="card-title mb-1">Dr. [PI Name]</h3>
-    <p class="text-muted mb-2"><em>Assistant Professor / Lab Director</em></p>
+    <h3 class="card-title mb-1">Dr. İlker Üstoğlu</h3>
+    <p class="text-muted mb-2"><em>Assoc. Professor / Lab Director</em></p>
     <p class="card-text small">
       Focus: Autonomous Flight Control, Safety-Critical Control Systems, Robust & Predictive Control.
     </p>
