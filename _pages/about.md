@@ -12,7 +12,7 @@ profile:
 news: true 
 latest_posts: false
 selected_papers: true
-social: true
+social: false
 ---
 
 Welcome to the **Safety-Critical & Autonomous Control Systems Laboratory (SCS Lab)** at Istanbul Technical University. 
