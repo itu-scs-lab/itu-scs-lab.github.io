@@ -2,25 +2,28 @@
 layout: about
 title: about
 permalink: /
-subtitle: Safety-Critical Systems Laboratory (ITU SCS Lab)
+subtitle: Safety-Critical Systems Laboratory at Istanbul Technical University
 
 profile:
   align: right
   image: group_logo.png
   image_circular: false
 
-news: true 
-latest_posts: false
+news: true
 selected_papers: true
 social: false
 ---
 
-Welcome to the **Safety-Critical & Autonomous Control Systems Laboratory (SCS Lab)** at Istanbul Technical University. 
+Welcome to the **Safety-CriticalSystems Laboratory (SCS Lab)** at Istanbul Technical University.
 
-Our research group focuses on the intersection of advanced control theory and autonomous systems. We aim to develop algorithms that guarantee safety, reliability, and high performance for complex dynamic systems, particularly in aerospace engineering and flight control.
+SCS Lab is an advanced research group operating at the interdisciplinary intersection of Electrical & Electronics Engineering, Industrial Engineering, and Software Engineering. Our laboratory conducts advanced studies on control theory and applications, risk management, and software quality assurance to address the rigorous demands of safety-critical environments.
 
-### Primary Research Areas
-* **Predictive Control:** Data-Driven Predictive Control (DeePC) and Model Predictive Control (MPC) architectures.
-* **Nonlinear Flight Control:** Incremental Nonlinear Dynamic Inversion (INDI) and autopilot design for UAVs, unmanned helicopters, and spacecraft.
-* **System Identification & Validation:** Utilizing specialized tools like CIFER and CONDUIT to transition theoretical algorithms into real-world flight tests.
-* **Safety-Critical Systems:** Developing robust frameworks for autonomous transitions and deterministic state machine logic.
+## Core Research Focus
+
+* **Control Theory & Applications:** Advanced Predictive Control frameworks (Model Predictive Control - MPC, Data-Driven Predictive Control - DeePC), Incremental Nonlinear Dynamic Inversion (INDI), Control Barrier Functions (CBF), and robust control strategies for complex dynamic systems.
+* **Risk & Reliability Management:** Risk assessment methodologies, safety margin analysis, fault detection strategies, and deterministic state machine architectures designed to preserve overall system integrity.
+* **Software Quality Assurance:** High-integrity software design, verification and validation strategies, and rigorous testing methodologies tailored specifically for safety-critical domains.
+
+---
+
+The control algorithms, risk frameworks, and software verification strategies developed at SCS Lab target high-consequence applications across diverse industries, including **aerospace engineering**, **automotive systems**, **railway systems**, **nuclear systems**, and **chemical processes**.
