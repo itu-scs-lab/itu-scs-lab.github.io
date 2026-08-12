@@ -8,6 +8,7 @@ term: Spring
 location: Faculty of Electrical and Electronics Engineering
 time: -
 course_id: kon-428
+category: Undergraduate
 schedule:
   - week: 1
     date: Feb 10
