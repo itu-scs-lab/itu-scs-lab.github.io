@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Themes & CSS Variable Mapping
+ * ITU SCS Lab Theme Styles (Light & Dark Senkronize)
  ******************************************************************************/
 
 @use "sass:color";
@@ -7,35 +7,30 @@
 :root {
   --global-bg-color: #{$white-color};
   --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$black-color};
+  --global-text-color: #{$scs-navy};              /* Ana metinler Koyu Lacivert */
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$purple-color};
-  --global-hover-color: #{$purple-color};
+  --global-theme-color: #{$scs-teal};             /* Vurgular, linkler, aktif sekmeler Teal */
+  --global-hover-color: #{$scs-navy};             /* Üzerine gelince Lacivert */
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-dark};
+  --global-footer-bg-color: #{$scs-navy};
   --global-footer-text-color: #{$grey-color-light};
-  --global-footer-link-color: #{$white-color};
+  --global-footer-link-color: #{$scs-teal-light};
   --global-distill-app-color: #{$grey-color};
   
-  /* Ayraç çizgilerini ve yıl başlıklarını belirginleştiren alan */
-  --global-divider-color: rgba(0, 0, 0, 0.9);
+  /* Ayraç çizgileri ve yıl arka plan çizgileri için logodaki Teal tonunun %25 opaklığı */
+  --global-divider-color: rgba(0, 128, 128, 0.25);
   
   --global-card-bg-color: #{$white-color};
-  --global-highlight-color: #{$red-color-dark};
-  --global-back-to-top-bg-color: rgba(
-    #{color.channel($black-color, "red", $space: rgb)},
-    #{color.channel($black-color, "green", $space: rgb)},
-    #{color.channel($black-color, "blue", $space: rgb)},
-    0.4
-  );
+  --global-highlight-color: #{$scs-teal};
+  --global-back-to-top-bg-color: rgba(0, 33, 71, 0.6);
   --global-back-to-top-text-color: #{$white-color};
   --global-newsletter-bg-color: #{$white-color};
-  --global-newsletter-text-color: #{$black-color};
+  --global-newsletter-text-color: #{$scs-navy};
 
-  --global-tip-block: #42b983;
-  --global-tip-block-bg: #e2f5ec;
-  --global-tip-block-text: #215d42;
-  --global-tip-block-title: #359469;
+  --global-tip-block: #{$scs-teal};
+  --global-tip-block-bg: rgba(0, 128, 128, 0.08);
+  --global-tip-block-text: #{$scs-navy};
+  --global-tip-block-title: #{$scs-teal};
   --global-warning-block: #e7c000;
   --global-warning-block-bg: #fff8d8;
   --global-warning-block-text: #6b5900;
@@ -45,35 +40,17 @@
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
 
-  #light-toggle-system {
-    padding-left: 10px;
-    padding-top: 12px;
-    display: block;
-  }
-
-  #light-toggle-dark {
-    display: none;
-  }
-
-  #light-toggle-light {
-    display: none;
-  }
-
-  .only-light {
-    display: block;
-  }
-
-  .only-dark {
-    display: none;
-  }
+  #light-toggle-system { padding-left: 10px; padding-top: 12px; display: block; }
+  #light-toggle-dark { display: none; }
+  #light-toggle-light { display: none; }
+  .only-light { display: block; }
+  .only-dark { display: none; }
 
   #back-to-top {
     color: var(--global-back-to-top-text-color);
     background: var(--global-back-to-top-bg-color);
-    bottom: $back-to-top-bottom;
-    right: $back-to-top-right;
-    height: $back-to-top-height;
-    width: $back-to-top-width;
+    bottom: $back-to-top-bottom; right: $back-to-top-right;
+    height: $back-to-top-height; width: $back-to-top-width;
     z-index: $back-to-top-z-index;
   }
 }
@@ -81,91 +58,44 @@
 html[data-theme="dark"] {
   --global-bg-color: #{$grey-color-dark};
   --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
+  --global-text-color: #f1f5f9;                   /* Koyu modda kontrast için net açık renk */
+  --global-text-color-light: #94a3b8;
+  --global-theme-color: #{$scs-teal-light};       /* Koyu modda parlayan Turkuaz */
+  --global-hover-color: #38bdf8;
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
-  --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #55555e;
+  --global-footer-bg-color: #020617;
+  --global-footer-text-color: #94a3b8;
+  --global-footer-link-color: #{$scs-teal-light};
+  --global-distill-app-color: #94a3b8;
+  --global-divider-color: rgba(0, 168, 168, 0.2);
   --global-card-bg-color: #{$grey-900};
-  --global-back-to-top-bg-color: rgba(
-    #{color.channel($white-color, "red", $space: rgb)},
-    #{color.channel($white-color, "green", $space: rgb)},
-    #{color.channel($white-color, "blue", $space: rgb)},
-    0.5
-  );
-  --global-back-to-top-text-color: #{$black-color};
-  --global-newsletter-bg-color: #{$grey-color-light};
-  --global-newsletter-text-color: #{$grey-color-dark};
+  --global-back-to-top-bg-color: rgba(0, 168, 168, 0.5);
+  --global-back-to-top-text-color: #{$white-color};
+  --global-newsletter-bg-color: #{$grey-900};
+  --global-newsletter-text-color: #f1f5f9;
 
-  --global-tip-block: #42b983;
-  --global-tip-block-bg: #e2f5ec;
-  --global-tip-block-text: #215d42;
-  --global-tip-block-title: #359469;
-  --global-warning-block: #e7c000;
-  --global-warning-block-bg: #fff8d8;
-  --global-warning-block-text: #6b5900;
-  --global-warning-block-title: #b29400;
-  --global-danger-block: #c00;
-  --global-danger-block-bg: #ffe0e0;
-  --global-danger-block-text: #600;
-  --global-danger-block-title: #c00;
-
-  .only-light {
-    display: none;
-  }
-
-  .only-dark {
-    display: block;
-  }
+  .only-light { display: none; }
+  .only-dark { display: block; }
 }
 
 html[data-theme-setting="dark"] {
-  #light-toggle-system {
-    display: none;
-  }
-
-  #light-toggle-dark {
-    padding-left: 10px;
-    padding-top: 12px;
-    display: block;
-  }
-
-  #light-toggle-light {
-    display: none;
-  }
-
-  #back-to-top {
-    color: var(--global-back-to-top-text-color);
-    background: var(--global-back-to-top-bg-color);
-  }
+  #light-toggle-system { display: none; }
+  #light-toggle-dark { padding-left: 10px; padding-top: 12px; display: block; }
+  #light-toggle-light { display: none; }
+  #back-to-top { color: var(--global-back-to-top-text-color); background: var(--global-back-to-top-bg-color); }
 }
 
 html[data-theme-setting="light"] {
-  #light-toggle-system {
-    display: none;
-  }
-
-  #light-toggle-dark {
-    display: none;
-  }
-
-  #light-toggle-light {
-    padding-left: 10px;
-    padding-top: 12px;
-    display: block;
-  }
+  #light-toggle-system { display: none; }
+  #light-toggle-dark { display: none; }
+  #light-toggle-light { padding-left: 10px; padding-top: 12px; display: block; }
 }
 
-/* Yıl Başlıkları Özel SASS Kuralı */
+/* --- Yıl Başlıkları ve Genel Ayraç Özel Kuralları --- */
 .publications h2.bibliography,
 .publications h2.year,
 h2.year {
   color: var(--global-text-color) !important;
-  opacity: 1 !important;
-  font-weight: 600;
+  opacity: 0.95 !important;
+  font-weight: 700;
 }
