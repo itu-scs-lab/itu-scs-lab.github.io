@@ -2,13 +2,16 @@
  * ITU SCS Lab Custom Variables (Logo Matched)
  ******************************************************************************/
 
+// Font Awesome ikon paketini doğrudan internetten/CDN'den çekerek ikon kutucuğu sorununu çözer
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
 @use "sass:color";
 
 // Content Layout Configuration
 $max-content-width:          800px !default;
 
-// Font Awesome & Icon Font Paths (Simge Hatalarını Çözen Kısım)
-$fa-font-path:               "../webfonts" !default;
+// Font awesome / Tabler location
+$fa-font-path:               "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts" !default;
 $ti-font-path:               "../fonts" !default;
 
 // SCS Lab Brand Palette (Logo-derived)
