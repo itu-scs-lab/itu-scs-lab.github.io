@@ -1,50 +1,97 @@
 ---
 layout: course
-title: Process Control
-description: Fundamental process control concepts, dynamic behavior of processes, feedback and feedforward control strategies, and controller tuning.
-instructor: Assoc. Prof. İlker Üstoğlu
-year: 2026
+title: Data Science Fundamentals
+description: This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.
+instructor: Prof. Data
+year: 2024
 term: Spring
-location: Faculty of Electrical and Electronics Engineering
-time: -
-course_id: kon-314
+location: Science Building, Room 202
+time: Mondays and Wednesdays, 2:00-3:30 PM
+course_id: data-science-fundamentals
 schedule:
   - week: 1
-    date: Feb 10
-    topic: Introduction & Principles of Process Control
-    description: Overview of process control, block diagrams, controlled/manipulated variables, and key terminology.
+    date: Feb 5
+    topic: Introduction to Data Science
+    description: Overview of the data science workflow and key concepts.
     materials:
-      - name: ITU OBS Course Catalog
-        url: https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=KON&dersNo=314
+      - name: Syllabus
+        url: /assets/pdf/example_pdf.pdf
+      - name: Slides
+        url: /assets/pdf/example_pdf.pdf
 
   - week: 2
-    date: Feb 17
-    topic: Linear Process Dynamics & Transfer Functions
-    description: Mathematical modeling of physical processes using differential equations and Laplace transforms.
+    date: Feb 12
+    topic: Data Collection and APIs
+    description: Methods for collecting data through APIs, web scraping, and databases.
     materials:
       - name: Lecture Notes
-        url: https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=KON&dersNo=314
+        url: /assets/pdf/example_pdf.pdf
+      - name: Assignment 1
+        url: /assets/pdf/example_pdf.pdf
+
+  - week: 3
+    date: Feb 19
+    topic: Data Cleaning and Preprocessing
+    description: Techniques for handling missing values, outliers, and data transformation.
+    materials:
+      - name: Lecture Notes
+        url: /assets/pdf/example_pdf.pdf
+      - name: Coding Lab
+        url: https://github.com/
+
+  - week: 4
+    date: Feb 26
+    topic: Exploratory Data Analysis
+    description: Descriptive statistics, visualization, and pattern discovery.
+    materials:
+      - name: Lecture Notes
+        url: /assets/pdf/example_pdf.pdf
+      - name: Assignment 2
+        url: /assets/pdf/example_pdf.pdf
+
+  - week: 5
+    date: Mar 4
+    topic: Statistical Analysis
+    description: Hypothesis testing, confidence intervals, and statistical inference.
+    materials:
+      - name: Lecture Notes
+        url: /assets/pdf/example_pdf.pdf
+      - name: Review Materials
+        url: /assets/pdf/example_pdf.pdf
+
+  - week: 6
+    date: Mar 11
+    topic: Data Visualization
+    description: Principles and tools for effective data visualization.
+    materials:
+      - name: Lecture Notes
+        url: /assets/pdf/example_pdf.pdf
+      - name: Assignment 3
+        url: /assets/pdf/example_pdf.pdf
 ---
 
 ## Course Overview
 
-This course covers the dynamic modeling, analysis, and feedback control system design principles for industrial processes.
+This course provides a comprehensive introduction to data science principles and practices. Students will:
 
-- Understand end-to-end process dynamics and transfer function derivation
-- Analyze transient and steady-state responses of first and second-order systems
-- Design and tune PID controllers using classical methods
-- Implement feedforward, cascade, and ratio control strategies
+- Learn the end-to-end data science workflow
+- Gain practical experience with data manipulation tools
+- Develop skills in data visualization and communication
+- Apply statistical methods to derive insights from data
 
 ## Prerequisites
 
-- Differential Equations
-- Basics of Linear Systems Theory
+- Basic programming knowledge (preferably in Python)
+- Introductory statistics
+- Comfort with basic algebra
 
 ## Textbooks
 
-- "Process Dynamics and Control" by Dale E. Seborg
-- "Feedback Control of Dynamic Systems" by Gene F. Franklin
+- "Python for Data Analysis" by Wes McKinney
+- "Data Science from Scratch" by Joel Grus
 
-## Catalog & Links
+## Grading
 
-- **ITU OBS Official Page:** [KON 314 Course Catalog](https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=KON&dersNo=314)
+- Assignments: 50%
+- Project: 40%
+- Participation: 10%
