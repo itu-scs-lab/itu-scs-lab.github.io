@@ -1,6 +1,5 @@
 /*******************************************************************************
- * Variables used throughout the theme.
- * Modifying these variables will allow you to customize the full theme.
+ * ITU SCS Lab Custom Variables (Logo Matched)
  ******************************************************************************/
 
 @use "sass:color";
@@ -8,49 +7,37 @@
 // Content Layout Configuration
 $max-content-width: 800px !default;
 
-// Colors
-$red-color: #ff3636 !default;
-$red-color-dark: #b71c1c !default;
-$orange-color: #f29105 !default;
-$blue-color: #0076df !default;
-$blue-color-dark: #00369f !default;
-$cyan-color: #2698ba !default;
-$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
-$green-color: #00ab37 !default;
-$green-color-lime: #b7d12a !default;
-$green-color-dark: #009f06 !default;
-$green-color-light: #ddffdd !default;
-$green-color-bright: #11d68b !default;
+// SCS Lab Brand Palette (Logo-derived)
+$scs-navy:                   #002147 !default; // Logo Deep Navy
+$scs-teal:                   #008080 !default; // Logo Teal / Petrol Yeşili
+$scs-teal-light:             #00a8a8 !default; // Koyu mod için biraz daha açık turkuaz
 
-// --- BURADAN TEMANIN ANA RENKLERİNİ ÖZELLEŞTİREBİLİRSİNİZ ---
-$purple-color: #333333 !default; // Ana vurgu rengi (Mor yerine Koyu Füme/Siyah yapıldı)
-$light-purple-color: color.adjust($purple-color, $lightness: 25%);
-$pink-color: #f92080 !default;
-$pink-color-light: #ffdddd !default;
-$yellow-color: #efcc00 !default;
+// Theme Core Assignments
+$purple-color:               $scs-teal !default;   // Temanın ana vurgu rengi (Mor yerine Teal)
+$blue-color:                 $scs-navy !default;   // İkincil renk
+$cyan-color:                 $scs-teal-light !default;
 
-$grey-color: #555555 !default; // Soluk gri metinleri daha belirgin yaptık
-$grey-color-light: color.adjust($grey-color, $lightness: 40%);
-$grey-color-dark: #1c1c1d !default;
-$grey-900: #212529 !default;
+// Neutral Colors
+$grey-color:                 #4a5568 !default; // Şık nötr gri metinler
+$grey-color-light:           #e2e8f0 !default;
+$grey-color-dark:            #0f172a !default; // Koyu mod için zengin slate arkaplan
+$grey-900:                   #1e293b !default;
 
-$white-color: #ffffff !default;
-$black-color: #000000 !default;
+$white-color:                #ffffff !default;
+$black-color:                #000000 !default;
 
-// Theme colors
-$code-bg-color-light: rgba($purple-color, 0.05);
-$code-bg-color-dark: #2c3237 !default;
+// Code Block Background
+$code-bg-color-light:        rgba($scs-teal, 0.06) !default;
+$code-bg-color-dark:         #1e293b !default;
 
-// Font awesome location
-$fa-font-path: "../webfonts";
-
-// Tabler icons location
-$ti-font-path: "../fonts";
+// Font awesome / Tabler locations
+$fa-font-path:               "../webfonts";
+$ti-font-path:               "../fonts";
 
 // Back To Top button config
-$back-to-top-z-index: 10;
-$back-to-top-bottom: 30px;
-$back-to-top-right: 30px;
-$back-to-top-diameter: 40px;
-$back-to-top-height: $back-to-top-diameter;
-$back-to-top-width: $back-to-top-diameter;
+$back-to-top-z-index:        10;
+$back-to-top-bottom:         30px;
+$back-to-top-right:          30px;
+$back-to-top-diameter:       40px;
+$back-to-top-height:         $back-to-top-diameter;
+$back-to-top-width:          $back-to-top-diameter;
