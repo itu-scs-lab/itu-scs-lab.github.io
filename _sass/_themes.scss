@@ -106,3 +106,12 @@ h2.year {
   display: inline-block !important;
   cursor: pointer;
 }
+
+/* Font Awesome İkonlarını Zorunlu Bağlama */
+#search-toggle i,
+#light-toggle i,
+.navbar-nav i {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+}
