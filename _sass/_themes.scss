@@ -98,3 +98,11 @@ h2.year {
   opacity: 0.95 !important;
   font-weight: 700;
 }
+/* Dark/Light Switch butonunu zorunlu görünür yapma */
+#light-toggle,
+.navbar #light-toggle-system,
+.navbar #light-toggle-dark,
+.navbar #light-toggle-light {
+  display: inline-block !important;
+  cursor: pointer;
+}
