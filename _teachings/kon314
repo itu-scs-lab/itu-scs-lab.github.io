@@ -8,6 +8,7 @@ term: Spring
 location: Faculty of Electrical and Electronics Engineering
 time: -
 course_id: kon-314
+category: Undergraduate
 schedule:
   - week: 1
     date: Feb 10
@@ -25,7 +26,7 @@ schedule:
 
 ## Course Overview
 
-This course covers the dynamic modeling, analysis, and feedback control system design principles for industrial processes. Students gain practical insights into controller tuning and stability criteria for single-input single-output (SISO) control loops.
+This course covers the dynamic modeling, analysis, and feedback control system design principles for industrial processes.
 
 ## Prerequisites
 
