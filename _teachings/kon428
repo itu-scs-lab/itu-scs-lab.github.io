@@ -7,11 +7,10 @@ year: 2026
 term: Spring
 location: Faculty of Electrical and Electronics Engineering
 time: -
-course_id: KON428
-cat: Undergraduate
-catalog_url: https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=KON&dersNo=428
+course_id: kon-428
 schedule:
   - week: 1
+    date: Feb 10
     topic: Introduction to Railway Signaling & Core Principles
     description: Historical background, headway optimization, line capacity, and safety standards in railway transportation.
     materials:
@@ -19,6 +18,7 @@ schedule:
         url: https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=KON&dersNo=428
 
   - week: 2
+    date: Feb 17
     topic: Trackside Interlocking & Block Signaling Principles
     description: Fixed block vs. moving block signaling, and train detection technologies (Track circuits, axle counters).
 ---
@@ -27,12 +27,10 @@ schedule:
 
 This course provides a comprehensive introduction to safety-critical control architectures in railway engineering, train protection systems (ATP/ATO/ATS), and fail-safe interlocking logic design.
 
-## Topics Covered
+## Prerequisites
 
-- Railway Interlocking Principles & Vital Logic Design
-- Automatic Train Control Frameworks (ETCS / CBTC)
-- Fixed Block vs. Moving Block Signaling Architectures
-- Safety-Critical System Design & SIL (Safety Integrity Level) Standards
+- Control Systems Theory
+- Logic Design Fundamentals
 
 ## Catalog & Links
 
