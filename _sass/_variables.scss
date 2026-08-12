@@ -5,22 +5,26 @@
 @use "sass:color";
 
 // Content Layout Configuration
-$max-content-width: 800px !default;
+$max-content-width:          800px !default;
+
+// Font Awesome & Icon Font Paths (Simge Hatalarını Çözen Kısım)
+$fa-font-path:               "../webfonts" !default;
+$ti-font-path:               "../fonts" !default;
 
 // SCS Lab Brand Palette (Logo-derived)
 $scs-navy:                   #002147 !default; // Logo Deep Navy
 $scs-teal:                   #008080 !default; // Logo Teal / Petrol Yeşili
-$scs-teal-light:             #00a8a8 !default; // Koyu mod için biraz daha açık turkuaz
+$scs-teal-light:             #00a8a8 !default; // Koyu mod için açık turkuaz
 
 // Theme Core Assignments
-$purple-color:               $scs-teal !default;   // Temanın ana vurgu rengi (Mor yerine Teal)
-$blue-color:                 $scs-navy !default;   // İkincil renk
+$purple-color:               $scs-teal !default;
+$blue-color:                 $scs-navy !default;
 $cyan-color:                 $scs-teal-light !default;
 
 // Neutral Colors
-$grey-color:                 #4a5568 !default; // Şık nötr gri metinler
+$grey-color:                 #4a5568 !default;
 $grey-color-light:           #e2e8f0 !default;
-$grey-color-dark:            #0f172a !default; // Koyu mod için zengin slate arkaplan
+$grey-color-dark:            #0f172a !default;
 $grey-900:                   #1e293b !default;
 
 $white-color:                #ffffff !default;
@@ -29,10 +33,6 @@ $black-color:                #000000 !default;
 // Code Block Background
 $code-bg-color-light:        rgba($scs-teal, 0.06) !default;
 $code-bg-color-dark:         #1e293b !default;
-
-// Font awesome / Tabler locations
-$fa-font-path:               "../webfonts";
-$ti-font-path:               "../fonts";
 
 // Back To Top button config
 $back-to-top-z-index:        10;
