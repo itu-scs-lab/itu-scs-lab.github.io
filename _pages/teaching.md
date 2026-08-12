@@ -5,7 +5,7 @@ title: teaching
 description: Undergraduate and graduate courses offered at ITU SCS Lab.
 nav: true
 nav_order: 6
-calendar: true
+calendar: false
 ---
 
 {% include courses.liquid %}
