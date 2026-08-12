@@ -3,7 +3,6 @@ layout: about
 title: about
 permalink: /
 subtitle: Safety-Critical Systems Laboratory at Istanbul Technical University
-nav: false
 
 profile:
   align: right
