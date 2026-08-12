@@ -157,3 +157,11 @@ html[data-theme-setting="light"] {
     display: block;
   }
 }
+
+/* --- Year Titles Visibility Fix --- */
+.publications h2.bibliography,
+.publications h2.year,
+h2.year {
+  color: var(--global-text-color) !important;
+  opacity: 1 !important;
+}
