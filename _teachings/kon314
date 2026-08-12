@@ -7,11 +7,10 @@ year: 2026
 term: Spring
 location: Faculty of Electrical and Electronics Engineering
 time: -
-course_id: KON314
-cat: Undergraduate
-catalog_url: https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=KON&dersNo=314
+course_id: kon-314
 schedule:
   - week: 1
+    date: Feb 10
     topic: Introduction & Principles of Process Control
     description: Overview of process control, block diagrams, controlled/manipulated variables, and key terminology.
     materials:
@@ -19,6 +18,7 @@ schedule:
         url: https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=KON&dersNo=314
 
   - week: 2
+    date: Feb 17
     topic: Linear Process Dynamics & Transfer Functions
     description: Mathematical modeling of physical processes using differential equations and Laplace transforms.
 ---
@@ -27,13 +27,10 @@ schedule:
 
 This course covers the dynamic modeling, analysis, and feedback control system design principles for industrial processes. Students gain practical insights into controller tuning and stability criteria for single-input single-output (SISO) control loops.
 
-## Topics Covered
+## Prerequisites
 
-- Process Dynamics & Transfer Function Derivation
-- First-Order and Second-Order System Responses
-- PID Controller Design and Tuning Methods (Ziegler-Nichols, Cohen-Coon)
-- Closed-Loop Stability Analysis (Routh-Hurwitz, Nyquist Criteria)
-- Advanced Control Architectures (Feedforward, Cascade, Ratio Control)
+- Differential Equations
+- Basics of Linear Systems Theory
 
 ## Catalog & Links
 
