@@ -17,7 +17,7 @@ nav_order: 6
     <p class="card-text small">
       Focus: Autonomous Flight Control, Safety-Critical Control Systems, Robust & Predictive Control.
     </p>
-    <div class="social-icons mt-3">
+    <div class="mt-3">
       <a href="mailto:info@scs-lab.itu.edu.tr" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-envelope"></i> Email</a>
       <a href="https://scholar.google.com" target="_blank" class="btn btn-sm btn-outline-secondary"><i class="ai ai-google-scholar"></i> Scholar</a>
       <a href="https://github.com/itu-scs-lab" target="_blank" class="btn btn-sm btn-outline-secondary"><i class="fa-brands fa-github"></i> GitHub</a>
