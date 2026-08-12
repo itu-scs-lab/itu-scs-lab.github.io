@@ -8,7 +8,6 @@ term: Spring
 location: Faculty of Electrical and Electronics Engineering
 time: -
 course_id: kon-314
-category: Undergraduate
 schedule:
   - week: 1
     date: Feb 10
@@ -29,7 +28,7 @@ schedule:
 
 ## Course Overview
 
-This course covers the dynamic modeling, analysis, and feedback control system design principles for industrial processes. Students gain practical insights into controller tuning and stability criteria for single-input single-output (SISO) control loops.
+This course covers the dynamic modeling, analysis, and feedback control system design principles for industrial processes.
 
 - Understand end-to-end process dynamics and transfer function derivation
 - Analyze transient and steady-state responses of first and second-order systems
@@ -41,10 +40,10 @@ This course covers the dynamic modeling, analysis, and feedback control system d
 - Differential Equations
 - Basics of Linear Systems Theory
 
-## Textbooks & References
+## Textbooks
 
-- "Process Dynamics and Control" by Dale E. Seborg, Thomas F. Edgar, Duncan A. Mellichamp, Francis J. Doyle III
-- "Feedback Control of Dynamic Systems" by Gene F. Franklin, J. David Powell, Abbas Emami-Naeini
+- "Process Dynamics and Control" by Dale E. Seborg
+- "Feedback Control of Dynamic Systems" by Gene F. Franklin
 
 ## Catalog & Links
 
