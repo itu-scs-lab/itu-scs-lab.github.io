@@ -20,19 +20,32 @@ schedule:
 
   - week: 2
     date: Feb 17
-    topic: Trackside Interlocking & Block Signaling Principles
+    topic: Trackside Interlocking & Block Signaling
     description: Fixed block vs. moving block signaling, and train detection technologies (Track circuits, axle counters).
+    materials:
+      - name: Lecture Notes
+        url: https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=KON&dersNo=428
 ---
 
 ## Course Overview
 
 This course provides a comprehensive introduction to safety-critical control architectures in railway engineering, train protection systems (ATP/ATO/ATS), and fail-safe interlocking logic design.
 
+- Learn vital logic design and railway interlocking principles
+- Understand automatic train control frameworks (ETCS / CBTC)
+- Compare fixed block vs. moving block signaling architectures
+- Apply Safety Integrity Level (SIL) standards to railway control design
+
 ## Prerequisites
 
 - Control Systems Theory
 - Logic Design Fundamentals
 
+## Textbooks & References
+
+- "Railway Signalling and Interlocking" by Gregor Theiss
+- "Principles of Railway Location and Design" by Siripreet Singh
+
 ## Catalog & Links
 
-- **ITU OBS Official Course Page:** [KON 428 Course Information](https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=KON&dersNo=428)
+- **ITU OBS Official Page:** [KON 428 Course Catalog](https://obs.itu.edu.tr/public/DersKatalog/DersKatalogBilgiBransDersKodu?bransKodu=KON&dersNo=428)
