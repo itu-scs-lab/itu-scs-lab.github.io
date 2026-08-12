@@ -17,7 +17,6 @@
   --global-footer-link-color: #{$scs-teal-light};
   --global-distill-app-color: #{$grey-color};
   
-  /* Ayraç çizgileri ve yıl arka plan çizgileri için logodaki Teal tonunun %25 opaklığı */
   --global-divider-color: rgba(0, 128, 128, 0.25);
   
   --global-card-bg-color: #{$white-color};
@@ -40,11 +39,11 @@
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
 
-  #light-toggle-system { padding-left: 10px; padding-top: 12px; display: block; }
-  #light-toggle-dark { display: none; }
-  #light-toggle-light { display: none; }
-  .only-light { display: block; }
-  .only-dark { display: none; }
+  #light-toggle-system { padding-left: 10px; padding-top: 12px; display: block !important; }
+  #light-toggle-dark { display: none !important; }
+  #light-toggle-light { display: none !important; }
+  .only-light { display: block !important; }
+  .only-dark { display: none !important; }
 
   #back-to-top {
     color: var(--global-back-to-top-text-color);
@@ -58,9 +57,9 @@
 html[data-theme="dark"] {
   --global-bg-color: #{$grey-color-dark};
   --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #f1f5f9;                   /* Koyu modda kontrast için net açık renk */
+  --global-text-color: #f1f5f9;
   --global-text-color-light: #94a3b8;
-  --global-theme-color: #{$scs-teal-light};       /* Koyu modda parlayan Turkuaz */
+  --global-theme-color: #{$scs-teal-light};
   --global-hover-color: #38bdf8;
   --global-hover-text-color: #{$white-color};
   --global-footer-bg-color: #020617;
@@ -74,24 +73,24 @@ html[data-theme="dark"] {
   --global-newsletter-bg-color: #{$grey-900};
   --global-newsletter-text-color: #f1f5f9;
 
-  .only-light { display: none; }
-  .only-dark { display: block; }
+  .only-light { display: none !important; }
+  .only-dark { display: block !important; }
 }
 
 html[data-theme-setting="dark"] {
-  #light-toggle-system { display: none; }
-  #light-toggle-dark { padding-left: 10px; padding-top: 12px; display: block; }
-  #light-toggle-light { display: none; }
+  #light-toggle-system { display: none !important; }
+  #light-toggle-dark { padding-left: 10px; padding-top: 12px; display: block !important; }
+  #light-toggle-light { display: none !important; }
   #back-to-top { color: var(--global-back-to-top-text-color); background: var(--global-back-to-top-bg-color); }
 }
 
 html[data-theme-setting="light"] {
-  #light-toggle-system { display: none; }
-  #light-toggle-dark { display: none; }
-  #light-toggle-light { padding-left: 10px; padding-top: 12px; display: block; }
+  #light-toggle-system { display: none !important; }
+  #light-toggle-dark { display: none !important; }
+  #light-toggle-light { padding-left: 10px; padding-top: 12px; display: block !important; }
 }
 
-/* --- Yıl Başlıkları ve Genel Ayraç Özel Kuralları --- */
+/* Yıl Başlıkları Özel Kuralı */
 .publications h2.bibliography,
 .publications h2.year,
 h2.year {
