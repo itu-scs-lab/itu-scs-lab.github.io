@@ -244,3 +244,24 @@ html[data-theme="light"] #light-toggle-dark {
     margin: 0;
   }
 }
+
+/* Filter Input Styling */
+.filter-search-input {
+  background-color: var(--global-card-bg-color) !important;
+  color: var(--global-text-color) !important;
+  border: 1px solid var(--global-divider-color) !important;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &::placeholder {
+    color: var(--global-text-color-light);
+    opacity: 0.7;
+  }
+
+  &:focus {
+    border-color: var(--global-theme-color) !important;
+    box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.15) !important;
+  }
+}
