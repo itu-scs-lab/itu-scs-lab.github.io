@@ -6,7 +6,11 @@
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
-// Colors
+/*******************************************************************************
+ * ITU SCS Lab Custom Variables
+ ******************************************************************************/
+
+// Base Colors
 $red-color: #ff3636 !default;
 $red-color-dark: #b71c1c !default;
 $orange-color: #f29105 !default;
@@ -19,7 +23,13 @@ $green-color-lime: #b7d12a !default;
 $green-color-dark: #009f06 !default;
 $green-color-light: #ddffdd !default;
 $green-color-bright: #11d68b !default;
-$purple-color: #b509ac !default;
+
+// SCS Lab Brand Palette (Logo Colors)
+$scs-navy: #002147 !default;
+$scs-teal: #008080 !default;
+$scs-teal-light: #00a8a8 !default;
+
+$purple-color: $scs-teal !default;
 $light-purple-color: color.adjust($purple-color, $lightness: 25%);
 $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
@@ -34,14 +44,11 @@ $white-color: #ffffff !default;
 $black-color: #000000 !default;
 
 // Theme colors
-
 $code-bg-color-light: rgba($purple-color, 0.05);
 $code-bg-color-dark: #2c3237 !default;
 
-// Font awesome location
+// Font locations
 $fa-font-path: "../webfonts";
-
-// Tabler icons location
 $ti-font-path: "../fonts";
 
 // Back To Top button config
