@@ -25,7 +25,7 @@ nav_order: 2
 {% bibliography %}
 </div>
 
-<script>
+  <script>
   function initPubChart() {
     var pubEntries = document.querySelectorAll('.publications ol.bibliography > li, .publications .entry');
     if (!pubEntries.length) return;
@@ -33,7 +33,21 @@ nav_order: 2
     var yearlyData = {};
 
     pubEntries.forEach(function(entry) {
+      // 1. Doğrudan al-folio'nun Bastığı HTML Sınıflarından Türü Yakala
+      var isJournal = entry.classList.contains('article') || entry.classList.contains('journal');
+      var isConf = entry.classList.contains('inproceedings') || entry.classList.contains('conference') || entry.classList.contains('proceedings');
+
+      // Eğer sınıftan okuyamazsa metin kontrolüne yedek olarak bak
       var text = entry.textContent.toLowerCase();
+      if (!isJournal && !isConf) {
+        if (text.includes('conference') || text.includes('congress') || text.includes('toplantısı') || text.includes('symposium')) {
+          isConf = true;
+        } else if (text.includes('journal') || text.includes('dergisi') || text.includes('transactions')) {
+          isJournal = true;
+        }
+      }
+
+      // 2. Yılı Yakala
       var yearMatch = entry.textContent.match(/\b(20\d{2})\b/);
       var year = yearMatch ? yearMatch[0] : 'Other';
 
@@ -43,16 +57,18 @@ nav_order: 2
 
       var badgeHTML = '';
 
-      if (text.includes('journal') || text.includes('transactions') || text.includes('letters')) {
+      if (isJournal) {
         yearlyData[year].journal++;
         badgeHTML = '<span class="pub-badge pub-badge-journal"><i class="fa-solid fa-file-lines"></i> Journal</span>';
-      } else if (text.includes('conference') || text.includes('symposium') || text.includes('proceedings') || text.includes('toplantısı') || text.includes('congress')) {
+      } else if (isConf) {
+        yearlyData[year].conference++;
         badgeHTML = '<span class="pub-badge pub-badge-conference"><i class="fa-solid fa-users"></i> Conference</span>';
       } else {
         yearlyData[year].other++;
         badgeHTML = '<span class="pub-badge pub-badge-other"><i class="fa-solid fa-bookmark"></i> Pub</span>';
       }
 
+      // Sol Rozeti Ekle
       if (!entry.querySelector('.pub-badge')) {
         var badgeContainer = document.createElement('div');
         badgeContainer.className = 'pub-badge-wrapper';
@@ -83,14 +99,14 @@ nav_order: 2
             label: 'Journal',
             data: journalCounts,
             backgroundColor: journalColor,
-            borderRadius: 4,
+            borderRadius: 3,
             maxBarThickness: 24
           },
           {
             label: 'Conference',
             data: confCounts,
             backgroundColor: confColor,
-            borderRadius: 4,
+            borderRadius: 3,
             maxBarThickness: 24
           }
         ]
@@ -128,7 +144,6 @@ nav_order: 2
     });
   }
 
-  // DOM Yüklendiğinde veya Sayfa Geçişinde Tetikle
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initPubChart);
   } else {
