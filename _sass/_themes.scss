@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Themes
+ * ITU SCS Lab Theme Styles
  ******************************************************************************/
 
 @use "sass:color";
@@ -7,27 +7,22 @@
 :root {
   --global-bg-color: #{$white-color};
   --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$black-color};
+  --global-text-color: #{$scs-navy};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$purple-color};
-  --global-hover-color: #{$purple-color};
+  --global-theme-color: #{$scs-teal};
+  --global-hover-color: #{$scs-navy};
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-dark};
+  --global-footer-bg-color: #{$scs-navy};
   --global-footer-text-color: #{$grey-color-light};
-  --global-footer-link-color: #{$white-color};
+  --global-footer-link-color: #{$scs-teal-light};
   --global-distill-app-color: #{$grey-color};
-  --global-divider-color: rgba(0, 0, 0, 0.1);
+  --global-divider-color: rgba(0, 128, 128, 0.25);
   --global-card-bg-color: #{$white-color};
-  --global-highlight-color: #{$red-color-dark};
-  --global-back-to-top-bg-color: rgba(
-    #{color.channel($black-color, "red", $space: rgb)},
-    #{color.channel($black-color, "green", $space: rgb)},
-    #{color.channel($black-color, "blue", $space: rgb)},
-    0.4
-  );
+  --global-highlight-color: #{$scs-teal};
+  --global-back-to-top-bg-color: rgba(0, 33, 71, 0.6);
   --global-back-to-top-text-color: #{$white-color};
   --global-newsletter-bg-color: #{$white-color};
-  --global-newsletter-text-color: #{$black-color};
+  --global-newsletter-text-color: #{$scs-navy};
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
@@ -41,20 +36,6 @@
   --global-danger-block-bg: #ffe0e0;
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
-
-  #light-toggle-system {
-    padding-left: 10px;
-    padding-top: 12px;
-    display: block;
-  }
-
-  #light-toggle-dark {
-    display: none;
-  }
-
-  #light-toggle-light {
-    display: none;
-  }
 
   .only-light {
     display: block;
@@ -78,23 +59,18 @@
 html[data-theme="dark"] {
   --global-bg-color: #{$grey-color-dark};
   --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
+  --global-text-color: #f1f5f9;
+  --global-text-color-light: #94a3b8;
+  --global-theme-color: #{$scs-teal-light};
+  --global-hover-color: #38bdf8;
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
-  --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #424246;
+  --global-footer-bg-color: #020617;
+  --global-footer-text-color: #94a3b8;
+  --global-footer-link-color: #{$scs-teal-light};
+  --global-distill-app-color: #94a3b8;
+  --global-divider-color: rgba(0, 168, 168, 0.2);
   --global-card-bg-color: #{$grey-900};
-  --global-back-to-top-bg-color: rgba(
-    #{color.channel($white-color, "red", $space: rgb)},
-    #{color.channel($white-color, "green", $space: rgb)},
-    #{color.channel($white-color, "blue", $space: rgb)},
-    0.5
-  );
+  --global-back-to-top-bg-color: rgba(0, 168, 168, 0.5);
   --global-back-to-top-text-color: #{$black-color};
   --global-newsletter-bg-color: #{$grey-color-light};
   --global-newsletter-text-color: #{$grey-color-dark};
@@ -121,46 +97,20 @@ html[data-theme="dark"] {
   }
 }
 
-html[data-theme-setting="dark"] {
-  #light-toggle-system {
-    display: none;
-  }
-
-  #light-toggle-dark {
-    padding-left: 10px;
-    padding-top: 12px;
-    display: block;
-  }
-
-  #light-toggle-light {
-    display: none;
-  }
-
-  #back-to-top {
-    color: var(--global-back-to-top-text-color);
-    background: var(--global-back-to-top-bg-color);
-  }
+/* Yıl başlıkları netliği */
+.publications h2.bibliography,
+.publications h2.year,
+h2.year {
+  color: var(--global-text-color) !important;
+  opacity: 0.95 !important;
+  font-weight: 700;
 }
 
-html[data-theme-setting="light"] {
-  #light-toggle-system {
-    display: none;
-  }
+/* ==========================================================================
+   THEME TOGGLE BUTTON FIX (Her modda tam olarak TEK İKON)
+   ========================================================================== */
 
-  #light-toggle-dark {
-    display: none;
-  }
-
-  #light-toggle-light {
-    padding-left: 10px;
-    padding-top: 12px;
-    display: block;
-  }
-}
-
-/* --- Clean Theme Toggle Visibility (Tek Buton Mantığı) --- */
-
-/* Varsayılan durumda (System modunda) sadece yarım daire görünsün */
+/* 1. Varsayılan / System Modu: Sadece yarım daire görünür */
 #light-toggle-system {
   display: inline-block !important;
 }
@@ -169,20 +119,20 @@ html[data-theme-setting="light"] {
   display: none !important;
 }
 
-/* Dark ayarlandığında sadece Ay görünsün */
-html[data-theme-setting="dark"] #light-toggle-dark {
+/* 2. Dark Mod Aktifleşince: Sadece Ay görünür */
+html[data-theme="dark"] #light-toggle-dark {
   display: inline-block !important;
 }
-html[data-theme-setting="dark"] #light-toggle-system,
-html[data-theme-setting="dark"] #light-toggle-light {
+html[data-theme="dark"] #light-toggle-system,
+html[data-theme="dark"] #light-toggle-light {
   display: none !important;
 }
 
-/* Light ayarlandığında sadece Güneş görünsün */
-html[data-theme-setting="light"] #light-toggle-light {
+/* 3. Light Mod Aktifleşince: Sadece Güneş görünür */
+html[data-theme="light"] #light-toggle-light {
   display: inline-block !important;
 }
-html[data-theme-setting="light"] #light-toggle-system,
-html[data-theme-setting="light"] #light-toggle-dark {
+html[data-theme="light"] #light-toggle-system,
+html[data-theme="light"] #light-toggle-dark {
   display: none !important;
 }
