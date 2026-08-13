@@ -7,16 +7,17 @@
   </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> ITU SCS Lab </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/people/">team </a> </li> <li class="nav-item active"> <a class="nav-link" href="/teaching/">teaching <span class="sr-only">(current)</span> </a> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">teaching</h1> <p class="post-description">Undergraduate and graduate courses offered at ITU SCS Lab.</p> </header> <article> <p><input type="text" id="course-search-input" class="form-control my-3 filter-search-input" placeholder="Type to filter..." style="max-width: 320px; border-radius: 6px;"></p> <div class="courses"> <h2 class="year">2026</h2> <div class="course-list"> <div class="course-item"> <h3 class="course-title"> <a href="/teachings/introduction-to-machine-learning/">Introduction to Machine Learning</a> </h3> <div class="course-meta"> <span class="course-term">Fall</span> <span class="course-instructor">Prof. Example</span> </div> <div class="course-description"> <p>This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.</p> </div> </div> </div> <h2 class="year">2025</h2> <div class="course-list"> <div class="course-item"> <h3 class="course-title"> <a href="/teachings/kon428/">Data Science Fundamentals</a> </h3> <div class="course-meta"> <span class="course-term">Spring</span> <span class="course-instructor">Prof. Data</span> </div> <div class="course-description"> <p>This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.</p> </div> </div> </div> <h2 class="year">2024</h2> <div class="course-list"> <div class="course-item"> <h3 class="course-title"> <a href="/teachings/kon314/">Data Science Fundamentals</a> </h3> <div class="course-meta"> <span class="course-term">Spring</span> <span class="course-instructor">Prof. Data</span> </div> <div class="course-description"> <p>This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.</p> </div> </div> <div class="course-item"> <h3 class="course-title"> <a href="/teachings/data-science-fundamentals/">Data Science Fundamentals</a> </h3> <div class="course-meta"> <span class="course-term">Spring</span> <span class="course-instructor">Prof. Data</span> </div> <div class="course-description"> <p>This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.</p> </div> </div> </div> </div> <script>
   document.addEventListener("DOMContentLoaded", function() {
     var searchInput = document.getElementById('course-search-input');
+    
     if (searchInput) {
       searchInput.addEventListener('input', function() {
         var query = this.value.toLowerCase().trim();
         
-        // Ders kartlarını ve tablo/liste elemanlarını tarar
-        var courseItems = document.querySelectorAll('.teaching-container .course-card, .courses-grid .course-card, table tr, .card');
+        // al-folio'nun varsayılan ders elemanları (Tablo satırları, kartlar, listeler)
+        var items = document.querySelectorAll('.table tr, .courses-list > *, .course-card, .teaching-container .row > div');
         
-        courseItems.forEach(function(item) {
-          // Tablo başlık satırını gizlememek için kontrol
-          if (item.tagName === 'TR' && item.querySelector('th')) return;
+        items.forEach(function(item) {
+          // Tablo başlık satırını (th) filtre dışı bırak
+          if (item.querySelector('th')) return;
 
           var text = item.textContent.toLowerCase();
           if (text.includes(query)) {
@@ -26,16 +27,17 @@
           }
         });
 
-        // Arama sonucunda boş kalan Yıl bloklarını/başlıklarını gizler
-        var yearBlocks = document.querySelectorAll('.year-block, .year-divider');
-        yearBlocks.forEach(function(block) {
-          var parent = block.closest('.year-block') || block.parentElement;
-          if (parent) {
-            var visibleCards = parent.querySelectorAll('.course-card:not([style*="display: none"]), tr:not([style*="display: none"])');
-            if (visibleCards.length === 0) {
-              block.style.display = 'none';
+        // Arama sonucunda boş kalan Yıl başlıklarını (h2 / .year-divider / .table-title) gizle
+        var yearHeaders = document.querySelectorAll('h2, .year-title, .year-divider');
+        yearHeaders.forEach(function(header) {
+          // Başlıktan sonra gelen kapsayıcı alanı kontrol et
+          var nextElem = header.nextElementSibling;
+          if (nextElem) {
+            var visibleItems = nextElem.querySelectorAll('tr:not([style*="display: none"]), .course-card:not([style*="display: none"]), div:not([style*="display: none"])');
+            if (visibleItems.length === 0 && query !== '') {
+              header.style.display = 'none';
             } else {
-              block.style.display = '';
+              header.style.display = '';
             }
           }
         });
