@@ -32,15 +32,14 @@ nav_order: 2
       } else if (text.includes('conference') || text.includes('symposium') || text.includes('proceedings') || text.includes('toplantısı') || text.includes('congress')) {
         badgeHTML = '<span class="pub-badge pub-badge-conference"><i class="fa-solid fa-users"></i> Conference</span>';
       } else {
-        badgeHTML = '<span class="pub-badge pub-badge-other"><i class="fa-solid fa-bookmark"></i> Publication</span>';
+        badgeHTML = '<span class="pub-badge pub-badge-other"><i class="fa-solid fa-bookmark"></i> Pub</span>';
       }
 
-      var titleElem = entry.querySelector('.title') || entry;
-      if (titleElem && !entry.querySelector('.pub-badge')) {
+      if (!entry.querySelector('.pub-badge')) {
         var badgeContainer = document.createElement('div');
         badgeContainer.className = 'pub-badge-wrapper';
         badgeContainer.innerHTML = badgeHTML;
-        titleElem.parentNode.insertBefore(badgeContainer, titleElem);
+        entry.insertBefore(badgeContainer, entry.firstChild);
       }
     });
   });
