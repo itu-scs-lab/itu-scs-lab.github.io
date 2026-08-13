@@ -1,5 +1,5 @@
 /*******************************************************************************
- * ITU SCS Lab Theme Styles
+ * ITU SCS Lab Themes
  ******************************************************************************/
 
 @use "sass:color";
@@ -107,19 +107,10 @@ h2.year {
 }
 
 /* ==========================================================================
-   THEME TOGGLE BUTTON FIX (Her modda tam olarak TEK İKON)
+   THEME TOGGLE BUTTON VISIBILITY RULES
    ========================================================================== */
 
-/* 1. Varsayılan / System Modu: Sadece yarım daire görünür */
-#light-toggle-system {
-  display: inline-block !important;
-}
-#light-toggle-dark,
-#light-toggle-light {
-  display: none !important;
-}
-
-/* 2. Dark Mod Aktifleşince: Sadece Ay görünür */
+/* 1. Koyu Mod Aktifken: Sadece Ay Görünsün */
 html[data-theme="dark"] #light-toggle-dark {
   display: inline-block !important;
 }
@@ -128,11 +119,20 @@ html[data-theme="dark"] #light-toggle-light {
   display: none !important;
 }
 
-/* 3. Light Mod Aktifleşince: Sadece Güneş görünür */
+/* 2. Aydınlık Mod Aktifken: Sadece Güneş Görünsün */
 html[data-theme="light"] #light-toggle-light {
   display: inline-block !important;
 }
 html[data-theme="light"] #light-toggle-system,
 html[data-theme="light"] #light-toggle-dark {
+  display: none !important;
+}
+
+/* 3. Diğer tüm durumlarda (System / Otomatik): Sadece Yarım Daire Görünsün */
+html:not([data-theme="dark"]):not([data-theme="light"]) #light-toggle-system {
+  display: inline-block !important;
+}
+html:not([data-theme="dark"]):not([data-theme="light"]) #light-toggle-dark,
+html:not([data-theme="dark"]):not([data-theme="light"]) #light-toggle-light {
   display: none !important;
 }
