@@ -350,7 +350,7 @@ html[data-theme='dark'] {
 }
 
 /* ==========================================================================
-   PUBLICATIONS DASHBOARD (FIXED SEARCH + EXPANDED CHART)
+   RESPONSIVE PUBLICATIONS DASHBOARD
    ========================================================================== */
 
 .pub-top-dashboard {
@@ -362,10 +362,10 @@ html[data-theme='dark'] {
   width: 100% !important;
 }
 
-/* Sol Taraf: Arama kutusu orijinal boyutunda kalır */
+/* Masaüstü: Arama kutusu sabit 280px */
 .pub-search-side {
-  flex: 0 0 320px !important; /* Sabit genişlik */
-  max-width: 320px !important;
+  flex: 0 0 280px !important;
+  width: 280px !important;
 
   input {
     width: 100% !important;
@@ -373,9 +373,10 @@ html[data-theme='dark'] {
   }
 }
 
-/* Sağ Taraf: Grafik arama kutusuna kadar sola esner */
+/* Masaüstü: Grafik kutusu kalan boşluğu tam doldurur */
 .pub-chart-side {
-  flex: 1 1 auto !important; /* Kalan tüm alanı kaplar */
+  flex: 1 1 auto !important;
+  min-width: 0 !important; /* Canvas tasmasini engeller */
   background-color: var(--global-card-bg-color) !important;
   border: 1px solid var(--global-divider-color) !important;
   border-radius: 8px !important;
@@ -383,9 +384,30 @@ html[data-theme='dark'] {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
 }
 
-/* Grafiğin esnek %100 genişliği */
 .chart-wrapper {
   width: 100% !important;
   height: 120px !important;
   position: relative !important;
+}
+
+/* MOBİL VE TABLET UYUMU (768px Altı) */
+@media (max-width: 768px) {
+  .pub-top-dashboard {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1rem !important;
+  }
+
+  .pub-search-side {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+  }
+
+  .pub-chart-side {
+    width: 100% !important;
+  }
+
+  .chart-wrapper {
+    height: 140px !important; /* Mobilde dikey biraz daha rahat alan */
+  }
 }
