@@ -81,15 +81,15 @@ nav_order: 2
             label: 'Journal',
             data: journalCounts,
             backgroundColor: journalColor,
-            borderRadius: 3,
-            barThickness: 12
+            borderRadius: 4,
+            maxBarThickness: 28 /* Max genişlik sınırı */
           },
           {
             label: 'Conference',
             data: confCounts,
             backgroundColor: confColor,
-            borderRadius: 3,
-            barThickness: 12
+            borderRadius: 4,
+            maxBarThickness: 28
           }
         ]
       },
@@ -100,7 +100,7 @@ nav_order: 2
           x: {
             stacked: true,
             grid: { display: false },
-            ticks: { color: textColor, font: { size: 10, weight: '600' } }
+            ticks: { color: textColor, font: { size: 11, weight: '600' } }
           },
           y: {
             stacked: true,
@@ -114,11 +114,11 @@ nav_order: 2
             position: 'top',
             align: 'end',
             labels: {
-              boxWidth: 6,
-              boxHeight: 6,
+              boxWidth: 8,
+              boxHeight: 8,
               usePointStyle: true,
               color: textColor,
-              font: { size: 9, weight: '600' }
+              font: { size: 10, weight: '600' }
             }
           },
           tooltip: {
@@ -128,5 +128,4 @@ nav_order: 2
         }
       }
     });
-  });
 </script>
