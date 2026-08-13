@@ -266,61 +266,85 @@ html[data-theme="light"] #light-toggle-dark {
   }
 }
 /* ==========================================================================
-   VERTICAL SIDE BADGES FOR PUBLICATIONS (-90 DEGREE ROTATED)
+   COOL VERTICAL SIDE BADGES FOR PUBLICATIONS
    ========================================================================== */
 
-/* Yayın kapsayıcısını bağıl konumlandır ve sola girinti ver */
+/* Yayın listesi satırını Flexbox ile yan yana sütun yap */
 .publications ol.bibliography > li, 
 .publications .entry {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 1.2rem !important;
   position: relative !important;
-  padding-left: 2.2rem !important; /* Dikey rozetin sığacağı sol boşluk */
-  margin-bottom: 2rem !important;
+  margin-bottom: 2.2rem !important;
 }
 
-/* Dikey Rozet Kapsayıcısı */
+/* Sol taraftaki dikey rozet kapsayıcısı */
 .pub-badge-wrapper {
-  position: absolute !important;
-  left: -8px !important;
-  top: 18px !important;
-  transform-origin: center center;
-  transform: rotate(-90deg);
-  z-index: 2;
+  flex-shrink: 0 !important;
+  padding-top: 0.15rem !important;
 }
 
-/* Canlı Renkli Dikey Rozet */
+/* Cool, Mat ve Modern Dikey Rozet Stili */
 .pub-badge {
+  writing-mode: vertical-rl !important;
+  transform: rotate(180deg) !important; /* Aşağıdan yukarıya doğru okunması için */
   display: inline-flex !important;
   align-items: center !important;
-  gap: 0.35rem !important;
+  justify-content: center !important;
+  gap: 0.4rem !important;
   font-size: 0.65rem !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.08em !important;
-  padding: 0.2rem 0.6rem !important;
-  border-radius: 4px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  padding: 0.65rem 0.3rem !important;
+  border-radius: 5px !important;
   text-transform: uppercase !important;
   white-space: nowrap !important;
-  color: #ffffff !important; /* Beyaz Metin */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
-
-  /* Journal (Dergi Makalesi) -> Canlı Zümrüt / Turkuaz */
-  &.pub-badge-journal {
-    background: linear-gradient(135deg, #00b09b, #96c93d) !important;
-    border: none !important;
-  }
-
-  /* Conference (Konferans Bildirisi) -> Canlı Elektrik Mavi */
-  &.pub-badge-conference {
-    background: linear-gradient(135deg, #0072ff, #00c6ff) !important;
-    border: none !important;
-  }
-
-  /* Diğer -> Canlı Mor/Kırmızı */
-  &.pub-badge-other {
-    background: linear-gradient(135deg, #8e2de2, #4a00e0) !important;
-    border: none !important;
-  }
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06) !important;
+  transition: all 0.2s ease !important;
 
   i {
     font-size: 0.7rem !important;
+    transform: rotate(90deg) !important; /* İkonun dik durması için */
+  }
+
+  /* Journal -> Cool Slate Teal / Petrol Mavisi */
+  &.pub-badge-journal {
+    background-color: rgba(15, 118, 110, 0.12) !important;
+    color: #0f766e !important;
+    border: 1px solid rgba(15, 118, 110, 0.3) !important;
+  }
+
+  /* Conference -> Cool Deep Indigo / Gece Mavisi */
+  &.pub-badge-conference {
+    background-color: rgba(67, 56, 202, 0.12) !important;
+    color: #4338ca !important;
+    border: 1px solid rgba(67, 56, 202, 0.3) !important;
+  }
+
+  /* Other -> Cool Muted Steel / Füme */
+  &.pub-badge-other {
+    background-color: rgba(71, 85, 105, 0.12) !important;
+    color: #475569 !important;
+    border: 1px solid rgba(71, 85, 105, 0.3) !important;
+  }
+}
+
+/* Dark Mode İçin Otomatik Uyumlı Cool Renk Tonları */
+html[data-theme='dark'] {
+  .pub-badge-journal {
+    background-color: rgba(45, 212, 191, 0.15) !important;
+    color: #2dd4bf !important;
+    border-color: rgba(45, 212, 191, 0.3) !important;
+  }
+  .pub-badge-conference {
+    background-color: rgba(129, 140, 248, 0.15) !important;
+    color: #818cf8 !important;
+    border-color: rgba(129, 140, 248, 0.3) !important;
+  }
+  .pub-badge-other {
+    background-color: rgba(148, 163, 184, 0.15) !important;
+    color: #94a3b8 !important;
+    border-color: rgba(148, 163, 184, 0.3) !important;
   }
 }
