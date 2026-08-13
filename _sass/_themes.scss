@@ -136,3 +136,7 @@ html[data-theme="light"] #light-toggle-system,
 html[data-theme="light"] #light-toggle-dark {
   display: none !important;
 }
+/* Sol üstteki site adını her yerde tamamen gizler */
+.navbar-brand {
+  display: none !important;
+}
