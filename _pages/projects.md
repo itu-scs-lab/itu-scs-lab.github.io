@@ -9,16 +9,8 @@ display_categories: false
 horizontal: true
 ---
 
-<!-- Live Search Input Box -->
-<input 
-  type="text" 
-  id="project-search-input" 
-  class="form-control my-3 filter-search-input" 
-  placeholder="Type to filter..." 
-  style="max-width: 320px; border-radius: 6px;"
->
+<input type="text" id="project-search-input" class="form-control my-3 filter-search-input" placeholder="Type to filter..." style="max-width: 320px; border-radius: 6px;">
 
-<!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
@@ -74,19 +66,22 @@ horizontal: true
 </div>
 
 <script>
-  document.getElementById('project-search-input').addEventListener('input', function() {
-    var query = this.value.toLowerCase().trim();
-    
-    // projects_horizontal yapısındaki her bir kart sütununu yakalar
-    var projectCols = document.querySelectorAll('.projects .row > div, .projects .card');
-    
-    projectCols.forEach(function(col) {
-      var text = col.textContent.toLowerCase();
-      if (text.includes(query)) {
-        col.style.display = '';
-      } else {
-        col.style.display = 'none';
-      }
-    });
+  document.addEventListener("DOMContentLoaded", function() {
+    var searchInput = document.getElementById('project-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', function() {
+        var query = this.value.toLowerCase().trim();
+        var projectCols = document.querySelectorAll('.projects .row > div, .projects .card');
+        
+        projectCols.forEach(function(col) {
+          var text = col.textContent.toLowerCase();
+          if (text.includes(query)) {
+            col.style.display = '';
+          } else {
+            col.style.display = 'none';
+          }
+        });
+      });
+    }
   });
 </script>
