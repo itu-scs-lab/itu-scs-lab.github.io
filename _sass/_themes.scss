@@ -157,3 +157,14 @@ html[data-theme-setting="light"] {
     display: block;
   }
 }
+
+/* Dark/Light Switch Butonunu Zorunlu Görünür Yapma */
+#light-toggle {
+  display: inline-block !important;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  color: var(--global-text-color);
+}
