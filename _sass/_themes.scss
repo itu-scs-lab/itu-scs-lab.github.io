@@ -265,3 +265,46 @@ html[data-theme="light"] #light-toggle-dark {
     box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.15) !important;
   }
 }
+
+/* ==========================================================================
+   PUBLICATION BADGES (Journal & Conference Tags)
+   ========================================================================== */
+
+.pub-badge-wrapper {
+  margin-bottom: 0.35rem;
+  margin-top: 0.2rem;
+}
+
+.pub-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+
+  /* Journal (Dergi Makalesi) -> Turkuaz / Cyan */
+  &.pub-badge-journal {
+    background-color: rgba(0, 150, 136, 0.12);
+    color: #00897b;
+    border: 1px solid rgba(0, 150, 136, 0.3);
+  }
+
+  /* Conference (Konferans Bildirisi) -> Mavi */
+  &.pub-badge-conference {
+    background-color: rgba(25, 118, 210, 0.12);
+    color: #1976d2;
+    border: 1px solid rgba(25, 118, 210, 0.3);
+  }
+
+  /* Diğer / Varsayılan -> Gri */
+  &.pub-badge-other {
+    background-color: rgba(108, 117, 125, 0.12);
+    color: #6c757d;
+    border: 1px solid rgba(108, 117, 125, 0.3);
+  }
+}
