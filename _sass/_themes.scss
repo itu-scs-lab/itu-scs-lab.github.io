@@ -158,32 +158,31 @@ html[data-theme-setting="light"] {
   }
 }
 
-/* Dark/Light Switch Buton Görünürlüğü */
-#light-toggle {
-  display: inline-block !important;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-}
+/* --- Clean Theme Toggle Visibility (Tek Buton Mantığı) --- */
 
-/* Simgeleri kapsayan span/i öğelerini görünür tutma */
-#light-toggle i,
-#light-toggle span {
-  font-size: 1.1rem;
-  color: var(--global-text-color);
-}
-
-/* --- System Theme Mode Icon Fix --- */
-html[data-theme-setting="system"] #light-toggle-system,
+/* Varsayılan durumda (System modunda) sadece yarım daire görünsün */
 #light-toggle-system {
   display: inline-block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+}
+#light-toggle-dark,
+#light-toggle-light {
+  display: none !important;
 }
 
-/* Sistem ikonu için Font Awesome v6 uyumlu görünüm */
-#light-toggle-system::before {
-  content: "\f042"; /* Font Awesome yarım daire / circle-half-stroke ikon kodu */
-  font-family: "Font Awesome 6 Free" !important;
-  font-weight: 900 !important;
+/* Dark ayarlandığında sadece Ay görünsün */
+html[data-theme-setting="dark"] #light-toggle-dark {
+  display: inline-block !important;
+}
+html[data-theme-setting="dark"] #light-toggle-system,
+html[data-theme-setting="dark"] #light-toggle-light {
+  display: none !important;
+}
+
+/* Light ayarlandığında sadece Güneş görünsün */
+html[data-theme-setting="light"] #light-toggle-light {
+  display: inline-block !important;
+}
+html[data-theme-setting="light"] #light-toggle-system,
+html[data-theme-setting="light"] #light-toggle-dark {
+  display: none !important;
 }
