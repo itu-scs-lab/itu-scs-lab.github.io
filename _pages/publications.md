@@ -7,21 +7,17 @@ nav: true
 nav_order: 2
 ---
 
-<!-- Chart.js Kütüphanesi -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<div class="pub-header-container">
-  <!-- Sol Taraf: Arama Kutusu -->
-  <div class="pub-header-left">
+<!-- Arama Kutusu ve Grafiği Yan Yana Tutan Ana Kapsayıcı -->
+<div class="pub-top-dashboard">
+  <div class="pub-search-side">
     {% include bib_search.liquid %}
   </div>
 
-  <!-- Sağ Taraf: Yıllara ve Türlere Göre Stacked Bar Chart -->
-  <div class="pub-header-right">
-    <div class="pub-stats-card">
-      <div class="chart-wrapper">
-        <canvas id="pubStackedChart"></canvas>
-      </div>
+  <div class="pub-chart-side">
+    <div class="chart-wrapper">
+      <canvas id="pubStackedChart"></canvas>
     </div>
   </div>
 </div>
@@ -33,14 +29,10 @@ nav_order: 2
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var pubEntries = document.querySelectorAll('.publications ol.bibliography > li, .publications .entry');
-    
-    // Yıl ve Tür Verilerini Toplama
-    var yearlyData = {}; // { "2023": { journal: 1, conference: 2 }, ... }
+    var yearlyData = {};
 
     pubEntries.forEach(function(entry) {
       var text = entry.textContent.toLowerCase();
-      
-      // Yıl Tespit Etme (Dört haneli sayı yakalama)
       var yearMatch = entry.textContent.match(/\b(20\d{2})\b/);
       var year = yearMatch ? yearMatch[0] : 'Other';
 
@@ -61,7 +53,6 @@ nav_order: 2
         badgeHTML = '<span class="pub-badge pub-badge-other"><i class="fa-solid fa-bookmark"></i> Pub</span>';
       }
 
-      // Sol Dikey Rozeti Ekleme
       if (!entry.querySelector('.pub-badge')) {
         var badgeContainer = document.createElement('div');
         badgeContainer.className = 'pub-badge-wrapper';
@@ -70,12 +61,10 @@ nav_order: 2
       }
     });
 
-    // Yılları Sıralama
     var years = Object.keys(yearlyData).sort();
     var journalCounts = years.map(function(y) { return yearlyData[y].journal; });
     var confCounts = years.map(function(y) { return yearlyData[y].conference; });
 
-    // Chart.js Stacked Bar Chart Hazırlığı
     var ctx = document.getElementById('pubStackedChart').getContext('2d');
     var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     
@@ -92,15 +81,15 @@ nav_order: 2
             label: 'Journal',
             data: journalCounts,
             backgroundColor: journalColor,
-            borderRadius: 4,
-            barThickness: 16
+            borderRadius: 3,
+            barThickness: 12
           },
           {
             label: 'Conference',
             data: confCounts,
             backgroundColor: confColor,
-            borderRadius: 4,
-            barThickness: 16
+            borderRadius: 3,
+            barThickness: 12
           }
         ]
       },
@@ -115,7 +104,7 @@ nav_order: 2
           },
           y: {
             stacked: true,
-            display: false, /* Temiz görünüm için Y ekseni çizgilerini sakla */
+            display: false,
             beginAtZero: true
           }
         },
@@ -125,11 +114,11 @@ nav_order: 2
             position: 'top',
             align: 'end',
             labels: {
-              boxWidth: 8,
-              boxHeight: 8,
+              boxWidth: 6,
+              boxHeight: 6,
               usePointStyle: true,
               color: textColor,
-              font: { size: 10, weight: '600' }
+              font: { size: 9, weight: '600' }
             }
           },
           tooltip: {
