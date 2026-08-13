@@ -7,7 +7,7 @@ subtitle: Safety-Critical Systems Laboratory at Istanbul Technical University
 profile:
   align: right
   image: group_logo.png
-  image_circular: false
+  image_circular: true
 
 news: true
 selected_papers: true
