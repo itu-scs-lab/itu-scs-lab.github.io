@@ -15,16 +15,17 @@ calendar: false
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var searchInput = document.getElementById('course-search-input');
+    
     if (searchInput) {
       searchInput.addEventListener('input', function() {
         var query = this.value.toLowerCase().trim();
         
-        // Ders kartlarını ve tablo/liste elemanlarını tarar
-        var courseItems = document.querySelectorAll('.teaching-container .course-card, .courses-grid .course-card, table tr, .card');
+        // al-folio'nun varsayılan ders elemanları (Tablo satırları, kartlar, listeler)
+        var items = document.querySelectorAll('.table tr, .courses-list > *, .course-card, .teaching-container .row > div');
         
-        courseItems.forEach(function(item) {
-          // Tablo başlık satırını gizlememek için kontrol
-          if (item.tagName === 'TR' && item.querySelector('th')) return;
+        items.forEach(function(item) {
+          // Tablo başlık satırını (th) filtre dışı bırak
+          if (item.querySelector('th')) return;
 
           var text = item.textContent.toLowerCase();
           if (text.includes(query)) {
@@ -34,16 +35,17 @@ calendar: false
           }
         });
 
-        // Arama sonucunda boş kalan Yıl bloklarını/başlıklarını gizler
-        var yearBlocks = document.querySelectorAll('.year-block, .year-divider');
-        yearBlocks.forEach(function(block) {
-          var parent = block.closest('.year-block') || block.parentElement;
-          if (parent) {
-            var visibleCards = parent.querySelectorAll('.course-card:not([style*="display: none"]), tr:not([style*="display: none"])');
-            if (visibleCards.length === 0) {
-              block.style.display = 'none';
+        // Arama sonucunda boş kalan Yıl başlıklarını (h2 / .year-divider / .table-title) gizle
+        var yearHeaders = document.querySelectorAll('h2, .year-title, .year-divider');
+        yearHeaders.forEach(function(header) {
+          // Başlıktan sonra gelen kapsayıcı alanı kontrol et
+          var nextElem = header.nextElementSibling;
+          if (nextElem) {
+            var visibleItems = nextElem.querySelectorAll('tr:not([style*="display: none"]), .course-card:not([style*="display: none"]), div:not([style*="display: none"])');
+            if (visibleItems.length === 0 && query !== '') {
+              header.style.display = 'none';
             } else {
-              block.style.display = '';
+              header.style.display = '';
             }
           }
         });
