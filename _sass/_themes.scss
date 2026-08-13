@@ -348,3 +348,70 @@ html[data-theme='dark'] {
     border-color: rgba(148, 163, 184, 0.3) !important;
   }
 }
+
+/* ==========================================================================
+   PUBLICATIONS HEADER & STATS CHART LAYOUT
+   ========================================================================== */
+
+.pub-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.pub-header-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.pub-header-right {
+  flex-shrink: 0;
+}
+
+/* İstatistik Kartı ve Halka Grafik */
+.pub-stats-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.chart-wrapper {
+  width: 220px;
+  height: 110px;
+  position: relative;
+}
+
+.stats-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.stat-count {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--global-text-color);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--global-text-color-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
