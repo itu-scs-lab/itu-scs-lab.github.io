@@ -350,7 +350,7 @@ html[data-theme='dark'] {
 }
 
 /* ==========================================================================
-   PUBLICATIONS DASHBOARD (FULL-WIDTH FLEX LAYOUT)
+   PUBLICATIONS DASHBOARD (FIXED SEARCH + EXPANDED CHART)
    ========================================================================== */
 
 .pub-top-dashboard {
@@ -362,30 +362,30 @@ html[data-theme='dark'] {
   width: 100% !important;
 }
 
-/* Arama kutusunun olduğu sol alan: Grafiğe kadar tam genişler */
+/* Sol Taraf: Arama kutusu orijinal boyutunda kalır */
 .pub-search-side {
-  flex: 1 1 auto !important;
-  
-  /* al-folio bib_search input düzeni */
+  flex: 0 0 320px !important; /* Sabit genişlik */
+  max-width: 320px !important;
+
   input {
-    width: 100% !important; /* Input kutusunu kapsayıcı boyunca uzatır */
-    max-width: none !important;
+    width: 100% !important;
     margin-bottom: 0 !important;
   }
 }
 
-/* Sağ taraftaki grafik kutusu */
+/* Sağ Taraf: Grafik arama kutusuna kadar sola esner */
 .pub-chart-side {
-  flex: 0 0 auto !important;
+  flex: 1 1 auto !important; /* Kalan tüm alanı kaplar */
   background-color: var(--global-card-bg-color) !important;
   border: 1px solid var(--global-divider-color) !important;
   border-radius: 8px !important;
-  padding: 0.5rem 0.8rem !important;
+  padding: 0.6rem 1rem !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
 }
 
+/* Grafiğin esnek %100 genişliği */
 .chart-wrapper {
-  width: 260px !important;
-  height: 110px !important;
+  width: 100% !important;
+  height: 120px !important;
   position: relative !important;
 }
