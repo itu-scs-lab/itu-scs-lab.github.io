@@ -6,7 +6,7 @@ description: Ongoing and completed research projects on safety-critical control,
 nav: true
 nav_order: 3
 display_categories: false
-horizontal: false
+horizontal: true
 ---
 
 <input type="text" id="project-search-input" class="form-control my-3 filter-search-input" placeholder="Type to filter..." style="max-width: 320px; border-radius: 6px;">
