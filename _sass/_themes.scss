@@ -158,13 +158,17 @@ html[data-theme-setting="light"] {
   }
 }
 
-/* Dark/Light Switch Butonunu Zorunlu Görünür Yapma */
+/* Dark/Light Switch Buton Görünürlüğü */
 #light-toggle {
   display: inline-block !important;
+  cursor: pointer;
   background: transparent;
   border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  padding: 0 0.5rem;
+}
+
+/* Simgeleri kapsayan span/i öğelerini görünür tutma */
+#light-toggle i,
+#light-toggle span {
+  font-size: 1.1rem;
   color: var(--global-text-color);
 }
