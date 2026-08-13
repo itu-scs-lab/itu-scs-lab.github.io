@@ -9,7 +9,6 @@ nav_order: 2
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<!-- Arama Kutusu ve Grafiği Yan Yana Tutan Ana Kapsayıcı -->
 <div class="pub-top-dashboard">
   <div class="pub-search-side">
     {% include bib_search.liquid %}
@@ -27,8 +26,10 @@ nav_order: 2
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
+  function initPubChart() {
     var pubEntries = document.querySelectorAll('.publications ol.bibliography > li, .publications .entry');
+    if (!pubEntries.length) return;
+
     var yearlyData = {};
 
     pubEntries.forEach(function(entry) {
@@ -46,7 +47,6 @@ nav_order: 2
         yearlyData[year].journal++;
         badgeHTML = '<span class="pub-badge pub-badge-journal"><i class="fa-solid fa-file-lines"></i> Journal</span>';
       } else if (text.includes('conference') || text.includes('symposium') || text.includes('proceedings') || text.includes('toplantısı') || text.includes('congress')) {
-        yearlyData[year].conference++;
         badgeHTML = '<span class="pub-badge pub-badge-conference"><i class="fa-solid fa-users"></i> Conference</span>';
       } else {
         yearlyData[year].other++;
@@ -65,9 +65,11 @@ nav_order: 2
     var journalCounts = years.map(function(y) { return yearlyData[y].journal; });
     var confCounts = years.map(function(y) { return yearlyData[y].conference; });
 
-    var ctx = document.getElementById('pubStackedChart').getContext('2d');
-    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    var canvas = document.getElementById('pubStackedChart');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
     
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     var journalColor = isDark ? '#2dd4bf' : '#0f766e';
     var confColor = isDark ? '#818cf8' : '#4338ca';
     var textColor = isDark ? '#94a3b8' : '#64748b';
@@ -82,14 +84,14 @@ nav_order: 2
             data: journalCounts,
             backgroundColor: journalColor,
             borderRadius: 4,
-            maxBarThickness: 28 /* Max genişlik sınırı */
+            maxBarThickness: 24
           },
           {
             label: 'Conference',
             data: confCounts,
             backgroundColor: confColor,
             borderRadius: 4,
-            maxBarThickness: 28
+            maxBarThickness: 24
           }
         ]
       },
@@ -120,12 +122,16 @@ nav_order: 2
               color: textColor,
               font: { size: 10, weight: '600' }
             }
-          },
-          tooltip: {
-            mode: 'index',
-            intersect: false
           }
         }
       }
     });
+  }
+
+  // DOM Yüklendiğinde veya Sayfa Geçişinde Tetikle
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPubChart);
+  } else {
+    initPubChart();
+  }
 </script>
