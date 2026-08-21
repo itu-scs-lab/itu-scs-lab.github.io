@@ -8,6 +8,7 @@ category: Predictive Control & Safety
 
 # Rozetler ve Arama Filtresi İçin Metadata
 organization: TUBITAK
+status: ongoing
 keywords: [Data-Driven Control, Model Predictive Control, Subspace Shaping, Conditioning, Automated Tuning, Reproducibility]
 ---
 
