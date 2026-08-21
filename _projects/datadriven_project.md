@@ -7,7 +7,7 @@ importance: 1
 category: Predictive Control & Safety
 
 # Rozetler ve Arama Filtresi İçin Metadata
-organization: ITU SCS Lab
+organization: TUBITAK
 keywords: [Data-Driven Control, Model Predictive Control, Subspace Shaping, Conditioning, Automated Tuning, Reproducibility]
 ---
 
