@@ -6,38 +6,26 @@ description: Ongoing and completed research projects on safety-critical control,
 nav: true
 nav_order: 3
 display_categories: false
-horizontal: true
+horizontal: false
 ---
 
-<input type="text" id="project-search-input" class="form-control my-3 filter-search-input" placeholder="Type to filter (e.g., ongoing, completed, ITU)..." style="max-width: 340px; border-radius: 6px;">
+<input type="text" id="project-search-input" class="form-control my-3 filter-search-input" placeholder="Type to filter (e.g., ongoing, completed, TUBITAK)..." style="max-width: 340px; border-radius: 6px;">
 
 <div class="projects">
 {% assign sorted_projects = site.projects | sort: "importance" %}
 
-{% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      <div class="col" data-org="{{ project.organization }}" data-status="{{ project.status }}" data-keywords="{{ project.keywords | join: ',' }}">
-        {% include projects_horizontal.liquid %}
-      </div>
-    {% endfor %}
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
+  {% for project in sorted_projects %}
+    <div class="col" data-org="{{ project.organization }}" data-status="{{ project.status }}" data-keywords="{{ project.keywords | join: ',' }}">
+      {% include projects.liquid %}
     </div>
+  {% endfor %}
   </div>
-{% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      <div class="col" data-org="{{ project.organization }}" data-status="{{ project.status }}" data-keywords="{{ project.keywords | join: ',' }}">
-        {% include projects.liquid %}
-      </div>
-    {% endfor %}
-  </div>
-{% endif %}
 </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    var projectCols = document.querySelectorAll('.projects .col, .projects .row > div');
+    var projectCols = document.querySelectorAll('.projects .col, .projects .grid-item');
 
     projectCols.forEach(function(col) {
       var card = col.querySelector('.card') || col;
@@ -47,12 +35,12 @@ horizontal: true
       var statusData = col.getAttribute('data-status');
       var keywordsData = col.getAttribute('data-keywords');
 
-      // Üst Başlık Şeridi (Kurum + Durum Rozeti)
+      // 1. Üst Meta Şeridi (Kurum + Durum Rozeti)
       if (!card.querySelector('.project-header-meta')) {
         var metaContainer = document.createElement('div');
         metaContainer.className = 'project-header-meta';
 
-        // 1. Kurum Rozeti
+        // Kurum Rozeti
         if (orgData && orgData.trim() !== '') {
           var orgBadge = document.createElement('span');
           orgBadge.className = 'project-org-badge';
@@ -60,11 +48,11 @@ horizontal: true
           metaContainer.appendChild(orgBadge);
         }
 
-        // 2. Durum Rozeti (Ongoing / Completed)
+        // Durum Rozeti (Ongoing / Completed)
         if (statusData && statusData.trim() !== '') {
           var statusBadge = document.createElement('span');
           var isCompleted = statusData.trim().toLowerCase() === 'completed';
-          
+
           if (isCompleted) {
             statusBadge.className = 'project-status-badge status-completed';
             statusBadge.innerHTML = '<i class="fa-solid fa-circle-check"></i> Completed';
@@ -80,7 +68,7 @@ horizontal: true
         cardBody.insertBefore(metaContainer, titleElem);
       }
 
-      // 3. Keywords Rozetleri (Kartın En Altına)
+      // 2. Keywords Kapsülleri (Kartın En Altına)
       if (keywordsData && keywordsData.trim() !== '' && !card.querySelector('.project-keywords-container')) {
         var keywords = keywordsData.split(',');
         var container = document.createElement('div');
