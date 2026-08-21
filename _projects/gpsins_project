@@ -2,7 +2,7 @@
 layout: page
 title: Model-Based Loosely Coupled GNSS/INS Integration
 description: Model-based loosely coupled Kalman filter development in MATLAB/Simulink for tactical and MALE UAV navigation and flight control computers.
-img: assets/img/projects/gnss_ins.jpg
+img: assets/img/projects/gnss_ins.png
 importance: 2
 category: Navigation & Estimation
 
