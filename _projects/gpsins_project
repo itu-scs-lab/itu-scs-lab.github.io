@@ -8,6 +8,7 @@ category: Navigation & Estimation
 
 # Kurum Rozeti ve Keywords Kapsülleri
 organization: Turkish Aerospace
+status: ongoing
 keywords: [GNSS/INS, Kalman Filter, Loosely Coupled, Sensor Fusion, DO-178C, Simulink, UAV Navigation]
 ---
 
