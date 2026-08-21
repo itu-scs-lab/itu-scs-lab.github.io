@@ -2,7 +2,7 @@
 layout: page
 title: Subspace Shaping & Conditioning in Data-Driven MPC
 description: Developing numerically stable, constraint-compliant, and reproducible subspace shaping frameworks for data-driven predictive flight control.
-img: assets/img/projects/deepc_conditioning.jpg
+img: assets/img/projects/deepc_conditioning.png
 importance: 1
 category: Predictive Control & Safety
 
