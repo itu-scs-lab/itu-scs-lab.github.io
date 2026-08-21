@@ -129,7 +129,7 @@ schedule:
 
   - week: 14
     date: Week 14
-    topic: TITO Sistemlerin Tasarımı: Dekuplaj ve Doğrudan Kutup Atama
+    topic: TITO Sistemlerin Tasarımı - Dekuplaj ve Doğrudan Kutup Atama
     description: Decoupling networks, multivariable compensator design, and direct pole assignment.
     materials:
       - name: Lecture Notes
