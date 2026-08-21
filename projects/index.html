@@ -6,55 +6,57 @@
     initTheme();
   </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> ITU SCS Lab </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/people/">team </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">projects</h1> <p class="post-description">Ongoing and completed research projects on safety-critical control, predictive frameworks, and autonomous systems.</p> </header> <article> <p><input type="text" id="project-search-input" class="form-control my-3 filter-search-input" placeholder="Type to filter..." style="max-width: 320px; border-radius: 6px;"></p> <div class="projects"> <div class="container"> <div class="row row-cols-1 row-cols-md-2"> <div class="col" data-org="ITU SCS Lab" data-keywords="Data-Driven Control,Model Predictive Control,Subspace Shaping,Conditioning,Automated Tuning,Reproducibility"> <div class="col mb-4"> <a href="/projects/datadriven_project/"> <div class="card h-100 hoverable"> <div class="row no-gutters"> <div class="col-md-6"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/deepc_conditioning-480.webp 480w,/assets/img/projects/deepc_conditioning-800.webp 800w,/assets/img/projects/deepc_conditioning-1400.webp 1400w," type="image/webp" sizes="(min-width: 768px) 156px, 50vw"></source> <img src="/assets/img/projects/deepc_conditioning.jpg" class="card-img" width="100%" height="auto" alt="project thumbnail" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-md-6"> <div class="card-body"> <h3 class="card-title">Subspace Shaping &amp; Conditioning in Data-Driven MPC</h3> <p class="card-text">Developing numerically stable, constraint-compliant, and reproducible subspace shaping frameworks for data-driven predictive flight control.</p> <div class="row ml-1 mr-1 p-0"> </div> </div> </div> </div> </div> </a> </div> </div> <div class="col" data-org="" data-keywords=""> <div class="col mb-4"> <a href="/projects/helicopter_project/"> <div class="card h-100 hoverable"> <div class="row no-gutters"> <div class="col-md-6"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/1-480.webp 480w,/assets/img/1-800.webp 800w,/assets/img/1-1400.webp 1400w," type="image/webp" sizes="(min-width: 768px) 156px, 50vw"></source> <img src="/assets/img/1.jpg" class="card-img" width="100%" height="auto" alt="project thumbnail" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-md-6"> <div class="card-body"> <h3 class="card-title">Unmanned Helicopter Flight Control &amp; Autopilot</h3> <p class="card-text">Flight phase state machine logic, deterministic transition algorithms, and autopilot architectures.</p> <div class="row ml-1 mr-1 p-0"> </div> </div> </div> </div> </div> </a> </div> </div> <div class="col" data-org="" data-keywords=""> <div class="col mb-4"> <a href="/projects/spacecraft_project/"> <div class="card h-100 hoverable"> <div class="row no-gutters"> <div class="col-md-6"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/7-480.webp 480w,/assets/img/7-800.webp 800w,/assets/img/7-1400.webp 1400w," type="image/webp" sizes="(min-width: 768px) 156px, 50vw"></source> <img src="/assets/img/7.jpg" class="card-img" width="100%" height="auto" alt="project thumbnail" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-md-6"> <div class="card-body"> <h3 class="card-title">Spacecraft Trajectory &amp; Attitude Control</h3> <p class="card-text">Robust nonlinear control algorithms for attitude dynamics and orbital maneuvers.</p> <div class="row ml-1 mr-1 p-0"> </div> </div> </div> </div> </div> </a> </div> </div> <div class="col" data-org="" data-keywords=""> <div class="col mb-4"> <a href="/projects/robotic_project/"> <div class="card h-100 hoverable"> <div class="row no-gutters"> <div class="col-md-6"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/12-480.webp 480w,/assets/img/12-800.webp 800w,/assets/img/12-1400.webp 1400w," type="image/webp" sizes="(min-width: 768px) 156px, 50vw"></source> <img src="/assets/img/12.jpg" class="card-img" width="100%" height="auto" alt="project thumbnail" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-md-6"> <div class="card-body"> <h3 class="card-title">Modular Robotics &amp; Vision-Based Tracking</h3> <p class="card-text">Low-cost rapid prototyping framework combining SimpleFOC and computer vision algorithms.</p> <div class="row ml-1 mr-1 p-0"> </div> </div> </div> </div> </div> </a> </div> </div> </div> </div> </div> <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // 1. Kurum ve Keywords Rozetlerini Kartlara Enjekte Etme
-    var projectCols = document.querySelectorAll('.projects .col');
+  var projectCols = document.querySelectorAll('.projects .col, .projects .row > div');
 
-    projectCols.forEach(function(col) {
-      var card = col.querySelector('.card') || col;
-      var cardBody = card.querySelector('.card-body') || card;
+  projectCols.forEach(function(col) {
+    var card = col.querySelector('.card') || col;
+    var cardBody = card.querySelector('.card-body') || card;
 
-      var orgData = col.getAttribute('data-org');
-      var keywordsData = col.getAttribute('data-keywords');
+    var orgData = col.getAttribute('data-org');
+    var keywordsData = col.getAttribute('data-keywords');
 
-      // Kurum / Fon Rozeti (Başlığın Üstüne)
-      if (orgData && orgData.trim() !== '' && !card.querySelector('.project-org-badge')) {
-        var orgBadge = document.createElement('div');
-        orgBadge.className = 'project-org-badge';
-        orgBadge.innerHTML = '<i class="fa-solid fa-building-columns"></i> ' + orgData.trim();
-        cardBody.insertBefore(orgBadge, cardBody.firstChild);
-      }
+    // 1. Kurum Rozeti (Başlığın Üstüne)
+    if (orgData && orgData.trim() !== '' && !card.querySelector('.project-org-badge')) {
+      var orgBadge = document.createElement('div');
+      orgBadge.className = 'project-org-badge';
+      orgBadge.innerHTML = '<i class="fa-solid fa-building-columns"></i> ' + orgData.trim();
+      
+      var titleElem = cardBody.querySelector('.card-title') || cardBody.firstChild;
+      cardBody.insertBefore(orgBadge, titleElem);
+    }
 
-      // Keywords Kapsülleri (Kartın En Altına)
-      if (keywordsData && keywordsData.trim() !== '' && !card.querySelector('.project-keywords-container')) {
-        var keywords = keywordsData.split(',');
-        var container = document.createElement('div');
-        container.className = 'project-keywords-container';
+    // 2. Keywords Rozetleri (Kartın En Altına)
+    if (keywordsData && keywordsData.trim() !== '' && !card.querySelector('.project-keywords-container')) {
+      var keywords = keywordsData.split(',');
+      var container = document.createElement('div');
+      container.className = 'project-keywords-container';
 
-        keywords.forEach(function(kw) {
-          if (kw.trim() !== '') {
-            var pill = document.createElement('span');
-            pill.className = 'project-keyword-pill';
-            pill.textContent = kw.trim();
-            container.appendChild(pill);
-          }
-        });
-
-        cardBody.appendChild(container);
-      }
-    });
-
-    // 2. Arama Filtresi (Keywords ve Kurum İsimleri Dahil Arama Yapar)
-    var searchInput = document.getElementById('project-search-input');
-    if (searchInput) {
-      searchInput.addEventListener('input', function() {
-        var query = this.value.toLowerCase().trim();
-        projectCols.forEach(function(col) {
-          var text = col.textContent.toLowerCase();
-          col.style.display = text.includes(query) ? '' : 'none';
-        });
+      keywords.forEach(function(kw) {
+        var cleanKw = kw.trim();
+        if (cleanKw.length > 0) {
+          var pill = document.createElement('span');
+          pill.className = 'project-keyword-pill';
+          pill.textContent = cleanKw;
+          container.appendChild(pill);
+        }
       });
+
+      cardBody.appendChild(container);
     }
   });
+
+  // Arama Filtresi
+  var searchInput = document.getElementById('project-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      var query = this.value.toLowerCase().trim();
+      projectCols.forEach(function(col) {
+        var text = col.textContent.toLowerCase();
+        col.style.display = text.includes(query) ? '' : 'none';
+      });
+    });
+  }
+});
 </script> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 ITU SCS Lab. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
