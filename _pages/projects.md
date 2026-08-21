@@ -25,14 +25,18 @@ horizontal: true
   <div class="container">
     <div class="row row-cols-1 row-cols-md-2">
     {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
+      <div class="col" data-org="{{ project.organization }}" data-keywords="{{ project.keywords | join: ',' }}">
+        {% include projects_horizontal.liquid %}
+      </div>
     {% endfor %}
     </div>
   </div>
   {% else %}
   <div class="row row-cols-1 row-cols-md-3">
     {% for project in sorted_projects %}
-      {% include projects.liquid %}
+      <div class="col" data-org="{{ project.organization }}" data-keywords="{{ project.keywords | join: ',' }}">
+        {% include projects.liquid %}
+      </div>
     {% endfor %}
   </div>
   {% endif %}
@@ -41,24 +45,25 @@ horizontal: true
 {% else %}
 
 <!-- Display projects without categories -->
-
 {% assign sorted_projects = site.projects | sort: "importance" %}
 
   <!-- Generate cards for each project -->
-
 {% if page.horizontal %}
-
   <div class="container">
     <div class="row row-cols-1 row-cols-md-2">
     {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
+      <div class="col" data-org="{{ project.organization }}" data-keywords="{{ project.keywords | join: ',' }}">
+        {% include projects_horizontal.liquid %}
+      </div>
     {% endfor %}
     </div>
   </div>
   {% else %}
   <div class="row row-cols-1 row-cols-md-3">
     {% for project in sorted_projects %}
-      {% include projects.liquid %}
+      <div class="col" data-org="{{ project.organization }}" data-keywords="{{ project.keywords | join: ',' }}">
+        {% include projects.liquid %}
+      </div>
     {% endfor %}
   </div>
   {% endif %}
@@ -67,19 +72,51 @@ horizontal: true
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    // 1. Kurum ve Keywords Rozetlerini Kartlara Enjekte Etme
+    var projectCols = document.querySelectorAll('.projects .col');
+
+    projectCols.forEach(function(col) {
+      var card = col.querySelector('.card') || col;
+      var cardBody = card.querySelector('.card-body') || card;
+
+      var orgData = col.getAttribute('data-org');
+      var keywordsData = col.getAttribute('data-keywords');
+
+      // Kurum / Fon Rozeti (Başlığın Üstüne)
+      if (orgData && orgData.trim() !== '' && !card.querySelector('.project-org-badge')) {
+        var orgBadge = document.createElement('div');
+        orgBadge.className = 'project-org-badge';
+        orgBadge.innerHTML = '<i class="fa-solid fa-building-columns"></i> ' + orgData.trim();
+        cardBody.insertBefore(orgBadge, cardBody.firstChild);
+      }
+
+      // Keywords Kapsülleri (Kartın En Altına)
+      if (keywordsData && keywordsData.trim() !== '' && !card.querySelector('.project-keywords-container')) {
+        var keywords = keywordsData.split(',');
+        var container = document.createElement('div');
+        container.className = 'project-keywords-container';
+
+        keywords.forEach(function(kw) {
+          if (kw.trim() !== '') {
+            var pill = document.createElement('span');
+            pill.className = 'project-keyword-pill';
+            pill.textContent = kw.trim();
+            container.appendChild(pill);
+          }
+        });
+
+        cardBody.appendChild(container);
+      }
+    });
+
+    // 2. Arama Filtresi (Keywords ve Kurum İsimleri Dahil Arama Yapar)
     var searchInput = document.getElementById('project-search-input');
     if (searchInput) {
       searchInput.addEventListener('input', function() {
         var query = this.value.toLowerCase().trim();
-        var projectCols = document.querySelectorAll('.projects .row > div, .projects .card');
-        
         projectCols.forEach(function(col) {
           var text = col.textContent.toLowerCase();
-          if (text.includes(query)) {
-            col.style.display = '';
-          } else {
-            col.style.display = 'none';
-          }
+          col.style.display = text.includes(query) ? '' : 'none';
         });
       });
     }
