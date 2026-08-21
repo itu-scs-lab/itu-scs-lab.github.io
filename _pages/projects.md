@@ -72,53 +72,55 @@ horizontal: true
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // 1. Kurum ve Keywords Rozetlerini Kartlara Enjekte Etme
-    var projectCols = document.querySelectorAll('.projects .col');
+  var projectCols = document.querySelectorAll('.projects .col, .projects .row > div');
 
-    projectCols.forEach(function(col) {
-      var card = col.querySelector('.card') || col;
-      var cardBody = card.querySelector('.card-body') || card;
+  projectCols.forEach(function(col) {
+    var card = col.querySelector('.card') || col;
+    var cardBody = card.querySelector('.card-body') || card;
 
-      var orgData = col.getAttribute('data-org');
-      var keywordsData = col.getAttribute('data-keywords');
+    var orgData = col.getAttribute('data-org');
+    var keywordsData = col.getAttribute('data-keywords');
 
-      // Kurum / Fon Rozeti (Başlığın Üstüne)
-      if (orgData && orgData.trim() !== '' && !card.querySelector('.project-org-badge')) {
-        var orgBadge = document.createElement('div');
-        orgBadge.className = 'project-org-badge';
-        orgBadge.innerHTML = '<i class="fa-solid fa-building-columns"></i> ' + orgData.trim();
-        cardBody.insertBefore(orgBadge, cardBody.firstChild);
-      }
+    // 1. Kurum Rozeti (Başlığın Üstüne)
+    if (orgData && orgData.trim() !== '' && !card.querySelector('.project-org-badge')) {
+      var orgBadge = document.createElement('div');
+      orgBadge.className = 'project-org-badge';
+      orgBadge.innerHTML = '<i class="fa-solid fa-building-columns"></i> ' + orgData.trim();
+      
+      var titleElem = cardBody.querySelector('.card-title') || cardBody.firstChild;
+      cardBody.insertBefore(orgBadge, titleElem);
+    }
 
-      // Keywords Kapsülleri (Kartın En Altına)
-      if (keywordsData && keywordsData.trim() !== '' && !card.querySelector('.project-keywords-container')) {
-        var keywords = keywordsData.split(',');
-        var container = document.createElement('div');
-        container.className = 'project-keywords-container';
+    // 2. Keywords Rozetleri (Kartın En Altına)
+    if (keywordsData && keywordsData.trim() !== '' && !card.querySelector('.project-keywords-container')) {
+      var keywords = keywordsData.split(',');
+      var container = document.createElement('div');
+      container.className = 'project-keywords-container';
 
-        keywords.forEach(function(kw) {
-          if (kw.trim() !== '') {
-            var pill = document.createElement('span');
-            pill.className = 'project-keyword-pill';
-            pill.textContent = kw.trim();
-            container.appendChild(pill);
-          }
-        });
-
-        cardBody.appendChild(container);
-      }
-    });
-
-    // 2. Arama Filtresi (Keywords ve Kurum İsimleri Dahil Arama Yapar)
-    var searchInput = document.getElementById('project-search-input');
-    if (searchInput) {
-      searchInput.addEventListener('input', function() {
-        var query = this.value.toLowerCase().trim();
-        projectCols.forEach(function(col) {
-          var text = col.textContent.toLowerCase();
-          col.style.display = text.includes(query) ? '' : 'none';
-        });
+      keywords.forEach(function(kw) {
+        var cleanKw = kw.trim();
+        if (cleanKw.length > 0) {
+          var pill = document.createElement('span');
+          pill.className = 'project-keyword-pill';
+          pill.textContent = cleanKw;
+          container.appendChild(pill);
+        }
       });
+
+      cardBody.appendChild(container);
     }
   });
+
+  // Arama Filtresi
+  var searchInput = document.getElementById('project-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      var query = this.value.toLowerCase().trim();
+      projectCols.forEach(function(col) {
+        var text = col.textContent.toLowerCase();
+        col.style.display = text.includes(query) ? '' : 'none';
+      });
+    });
+  }
+});
 </script>
