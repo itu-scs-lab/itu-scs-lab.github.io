@@ -411,30 +411,34 @@ html[data-theme='dark'] {
     height: 140px !important; /* Mobilde dikey biraz daha rahat alan */
   }
 }
-
 /* ==========================================================================
    PROJECT CARDS: ORGANIZATION & KEYWORD BADGES
    ========================================================================== */
 
-/* Proje Kartı İçi Düzeni */
-.project-card, .card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+.projects .card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
 }
 
-/* Kurum / Proje Adı Rozeti (Sağ/Sol Üst) */
+.projects .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+}
+
+/* Kurum / Proje Adı Rozeti */
 .project-org-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  padding: 0.2rem 0.55rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 4px;
-  background-color: rgba(14, 165, 233, 0.12); /* Canlı Açık Mavi */
+  background-color: rgba(14, 165, 233, 0.12);
   color: #0284c7;
   border: 1px solid rgba(14, 165, 233, 0.3);
   margin-bottom: 0.6rem;
@@ -445,32 +449,27 @@ html[data-theme='dark'] {
   }
 }
 
-/* Kart Altındaki Keywords Kapsayıcısı */
+/* Keywords Kapsayıcısı */
 .project-keywords-container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin-top: auto; /* Kartın en altına yaslar */
+  margin-top: auto; /* Kartın en altına yapıştırır */
   padding-top: 0.8rem;
 }
 
-/* Anahtar Kelime Kapsülü (Keyword Pill) */
+/* Keyword Kapsülü */
 .project-keyword-pill {
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 600;
   padding: 0.15rem 0.5rem;
-  border-radius: 12px;
+  border-radius: 10px;
   background-color: rgba(100, 116, 139, 0.1);
   color: #475569;
   border: 1px solid rgba(100, 116, 139, 0.2);
-  transition: all 0.2s ease;
-
-  &:hover {
-    background-color: rgba(100, 116, 139, 0.2);
-  }
 }
 
-/* Dark Mode Renk Ayarları */
+/* Dark Mod Uyumu */
 html[data-theme='dark'] {
   .project-org-badge {
     background-color: rgba(56, 189, 248, 0.15);
@@ -482,9 +481,5 @@ html[data-theme='dark'] {
     background-color: rgba(148, 163, 184, 0.12);
     color: #cbd5e1;
     border-color: rgba(148, 163, 184, 0.25);
-
-    &:hover {
-      background-color: rgba(148, 163, 184, 0.22);
-    }
   }
 }
