@@ -2,19 +2,17 @@
 layout: page
 title: Model-Based Loosely Coupled GNSS/INS Integration
 description: Model-based loosely coupled Kalman filter development in MATLAB/Simulink for tactical and MALE UAV navigation and flight control computers.
-img: assets/img/projects/gps_ins.png
+img: assets/img/projects/gps_ins.jpg
 importance: 2
 category: Navigation & Estimation
 
-# Kurum Rozeti ve Keywords Kapsülleri
-organization: Turkish Aerospace
-status: ongoing
+organization: TUSAŞ / ITU SCS Lab
 keywords: [GNSS/INS, Kalman Filter, Loosely Coupled, Sensor Fusion, DO-178C, Simulink, UAV Navigation]
 ---
 
 ### Project Context & Motivation
 
-Current tactical and **MALE (Medium Altitude Long Endurance)** class UAVs rely heavily on proprietary Embedded GPS/INS (EGI) hardware. Switching vendors across different tiers leads to disparate navigation behaviors, prolonged validation cycles, and slow root-cause resolution due to closed-source firmware dependencies. 
+Current tactical and **MALE (Medium Altitude Long Endurance)** class UAVs rely heavily on proprietary Embedded GPS/INS (EGI) hardware. Switching vendors across different tiers leads to disparate navigation behaviors, prolonged validation cycles, and slow root-cause resolution due to closed-source firmware dependencies.
 
 This project develops an in-house, DO-178C compliant, **model-based loosely coupled GNSS/INS Kalman filtering framework** in MATLAB/Simulink. By converting the verified models directly into C code via Simulink code generation tools, the navigation algorithm runs directly on the Flight Control Computer (FCC), seamlessly pairing with varied grades of IMU and GNSS receivers.
 
