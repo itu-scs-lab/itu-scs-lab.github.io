@@ -2,7 +2,7 @@
 layout: page
 title: Real-Time Algebraic MPC for Terrain Following in High-Subsonic UAVs
 description: Real-time altitude reference generation and terrain following via Algebraic Model Predictive Control, online Digital Elevation Models (DEM), and HIL validation.
-img: assets/img/projects/terrain_following_mpc.jpg
+img: assets/img/projects/terrain_following_mpc.png
 importance: 3
 category: Predictive Control & Safety
 
