@@ -1,18 +1,41 @@
 ---
 layout: page
-title: Unmanned Helicopter Flight Control & Autopilot
-description: Flight phase state machine logic, deterministic transition algorithms, and autopilot architectures.
-img: assets/img/1.jpg
-importance: 1
-category: work
-related_publications: false
+title: Model-Based Loosely Coupled GNSS/INS Integration
+description: Model-based loosely coupled Kalman filter development in MATLAB/Simulink for tactical and MALE UAV navigation and flight control computers.
+img: assets/img/projects/gnss_ins.jpg
+importance: 2
+category: Navigation & Estimation
+
+# Kurum Rozeti ve Keywords Kapsülleri
+organization: TUSAŞ / ITU SCS Lab
+keywords: [GNSS/INS, Kalman Filter, Loosely Coupled, Sensor Fusion, DO-178C, Simulink, UAV Navigation]
 ---
 
-## Project Overview
+### Project Context & Motivation
 
-This project focuses on designing, testing, and analyzing advanced flight control laws and autopilot architectures tailored for unmanned rotorcraft systems.
+Current tactical and **MALE (Medium Altitude Long Endurance)** class UAVs rely heavily on proprietary Embedded GPS/INS (EGI) hardware. Switching vendors across different tiers leads to disparate navigation behaviors, prolonged validation cycles, and slow root-cause resolution due to closed-source firmware dependencies. 
 
-### Key Contributions
-* **Flight Phase State Machine:** Designed deterministic algorithms utilizing multi-sensor voting mechanisms for reliable ground and airborne transitions.
-* **Control Optimization:** Integrated frequency-domain system identification and handling qualities optimization using tools like **CIFER** and **CONDUIT**.
-* **Flight Validation:** Applied Incremental Nonlinear Dynamic Inversion (**INDI**) to overcome rotorcraft cross-coupling effects and aerodynamic uncertainties.
+This project develops an in-house, DO-178C compliant, **model-based loosely coupled GNSS/INS Kalman filtering framework** in MATLAB/Simulink. By converting the verified models directly into C code via Simulink code generation tools, the navigation algorithm runs directly on the Flight Control Computer (FCC), seamlessly pairing with varied grades of IMU and GNSS receivers.
+
+---
+
+### Core Objectives & Capabilities
+
+* **Sensor Agnostic Architecture:** Fuses varied GNSS receivers and IMU grades (initial baseline: *u-blox ZED-F9P* & *GC Lab GCIMU02*) within a single configurable framework.
+* **DO-178C Compliance:** Model-based software development life cycle targeting certifiable embedded flight control code.
+* **Multi-Modal Alignment:**
+  * **Dual-GNSS Coarse Alignment:** Heading estimation under stationary conditions ($<5^\circ$).
+  * **Kinematic Alignment:** Single GNSS coarse alignment ($<1^\circ$ at ground speed $>8$ m/s).
+  * **Magnetometer Fallback:** Heading initialization without kinematics or dual-antenna setup ($<10^\circ$).
+  * **Fine Alignment:** Dynamic transition to full navigation mode upon sufficient platform maneuvers.
+* **GNSS-Denied & Degraded Navigation:** Integration of barometric altimeter, True Airspeed (TAS), Angle of Sideslip (AOS), and magnetometer data for dead reckoning.
+* **Geometric & Signal Integrity:** Lever-arm compensation between GNSS antenna and IMU phase center, boresight calibration, and anti-spoofing integrity monitoring.
+
+---
+
+### Navigation Output States
+
+* **Attitude & Rates:** Roll, pitch, yaw angles and body angular rates ($p, q, r$).
+* **Kinematics:** Body-axis accelerations ($a_x, a_y, a_z$) and NED frame velocities ($v_N, v_E, v_D$).
+* **Positioning:** WGS-84 coordinates (Latitude, Longitude, Height) and Mean Sea Level (MSL) altitude.
+* **Health & Status:** Figure of Merit (FOM), position standard deviations, and system operating modes.
