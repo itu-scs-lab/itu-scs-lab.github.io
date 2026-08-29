@@ -16,9 +16,13 @@ selected_papers: true
 social: false 
 ---
 
-Welcome to the **Safety-Critical Systems Laboratory (SCS Lab)** at Istanbul Technical University. 
+Welcome to the **Safety-Critical Systems Laboratory (SCS Lab)** at Istanbul Technical University.
 
-SCS Lab is an advanced research group operating at the interdisciplinary intersection of Electrical & Electronics Engineering, Control Engineering, and Software Systems. Our laboratory conducts advanced studies on control theory and applications, risk management, and software quality assurance to address the rigorous demands of safety-critical environments.
+The **SCS Lab** is an advanced research, development, and training center dedicated to the theory, implementation, and verification of control engineering across all safety-critical applications. Operating at the intersection of Modern Control Theory, Dynamical Systems, Electrical & Electronics Engineering, and High-Integrity Software Architectures, our primary mission is to engineer deterministic, certifiable, and fault-tolerant solutions where system failure or performance degradation is not an option.
+
+Our research spectrum spans the full continuum of control systems engineering—including classical control, state-space methods, optimal and adaptive control, robust control, nonlinear dynamics, modern data-driven methodologies, predictive control frameworks, and state estimation/sensor fusion architectures. We complement theoretical control synthesis with system identification, active fault detection and isolation (FDI), risk/reliability management, and certifiable model-based development pipelines complying with international safety standards (such as DO-178C, ISO 26262, and IEC 61508). These capabilities serve a broad domain of critical engineering fields, including autonomous aerial/ground/marine vehicles, robotics and mechatronics, rail transit, automotive systems, defense platforms, energy networks, and process automation.
+
+Beyond academic research and high-impact R&D projects funded nationally and internationally, SCS Lab actively drives knowledge transfer to academia and industry. The laboratory develops and delivers comprehensive curricula across undergraduate, M.Sc., and Ph.D. levels, while also designing customized, high-level corporate training programs and technical workshops tailored to the specialized needs of industry partners and technology companies.
 
 <!-- 1. CORE RESEARCH FOCUS -->
 <h2 class="about-section-heading">Core Research Focus</h2>
