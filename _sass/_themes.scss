@@ -855,13 +855,39 @@ html[data-theme='dark'] {
 }
 
 /* ==========================================================================
-   TEACHING / COURSES HUB MODERN STYLES
+   TEACHING / COURSES HUB MODERN STYLES (COMPLETE)
    ========================================================================== */
 
 .courses-hub-container {
   width: 100%;
 }
 
+/* 1. Üst Filtre Butonları */
+.course-filter-group {
+  display: flex !important;
+  gap: 0.5rem !important;
+  flex-wrap: wrap !important;
+
+  .course-filter-btn {
+    border: 1px solid var(--global-divider-color, #cbd5e1) !important;
+    background: transparent !important;
+    color: var(--global-text-color, #334155) !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    padding: 0.38rem 1rem !important;
+    border-radius: 20px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+
+    &:hover, &.active {
+      background-color: #0284c7 !important;
+      color: #ffffff !important;
+      border-color: #0284c7 !important;
+    }
+  }
+}
+
+/* 2. Kart Ana Gövdesi */
 .custom-course-card {
   display: flex !important;
   flex-direction: column !important;
@@ -879,7 +905,7 @@ html[data-theme='dark'] {
     border-color: rgba(2, 132, 199, 0.4) !important;
   }
 
-  /* Üst Rozetler */
+  /* Kart Üst Rozet Satırı */
   .course-card-top {
     display: flex !important;
     justify-content: space-between !important;
@@ -898,6 +924,13 @@ html[data-theme='dark'] {
       border: 1px solid rgba(2, 132, 199, 0.3) !important;
     }
 
+    .course-meta-badges {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      flex-wrap: wrap !important;
+    }
+
     .course-term-badge {
       font-size: 0.72rem !important;
       font-weight: 600 !important;
@@ -905,6 +938,34 @@ html[data-theme='dark'] {
       background-color: rgba(100, 116, 139, 0.08) !important;
       padding: 0.22rem 0.55rem !important;
       border-radius: 6px !important;
+    }
+  }
+
+  /* Seviye Rozetleri (Undergraduate / Graduate / Special Course) */
+  .course-level-badge {
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    padding: 0.22rem 0.55rem !important;
+    border-radius: 6px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.03em !important;
+
+    &.level-undergraduate {
+      background-color: rgba(16, 185, 129, 0.12) !important;
+      color: #059669 !important;
+      border: 1px solid rgba(16, 185, 129, 0.3) !important;
+    }
+
+    &.level-graduate {
+      background-color: rgba(139, 92, 246, 0.12) !important;
+      color: #7c3aed !important;
+      border: 1px solid rgba(139, 92, 246, 0.3) !important;
+    }
+
+    &.level-special-course {
+      background-color: rgba(245, 158, 11, 0.12) !important;
+      color: #d97706 !important;
+      border: 1px solid rgba(245, 158, 11, 0.3) !important;
     }
   }
 
@@ -946,8 +1007,25 @@ html[data-theme='dark'] {
     font-size: 0.84rem !important;
     color: var(--global-text-color-light, #475569) !important;
     line-height: 1.55 !important;
-    margin-bottom: 1.3rem !important;
+    margin-bottom: 1rem !important;
     flex-grow: 1 !important;
+  }
+
+  /* Ek Bilgi (Kredi / ECTS Rozetleri) */
+  .course-extra-info {
+    display: flex !important;
+    gap: 0.4rem !important;
+    margin-bottom: 1.1rem !important;
+
+    .extra-pill {
+      font-size: 0.72rem !important;
+      font-weight: 600 !important;
+      color: var(--global-text-color-light, #64748b) !important;
+      background-color: rgba(100, 116, 139, 0.08) !important;
+      border: 1px solid var(--global-divider-color, rgba(0,0,0,0.06)) !important;
+      padding: 0.2rem 0.55rem !important;
+      border-radius: 6px !important;
+    }
   }
 
   /* Footer Buton */
@@ -979,8 +1057,19 @@ html[data-theme='dark'] {
   }
 }
 
-/* Dark Mode Uyumu */
+/* 3. Dark Mode Uyumu */
 html[data-theme='dark'] {
+  .course-filter-group .course-filter-btn {
+    border-color: #334155 !important;
+    color: #cbd5e1 !important;
+
+    &:hover, &.active {
+      background-color: #38bdf8 !important;
+      color: #0f172a !important;
+      border-color: #38bdf8 !important;
+    }
+  }
+
   .custom-course-card {
     background-color: #1e293b !important;
     border-color: #334155 !important;
@@ -1004,8 +1093,28 @@ html[data-theme='dark'] {
     border-color: rgba(56, 189, 248, 0.3) !important;
   }
 
-  .custom-course-card .course-card-top .course-term-badge {
+  .custom-course-card .course-card-top .course-term-badge,
+  .course-extra-info .extra-pill {
     background-color: #0f172a !important;
+    border-color: #334155 !important;
     color: #94a3b8 !important;
+  }
+
+  .course-level-badge.level-undergraduate {
+    background-color: rgba(52, 211, 153, 0.15) !important;
+    color: #34d399 !important;
+    border-color: rgba(52, 211, 153, 0.3) !important;
+  }
+
+  .course-level-badge.level-graduate {
+    background-color: rgba(167, 139, 250, 0.15) !important;
+    color: #a78bfa !important;
+    border-color: rgba(167, 139, 250, 0.3) !important;
+  }
+
+  .course-level-badge.level-special-course {
+    background-color: rgba(251, 191, 36, 0.15) !important;
+    color: #fbbf24 !important;
+    border-color: rgba(251, 191, 36, 0.3) !important;
   }
 }
