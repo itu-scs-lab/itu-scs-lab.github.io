@@ -33,13 +33,13 @@ nav_order: 4
 </div>
 
 <!-- 2. SEARCH & DYNAMIC FILTER BAR -->
-<div class="repo-controls-row">
-  <div class="repo-search-box">
-    <input type="text" id="repo-search-input" placeholder="Search toolboxes (e.g. MPC, Simulink, Kalman, C++)...">
+<div class="repo-toolbar my-4">
+  <div class="repo-search-area">
+    <input type="text" id="repo-search-input" class="repo-search-field" placeholder="Search toolboxes (e.g. Simulink, C++)...">
   </div>
   
-  <div class="repo-filter-controls">
-    <button id="filter-all-btn" class="filter-all-btn active">All</button>
+  <div class="repo-filter-area">
+    <button id="filter-all-btn" class="filter-all-btn active" type="button">All</button>
     <div class="select-wrapper">
       <select id="repo-tag-select" class="repo-dropdown-select" aria-label="Filter by tag">
         <option value="all">Filter by Tag (All)</option>
