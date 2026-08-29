@@ -1333,3 +1333,210 @@ html[data-theme='dark'] {
     }
   }
 }
+
+/* ==========================================================================
+   ABOUT / HOME PAGE MODERN STYLING
+   ========================================================================== */
+
+/* 1. Hero Bölümü */
+.about-hero-section {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
+  }
+}
+
+.about-hero-text {
+  flex: 1 1 auto !important;
+
+  .lab-main-title {
+    font-size: 2.4rem !important;
+    font-weight: 800 !important;
+    color: var(--global-text-color) !important;
+    line-height: 1.15 !important;
+    margin-bottom: 0.4rem !important;
+  }
+
+  .lab-subtitle {
+    font-size: 1.05rem !important;
+    color: var(--global-theme-color, #008080) !important;
+    font-weight: 600 !important;
+    margin-bottom: 1.2rem !important;
+  }
+
+  .lab-lead {
+    font-size: 0.95rem !important;
+    color: var(--global-text-color) !important;
+    line-height: 1.65 !important;
+    opacity: 0.9 !important;
+  }
+}
+
+.about-hero-logo {
+  flex: 0 0 210px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  img {
+    width: 200px !important;
+    height: 200px !important;
+    object-fit: contain !important;
+    border-radius: 50% !important;
+    padding: 0.5rem !important;
+    background-color: var(--global-card-bg-color, #ffffff) !important;
+    border: 1px solid var(--global-divider-color, rgba(0,0,0,0.1)) !important;
+    box-shadow: 0 8px 24px rgba(0, 33, 71, 0.06) !important;
+    transition: transform 0.3s ease !important;
+
+    &:hover {
+      transform: scale(1.03) !important;
+    }
+  }
+}
+
+/* 2. Research Focus Kartları (3'lü Grid) */
+.about-section-heading {
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  color: var(--global-text-color) !important;
+  margin: 2.5rem 0 1.2rem 0 !important;
+}
+
+.research-focus-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  gap: 1.25rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.focus-card {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 1.4rem !important;
+  background-color: var(--global-card-bg-color, #ffffff) !important;
+  border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.1)) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+
+  &:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06) !important;
+    border-color: var(--global-theme-color, #008080) !important;
+  }
+
+  .focus-icon-box {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 8px !important;
+    background-color: rgba(0, 128, 128, 0.1) !important;
+    color: var(--global-theme-color, #008080) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.15rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .focus-title {
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    color: var(--global-text-color) !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .focus-desc {
+    font-size: 0.82rem !important;
+    color: var(--global-text-color-light, #64748b) !important;
+    line-height: 1.55 !important;
+    margin: 0 !important;
+  }
+}
+
+/* 3. Hedef Sektör Rozetleri (Application Domains) */
+.domains-container {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  flex-wrap: wrap !important;
+  padding: 1rem 1.25rem !important;
+  background-color: rgba(0, 128, 128, 0.04) !important;
+  border: 1px dashed var(--global-divider-color, rgba(0, 128, 128, 0.25)) !important;
+  border-radius: 10px !important;
+  margin-bottom: 2.5rem !important;
+
+  .domains-label {
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: var(--global-theme-color, #008080) !important;
+    margin-right: 0.3rem !important;
+  }
+
+  .domain-pill {
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    padding: 0.25rem 0.65rem !important;
+    border-radius: 20px !important;
+    background-color: var(--global-card-bg-color, #ffffff) !important;
+    border: 1px solid var(--global-divider-color, rgba(0,0,0,0.1)) !important;
+    color: var(--global-text-color) !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02) !important;
+  }
+}
+
+/* 4. Seçili Yayınlar Alt Butonu */
+.view-all-pubs-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+  margin-top: 1rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  color: var(--global-theme-color, #008080) !important;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, color 0.2s ease !important;
+
+  &:hover {
+    transform: translateX(4px) !important;
+    color: var(--global-hover-color, #002147) !important;
+  }
+}
+
+/* Dark Mode Uyumu */
+html[data-theme='dark'] {
+  .focus-card {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+  }
+
+  .focus-icon-box {
+    background-color: rgba(45, 212, 191, 0.15) !important;
+    color: #2dd4bf !important;
+  }
+
+  .domains-container {
+    background-color: rgba(15, 23, 42, 0.6) !important;
+    border-color: #334155 !important;
+
+    .domain-pill {
+      background-color: #1e293b !important;
+      border-color: #334155 !important;
+      color: #e2e8f0 !important;
+    }
+  }
+
+  .about-hero-logo img {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+  }
+}
