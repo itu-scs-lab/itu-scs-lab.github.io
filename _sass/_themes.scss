@@ -614,3 +614,222 @@ html[data-theme='dark'] {
     border-color: rgba(148, 163, 184, 0.3) !important;
   }
 }
+
+/* ==========================================================================
+   REPOSITORIES / CODE HUB STYLES
+   ========================================================================== */
+
+/* 1. Üst Metrik Kartları */
+.repo-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.repo-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--global-card-bg-color, #ffffff);
+  border: 1px solid var(--global-divider-color, #e2e8f0);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  .stat-icon {
+    font-size: 1.6rem;
+    color: #0284c7;
+  }
+
+  .stat-value {
+    display: block;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--global-text-color);
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+/* 2. Filtreleme Butonları */
+.repo-filter-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+
+  .filter-btn {
+    border: 1px solid var(--global-divider-color, #cbd5e1);
+    background: transparent;
+    color: var(--global-text-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover, &.active {
+      background-color: #0284c7;
+      color: #ffffff;
+      border-color: #0284c7;
+    }
+  }
+}
+
+/* 3. Özel Repo Kartı */
+.custom-repo-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.4rem;
+  background-color: var(--global-card-bg-color, #ffffff);
+  border: 1px solid var(--global-divider-color, #e2e8f0);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  transition: all 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+    border-color: rgba(14, 165, 233, 0.4);
+  }
+
+  .repo-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+
+    .repo-type-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background-color: rgba(14, 165, 233, 0.12);
+      color: #0284c7;
+      border: 1px solid rgba(14, 165, 233, 0.3);
+    }
+
+    .repo-gh-link {
+      font-size: 1.25rem;
+      color: var(--global-text-color-light);
+      transition: color 0.2s;
+
+      &:hover {
+        color: #0284c7;
+      }
+    }
+  }
+
+  .repo-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+
+    a {
+      color: #0284c7;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .repo-description {
+    font-size: 0.82rem;
+    color: var(--global-text-color);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+  }
+
+  /* Klonlama Snippet'ı */
+  .repo-install-snippet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.04);
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.72rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--global-divider-color);
+
+    code {
+      background: transparent;
+      padding: 0;
+      color: var(--global-text-color);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .copy-btn {
+      background: transparent;
+      border: none;
+      color: var(--global-text-color-light);
+      cursor: pointer;
+      padding: 0 0.2rem;
+      &:hover {
+        color: #0284c7;
+      }
+    }
+  }
+
+  /* Teknoloji Rozetleri */
+  .repo-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+
+    .tech-pill {
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 10px;
+      background-color: rgba(100, 116, 139, 0.1);
+      color: var(--global-text-color);
+      border: 1px solid rgba(100, 116, 139, 0.2);
+
+      i {
+        font-size: 0.55rem;
+        margin-right: 0.2rem;
+      }
+    }
+  }
+}
+
+/* Dark Mode */
+html[data-theme='dark'] {
+  .repo-stat-card, .custom-repo-card {
+    background-color: #1e293b;
+    border-color: #334155;
+  }
+
+  .repo-install-snippet {
+    background-color: #0f172a;
+    border-color: #334155;
+  }
+
+  .repo-title a {
+    color: #38bdf8;
+  }
+
+  .repo-card-header .repo-type-badge {
+    background-color: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border-color: rgba(56, 189, 248, 0.3);
+  }
+}
