@@ -1335,74 +1335,20 @@ html[data-theme='dark'] {
 }
 
 /* ==========================================================================
-   ABOUT / HOME PAGE MODERN STYLING
+   ABOUT PAGE (LAYOUT: ABOUT) ENHANCEMENTS
    ========================================================================== */
 
-/* 1. Hero Bölümü */
-.about-hero-section {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 2.5rem !important;
-  margin-bottom: 2.5rem !important;
-
-  @media (max-width: 768px) {
-    flex-direction: column-reverse !important;
-    text-align: center !important;
-    gap: 1.5rem !important;
-  }
-}
-
-.about-hero-text {
-  flex: 1 1 auto !important;
-
-  .lab-main-title {
-    font-size: 2.4rem !important;
-    font-weight: 800 !important;
-    color: var(--global-text-color) !important;
-    line-height: 1.15 !important;
-    margin-bottom: 0.4rem !important;
-  }
-
-  .lab-subtitle {
-    font-size: 1.05rem !important;
-    color: var(--global-theme-color, #008080) !important;
-    font-weight: 600 !important;
-    margin-bottom: 1.2rem !important;
-  }
-
-  .lab-lead {
-    font-size: 0.95rem !important;
-    color: var(--global-text-color) !important;
-    line-height: 1.65 !important;
-    opacity: 0.9 !important;
-  }
-}
-
-.about-hero-logo {
-  flex: 0 0 210px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-
+/* Profil Fotoğrafı / Logo Çerçevesi */
+.profile {
   img {
-    width: 200px !important;
-    height: 200px !important;
-    object-fit: contain !important;
-    border-radius: 50% !important;
-    padding: 0.5rem !important;
+    border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.1)) !important;
+    box-shadow: 0 6px 18px rgba(0, 33, 71, 0.06) !important;
+    padding: 0.35rem !important;
     background-color: var(--global-card-bg-color, #ffffff) !important;
-    border: 1px solid var(--global-divider-color, rgba(0,0,0,0.1)) !important;
-    box-shadow: 0 8px 24px rgba(0, 33, 71, 0.06) !important;
-    transition: transform 0.3s ease !important;
-
-    &:hover {
-      transform: scale(1.03) !important;
-    }
   }
 }
 
-/* 2. Research Focus Kartları (3'lü Grid) */
+/* Bölüm Başlığı */
 .about-section-heading {
   font-size: 1.5rem !important;
   font-weight: 800 !important;
@@ -1410,9 +1356,10 @@ html[data-theme='dark'] {
   margin: 2.5rem 0 1.2rem 0 !important;
 }
 
+/* 3'lü Odak Kartları Gridi */
 .research-focus-grid {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
   gap: 1.25rem !important;
   margin-bottom: 2rem !important;
 }
@@ -1461,7 +1408,7 @@ html[data-theme='dark'] {
   }
 }
 
-/* 3. Hedef Sektör Rozetleri (Application Domains) */
+/* Hedef Sektör Rozetleri (Application Domains) */
 .domains-container {
   display: flex !important;
   align-items: center !important;
@@ -1488,32 +1435,19 @@ html[data-theme='dark'] {
     padding: 0.25rem 0.65rem !important;
     border-radius: 20px !important;
     background-color: var(--global-card-bg-color, #ffffff) !important;
-    border: 1px solid var(--global-divider-color, rgba(0,0,0,0.1)) !important;
+    border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.1)) !important;
     color: var(--global-text-color) !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02) !important;
-  }
-}
-
-/* 4. Seçili Yayınlar Alt Butonu */
-.view-all-pubs-btn {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 0.4rem !important;
-  margin-top: 1rem !important;
-  font-size: 0.85rem !important;
-  font-weight: 700 !important;
-  color: var(--global-theme-color, #008080) !important;
-  text-decoration: none !important;
-  transition: transform 0.2s ease, color 0.2s ease !important;
-
-  &:hover {
-    transform: translateX(4px) !important;
-    color: var(--global-hover-color, #002147) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
   }
 }
 
 /* Dark Mode Uyumu */
 html[data-theme='dark'] {
+  .profile img {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+  }
+
   .focus-card {
     background-color: #1e293b !important;
     border-color: #334155 !important;
@@ -1533,10 +1467,5 @@ html[data-theme='dark'] {
       border-color: #334155 !important;
       color: #e2e8f0 !important;
     }
-  }
-
-  .about-hero-logo img {
-    background-color: #1e293b !important;
-    border-color: #334155 !important;
   }
 }
