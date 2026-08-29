@@ -44,7 +44,7 @@ nav_order: 5
   <!-- Talha Ulukır -->
   <div class="team-member-card">
     <h3 class="member-name">Talha Ulukır, Ph.D.</h3>
-    <div class="member-role">Control Systems Engineer / Postdoc</div>
+    <div class="member-role">Control Systems Engineer </div>
     
   <div class="member-tags-title">Research Specialization</div>
     <div class="member-tags">
@@ -70,8 +70,8 @@ nav_order: 5
 
   <!-- Ömer Faruk Polat -->
   <div class="team-member-card">
-    <h3 class="member-name">Ömer Faruk Polat, M.Sc.</h3>
-    <div class="member-role">Control Systems Researcher / Ph.D. Student</div>
+    <h3 class="member-name">Ömer Faruk Polat</h3>
+    <div class="member-role">Control Systems Researcher / M.Sc. Student</div>
     
   <div class="member-tags-title">Research Specialization</div>
     <div class="member-tags">
