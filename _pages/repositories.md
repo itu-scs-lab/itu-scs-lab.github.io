@@ -63,12 +63,12 @@ nav_order: 4
         Algebraic Model Predictive Control (A-MPC) toolbox developed for Linear Time-Invariant (LTI) systems with closed-form solution structures for fast, real-time embedded execution.
       </p>
       
-      <div class="repo-install-snippet">
+  <div class="repo-install-snippet">
         <code>git clone https://github.com/TalhaUlukir/AMPC.git</code>
         <button class="copy-btn" title="Copy to clipboard" onclick="navigator.clipboard.writeText('git clone https://github.com/TalhaUlukir/AMPC.git')"><i class="fa-regular fa-copy"></i></button>
       </div>
 
-      <div class="repo-tech-stack">
+  <div class="repo-tech-stack">
         <span class="tech-pill"><i class="fa-solid fa-circle" style="color: #e34c26;"></i> MATLAB</span>
         <span class="tech-pill"><i class="fa-solid fa-diagram-project"></i> Simulink Blockset</span>
         <span class="tech-pill">Predictive Control</span>
