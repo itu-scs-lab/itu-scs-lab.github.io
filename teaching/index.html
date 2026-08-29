@@ -18,10 +18,16 @@
 
         courseItems.forEach(item => {
           const itemLevel = item.getAttribute('data-level') || '';
-          if (filter === 'all' || itemLevel.includes(filter)) {
-            item.style.display = '';
-          } else {
-            item.style.display = 'none';
+
+          // Eski hatalı mantık:
+// if (filter === 'all' || itemLevel.includes(filter))
+
+// Düzeltilmiş kesin mantık:
+if (filter === 'all' || itemLevel === filter) {
+  item.style.setProperty('display', '', 'important');
+} else {
+  item.style.setProperty('display', 'none', 'important');
+}
           }
         });
       });
