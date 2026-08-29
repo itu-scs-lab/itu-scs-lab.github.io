@@ -33,8 +33,10 @@ nav_order: 4
 </div>
 
 <!-- 2. SEARCH & DYNAMIC FILTER BAR -->
-<div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
-  <input type="text" id="repo-search-input" class="form-control" placeholder="Search toolboxes (e.g. MPC, Simulink, Kalman, C++)..." style="max-width: 380px; border-radius: 8px; padding: 0.5rem 0.8rem; font-size: 0.85rem;">
+<div class="repo-controls-row">
+  <div class="repo-search-box">
+    <input type="text" id="repo-search-input" placeholder="Search toolboxes (e.g. MPC, Simulink, Kalman, C++)...">
+  </div>
   
   <div class="repo-filter-controls">
     <button id="filter-all-btn" class="filter-all-btn active">All</button>
