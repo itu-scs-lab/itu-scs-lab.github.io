@@ -17,7 +17,7 @@ nav_order: 1
     </p>
   </div>
   <div class="about-hero-logo">
-    <img src="{{ '/assets/img/scs-lab-logo.png' | relative_url }}" alt="ITU SCS Lab Logo">
+    <img src="{{ '/assets/img/group_logo.png' | relative_url }}" alt="ITU SCS Lab Logo">
   </div>
 </div>
 
