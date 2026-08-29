@@ -28,13 +28,13 @@ nav_order: 6
         <div class="custom-course-card">
           
           <!-- Kart Üst Başlık & Rozetler -->
-          <div class="course-card-top">
+  <div class="course-card-top">
             <div class="course-code-badge">
               <i class="fa-solid fa-graduation-cap me-1"></i>
               {{ course.course_id | default: "COURSE" | upcase }}
             </div>
             
-            <div class="course-meta-badges">
+  <div class="course-meta-badges">
               <!-- Seviye Rozeti -->
               <span class="course-level-badge level-{{ course_level | downcase | replace: ' ', '-' }}">
                 {{ course_level }}
@@ -48,12 +48,12 @@ nav_order: 6
           </div>
 
           <!-- Ders Başlığı -->
-          <h3 class="course-title">
+  <h3 class="course-title">
             <a href="{{ course.url | relative_url }}">{{ course.title }}</a>
           </h3>
 
           <!-- Eğitmen Bilgisi -->
-          {% if course.instructor %}
+  {% if course.instructor %}
           <div class="course-instructor">
             <i class="fa-solid fa-chalkboard-user"></i>
             <span>{{ course.instructor }}</span>
@@ -61,25 +61,25 @@ nav_order: 6
           {% endif %}
 
           <!-- Ders Özeti / Açıklama -->
-          <p class="course-description">
+  <p class="course-description">
             {{ course.description | truncate: 155 }}
           </p>
 
           <!-- Ek Bilgi Şeridi (Kredi, vb.) -->
-          {% if course.credits %}
+  {% if course.credits %}
           <div class="course-extra-info">
             <span class="extra-pill"><i class="fa-solid fa-award me-1"></i>{{ course.credits }}</span>
           </div>
           {% endif %}
 
           <!-- Alt Buton Linki -->
-          <div class="course-card-footer">
+   <div class="course-card-footer">
             <a href="{{ course.url | relative_url }}" class="course-btn">
               View Syllabus & Schedule <i class="fa-solid fa-arrow-right ms-1"></i>
             </a>
           </div>
 
-        </div>
+  </div>
       </div>
     {% endfor %}
   </div>
