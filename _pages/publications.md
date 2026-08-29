@@ -25,29 +25,23 @@ nav_order: 2
 {% bibliography %}
 </div>
 
-  <script>
+<script>
   function initPubChart() {
-    var pubEntries = document.querySelectorAll('.publications ol.bibliography > li, .publications .entry');
+    var pubEntries = document.querySelectorAll('.publications ol.bibliography > li');
     if (!pubEntries.length) return;
 
     var yearlyData = {};
 
     pubEntries.forEach(function(entry) {
-      // 1. Doğrudan al-folio'nun Bastığı HTML Sınıflarından Türü Yakala
-      var isJournal = entry.classList.contains('article') || entry.classList.contains('journal');
-      var isConf = entry.classList.contains('inproceedings') || entry.classList.contains('conference') || entry.classList.contains('proceedings');
+      // 1. Elemanın kendisindeki veya çocuk elemanlarındaki tüm sınıf ve öznitelikleri topla
+      var fullClasses = entry.className + ' ' + (entry.querySelector('.entry') ? entry.querySelector('.entry').className : '');
+      fullClasses = fullClasses.toLowerCase();
 
-      // Eğer sınıftan okuyamazsa metin kontrolüne yedek olarak bak
-      var text = entry.textContent.toLowerCase();
-      if (!isJournal && !isConf) {
-        if (text.includes('conference') || text.includes('congress') || text.includes('toplantısı') || text.includes('symposium')) {
-          isConf = true;
-        } else if (text.includes('journal') || text.includes('dergisi') || text.includes('transactions')) {
-          isJournal = true;
-        }
-      }
+      // 2. Doğrudan BibTeX @article ve @inproceedings kontrolü
+      var isJournal = fullClasses.includes('article');
+      var isConf = fullClasses.includes('inproceedings') || fullClasses.includes('proceedings') || fullClasses.includes('conference');
 
-      // 2. Yılı Yakala
+      // 3. Yılı Yakala
       var yearMatch = entry.textContent.match(/\b(20\d{2})\b/);
       var year = yearMatch ? yearMatch[0] : 'Other';
 
@@ -68,8 +62,11 @@ nav_order: 2
         badgeHTML = '<span class="pub-badge pub-badge-other"><i class="fa-solid fa-bookmark"></i> Pub</span>';
       }
 
-      // Sol Rozeti Ekle
-      if (!entry.querySelector('.pub-badge')) {
+      // Sol Rozeti Yerleştir
+      var existingWrapper = entry.querySelector('.pub-badge-wrapper');
+      if (existingWrapper) {
+        existingWrapper.innerHTML = badgeHTML;
+      } else {
         var badgeContainer = document.createElement('div');
         badgeContainer.className = 'pub-badge-wrapper';
         badgeContainer.innerHTML = badgeHTML;
@@ -77,6 +74,7 @@ nav_order: 2
       }
     });
 
+    // Grafik Çizimi
     var years = Object.keys(yearlyData).sort();
     var journalCounts = years.map(function(y) { return yearlyData[y].journal; });
     var confCounts = years.map(function(y) { return yearlyData[y].conference; });
