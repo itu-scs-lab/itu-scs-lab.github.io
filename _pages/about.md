@@ -13,14 +13,14 @@ profile:
     <p>Istanbul, Türkiye</p>
 
 selected_papers: true 
-social: true 
+social: false 
 ---
 
 Welcome to the **Safety-Critical Systems Laboratory (SCS Lab)** at Istanbul Technical University. 
 
 SCS Lab is an advanced research group operating at the interdisciplinary intersection of Electrical & Electronics Engineering, Control Engineering, and Software Systems. Our laboratory conducts advanced studies on control theory and applications, risk management, and software quality assurance to address the rigorous demands of safety-critical environments.
 
-<!-- 1. CORE RESEARCH FOCUS (3 KARTLI GRID) -->
+<!-- 1. CORE RESEARCH FOCUS -->
 <h2 class="about-section-heading">Core Research Focus</h2>
 
 <div class="research-focus-grid">
@@ -44,7 +44,7 @@ SCS Lab is an advanced research group operating at the interdisciplinary interse
 
   <!-- Focus 3 -->
   <div class="focus-card">
-    <div class="focus-icon-box"><i class="fa-solid fa-code-check"></i></div>
+    <div class="focus-icon-box"><i class="fa-solid fa-list-check"></i></div>
     <h3 class="focus-title">Software Quality Assurance</h3>
     <p class="focus-desc">
       High-integrity software design, verification and validation strategies, and rigorous testing methodologies tailored specifically for safety-critical domains.
