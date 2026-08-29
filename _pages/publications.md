@@ -9,13 +9,16 @@ nav_order: 2
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<div class="pub-top-dashboard">
-  <div class="pub-search-side">
+<!-- ÜST BLOK: Önce Arama Çubuğu, Altında Tam Genişlikte Grafik -->
+<div class="pub-dashboard-stacked">
+  <!-- 1. Arama Çubuğu (Üstte) -->
+  <div class="pub-search-top">
     {% include bib_search.liquid %}
   </div>
 
-  <div class="pub-chart-side">
-    <div class="chart-wrapper">
+  <!-- 2. Grafik Kutusu (Geniş / Altta) -->
+  <div class="pub-chart-full">
+    <div class="chart-wrapper-full">
       <canvas id="pubStackedChart"></canvas>
     </div>
   </div>
@@ -107,15 +110,15 @@ nav_order: 2
             label: 'Journal',
             data: journalCounts,
             backgroundColor: journalColor,
-            borderRadius: 3,
-            maxBarThickness: 22
+            borderRadius: 4,
+            maxBarThickness: 36
           },
           {
             label: 'Conference',
             data: confCounts,
             backgroundColor: confColor,
-            borderRadius: 3,
-            maxBarThickness: 22
+            borderRadius: 4,
+            maxBarThickness: 36
           }
         ]
       },
@@ -126,7 +129,7 @@ nav_order: 2
           x: {
             stacked: true,
             grid: { display: false },
-            ticks: { color: textColor, font: { size: 11, weight: '600' } }
+            ticks: { color: textColor, font: { size: 12, weight: '600' } }
           },
           y: {
             stacked: true,
@@ -140,11 +143,11 @@ nav_order: 2
             position: 'top',
             align: 'end',
             labels: {
-              boxWidth: 8,
-              boxHeight: 8,
+              boxWidth: 10,
+              boxHeight: 10,
               usePointStyle: true,
               color: textColor,
-              font: { size: 10, weight: '600' }
+              font: { size: 11, weight: '600' }
             }
           }
         }
