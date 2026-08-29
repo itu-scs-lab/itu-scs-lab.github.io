@@ -8,6 +8,7 @@ term: Spring
 location: ITU Faculty of Electrical and Electronics Engineering
 time: TBA
 course_id: KON314E
+level: Undergraduate
 schedule:
   - week: 1
     date: Week 1
