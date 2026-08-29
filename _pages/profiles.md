@@ -1,70 +1,95 @@
 ---
 layout: page
+permalink: /team/
 title: team
-permalink: /people/
 description: Members and researchers at ITU SCS Lab.
 nav: true
-nav_order: 6
+nav_order: 5
 ---
 
-<!-- PRINCIPAL INVESTIGATOR -->
-## Principal Investigator
+<!-- 1. PRINCIPAL INVESTIGATOR -->
+<h2 class="team-section-title">Principal Investigator</h2>
 
-<div class="card mt-3 mb-4">
-  <div class="card-body">
-    <h3 class="card-title mb-1">Dr. İlker Üstoğlu</h3>
-    <p class="text-muted mb-2"><em>Assoc. Professor / Lab Director</em></p>
-    <p class="card-text small">
-      Focus: Autonomous Flight Control, Safety-Critical Control Systems, Robust & Predictive Control.
-    </p>
-    <div class="mt-3">
-      <a href="mailto:info@scs-lab.itu.edu.tr" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-envelope"></i> Email</a>
-      <a href="https://scholar.google.com" target="_blank" class="btn btn-sm btn-outline-secondary"><i class="ai ai-google-scholar"></i> Scholar</a>
-      <a href="https://github.com/itu-scs-lab" target="_blank" class="btn btn-sm btn-outline-secondary"><i class="fa-brands fa-github"></i> GitHub</a>
-    </div>
+<div class="team-pi-card">
+  <div class="pi-header">
+    <h3 class="pi-name">Dr. İlker Üstoğlu</h3>
+    <span class="pi-role-badge"><i class="fa-solid fa-award me-1"></i> Lab Director</span>
+  </div>
+  <div class="pi-title-sub">Assoc. Professor / SCS Lab Director</div>
+  
+  <p class="pi-focus">
+    <strong>Focus:</strong> Autonomous Flight Control, Safety-Critical Control Systems, Robust & Predictive Control.
+  </p>
+
+  <div class="team-social-links">
+    <a href="mailto:ustoglu@itu.edu.tr" class="team-social-btn">
+      <i class="fa-solid fa-envelope"></i> Email
+    </a>
+    <a href="https://scholar.google.com" target="_blank" class="team-social-btn">
+      <i class="fa-solid fa-graduation-cap"></i> Scholar
+    </a>
+    <a href="https://github.com" target="_blank" class="team-social-btn">
+      <i class="fa-brands fa-github"></i> GitHub
+    </a>
   </div>
 </div>
 
-<hr>
+<hr class="my-5" style="border-top: 1px solid var(--global-divider-color, rgba(0,0,0,0.1));">
 
-<!-- RESEARCHERS & PHD STUDENTS -->
-## Researchers
+<!-- 2. RESEARCHERS -->
+<h2 class="team-section-title">Researchers</h2>
 
-<div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+<div class="team-grid">
 
-  <!-- Researcher 1: Talha Ulukır -->
-  <div class="col">
-    <div class="card h-100 p-2">
-      <div class="card-body">
-        <h4 class="card-title mb-1">Talha Ulukır, Ph.D.</h4>
-        <p class="text-muted small mb-2"><em>Control Systems Engineer</em></p>
-        <p class="card-text small">
-          Specialization: Flight Control Law Design, Data-Driven Predictive Control (DeePC), Model Predictive Control (MPC), Incremental Nonlinear Dynamic Inversion (INDI), Rotorcraft Dynamics.
-        </p>
-        <div class="mt-3">
-          <a href="https://github.com/itu-scs-lab" target="_blank" class="card-link small"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a href="https://scholar.google.com" target="_blank" class="card-link small"><i class="ai ai-google-scholar"></i> Scholar</a>
-          <a href="https://linkedin.com" target="_blank" class="card-link small"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        </div>
-      </div>
+  <!-- Talha Ulukır -->
+  <div class="team-member-card">
+    <h3 class="member-name">Talha Ulukır, Ph.D.</h3>
+    <div class="member-role">Control Systems Engineer / Postdoc</div>
+    
+  <div class="member-tags-title">Research Specialization</div>
+    <div class="member-tags">
+      <span class="member-pill">Flight Control Law Design</span>
+      <span class="member-pill">Data-Driven MPC (DeePC)</span>
+      <span class="member-pill">A-MPC</span>
+      <span class="member-pill">INDI</span>
+      <span class="member-pill">Rotorcraft Dynamics</span>
+  </div>
+
+  <div class="team-social-links">
+      <a href="https://github.com/TalhaUlukir" target="_blank" class="team-social-btn">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+      <a href="https://scholar.google.com" target="_blank" class="team-social-btn">
+        <i class="fa-solid fa-graduation-cap"></i> Scholar
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="team-social-btn">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
     </div>
   </div>
 
-  <!-- Researcher 2: Ömer Faruk Polat -->
-  <div class="col">
-    <div class="card h-100 p-2">
-      <div class="card-body">
-        <h4 class="card-title mb-1">Ömer Faruk Polat, M.Sc.</h4>
-        <p class="text-muted small mb-2"><em>Control Systems Researcher</em></p>
-        <p class="card-text small">
-          Specialization: Data-Driven Predictive Control (DeePC), Iterative Learning Control (ILC), Repetitive Control.
-        </p>
-        <div class="mt-3">
-          <a href="https://github.com/itu-scs-lab" target="_blank" class="card-link small"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a href="https://scholar.google.com" target="_blank" class="card-link small"><i class="ai ai-google-scholar"></i> Scholar</a>
-          <a href="https://linkedin.com" target="_blank" class="card-link small"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        </div>
-      </div>
+  <!-- Ömer Faruk Polat -->
+  <div class="team-member-card">
+    <h3 class="member-name">Ömer Faruk Polat, M.Sc.</h3>
+    <div class="member-role">Control Systems Researcher / Ph.D. Student</div>
+    
+  <div class="member-tags-title">Research Specialization</div>
+    <div class="member-tags">
+      <span class="member-pill">Data-Driven MPC (DeePC)</span>
+      <span class="member-pill">Iterative Learning Control (ILC)</span>
+      <span class="member-pill">Repetitive Control</span>
+    </div>
+
+  <div class="team-social-links">
+      <a href="https://github.com" target="_blank" class="team-social-btn">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+      <a href="https://scholar.google.com" target="_blank" class="team-social-btn">
+        <i class="fa-solid fa-graduation-cap"></i> Scholar
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="team-social-btn">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
     </div>
   </div>
 
