@@ -33,20 +33,28 @@ nav_order: 2
     var yearlyData = {};
 
     pubEntries.forEach(function(entry) {
-      // 1. Elemanın kendisindeki veya çocuk elemanlarındaki tüm sınıf ve öznitelikleri topla
-      var fullClasses = entry.className + ' ' + (entry.querySelector('.entry') ? entry.querySelector('.entry').className : '');
-      fullClasses = fullClasses.toLowerCase();
+      var html = entry.innerHTML.toLowerCase();
+      var text = entry.textContent.toLowerCase();
 
-      // 2. Doğrudan BibTeX @article ve @inproceedings kontrolü
-      var isJournal = fullClasses.includes('article');
-      var isConf = fullClasses.includes('inproceedings') || fullClasses.includes('proceedings') || fullClasses.includes('conference');
+      // 1. Konferans mı Dergi mi Kesin Belirleme
+      // (al-folio konferanslarda "In ..." / "proceedings" / "congress" / "conference" / "toplantı" basar)
+      var isConf = text.includes(' in ') || 
+                   text.includes('congress') || 
+                   text.includes('conference') || 
+                   text.includes('symposium') || 
+                   text.includes('proceedings') || 
+                   text.includes('toplantı') ||
+                   text.includes('toplantisi');
 
-      // 3. Yılı Yakala
-      var yearMatch = entry.textContent.match(/\b(20\d{2})\b/);
-      var year = yearMatch ? yearMatch[0] : 'Other';
+      // (al-folio dergilerde "doi", "vol.", "no.", "pp.", "journal", "dergi" basar)
+      var isJournal = !isConf; 
+
+      // 2. Yılı Yakala (2020-2029)
+      var yearMatch = text.match(/\b(20\d{2})\b/);
+      var year = yearMatch ? yearMatch[0] : '2025';
 
       if (!yearlyData[year]) {
-        yearlyData[year] = { journal: 0, conference: 0, other: 0 };
+        yearlyData[year] = { journal: 0, conference: 0 };
       }
 
       var badgeHTML = '';
@@ -54,15 +62,12 @@ nav_order: 2
       if (isJournal) {
         yearlyData[year].journal++;
         badgeHTML = '<span class="pub-badge pub-badge-journal"><i class="fa-solid fa-file-lines"></i> Journal</span>';
-      } else if (isConf) {
+      } else {
         yearlyData[year].conference++;
         badgeHTML = '<span class="pub-badge pub-badge-conference"><i class="fa-solid fa-users"></i> Conference</span>';
-      } else {
-        yearlyData[year].other++;
-        badgeHTML = '<span class="pub-badge pub-badge-other"><i class="fa-solid fa-bookmark"></i> Pub</span>';
       }
 
-      // Sol Rozeti Yerleştir
+      // Varsa eski rozeti kaldır veya güncelle
       var existingWrapper = entry.querySelector('.pub-badge-wrapper');
       if (existingWrapper) {
         existingWrapper.innerHTML = badgeHTML;
@@ -74,7 +79,7 @@ nav_order: 2
       }
     });
 
-    // Grafik Çizimi
+    // 3. Grafik Çizimi
     var years = Object.keys(yearlyData).sort();
     var journalCounts = years.map(function(y) { return yearlyData[y].journal; });
     var confCounts = years.map(function(y) { return yearlyData[y].conference; });
@@ -82,13 +87,18 @@ nav_order: 2
     var canvas = document.getElementById('pubStackedChart');
     if (!canvas) return;
     var ctx = canvas.getContext('2d');
-    
+
+    // Varsa eski canvas chart objesini temizle
+    if (window.myPubChart) {
+      window.myPubChart.destroy();
+    }
+
     var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     var journalColor = isDark ? '#2dd4bf' : '#0f766e';
     var confColor = isDark ? '#818cf8' : '#4338ca';
     var textColor = isDark ? '#94a3b8' : '#64748b';
 
-    new Chart(ctx, {
+    window.myPubChart = new Chart(ctx, {
       type: 'bar',
       data: {
         labels: years,
@@ -98,14 +108,14 @@ nav_order: 2
             data: journalCounts,
             backgroundColor: journalColor,
             borderRadius: 3,
-            maxBarThickness: 24
+            maxBarThickness: 22
           },
           {
             label: 'Conference',
             data: confCounts,
             backgroundColor: confColor,
             borderRadius: 3,
-            maxBarThickness: 24
+            maxBarThickness: 22
           }
         ]
       },
