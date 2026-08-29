@@ -8,6 +8,7 @@ term: Fall
 location: ITU Faculty of Electrical and Electronics Engineering
 time: TBA
 course_id: KON405E
+level: Undergraduate
 schedule:
   - week: 1
     date: Week 1
