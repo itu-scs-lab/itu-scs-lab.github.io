@@ -32,15 +32,17 @@ nav_order: 4
   </div>
 </div>
 
-<!-- 2. SEARCH & FILTER BAR -->
+<!-- 2. SEARCH & DYNAMIC FILTER BAR -->
 <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
-  <input type="text" id="repo-search-input" class="form-control" placeholder="Search toolboxes (e.g.  Simulink, Kalman, C++)..." style="max-width: 380px; border-radius: 8px; padding: 0.5rem 0.8rem; font-size: 0.85rem;">
+  <input type="text" id="repo-search-input" class="form-control" placeholder="Search toolboxes (e.g. MPC, Simulink, Kalman, C++)..." style="max-width: 380px; border-radius: 8px; padding: 0.5rem 0.8rem; font-size: 0.85rem;">
   
-  <div class="repo-filter-tags">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="mpc">MPC & Control</button>
-    <button class="filter-btn" data-filter="simulink">MATLAB/Simulink</button>
-    <button class="filter-btn" data-filter="estimation">Estimation</button>
+  <div class="repo-filter-controls">
+    <button id="filter-all-btn" class="filter-all-btn active">All</button>
+    <div class="select-wrapper">
+      <select id="repo-tag-select" class="repo-dropdown-select" aria-label="Filter by tag">
+        <option value="all">Filter by Tag (All)</option>
+      </select>
+    </div>
   </div>
 </div>
 
@@ -48,7 +50,7 @@ nav_order: 4
 <div class="row row-cols-1 row-cols-md-2 g-4" id="custom-repo-grid">
 
   <!-- REPO 1: AMPC -->
-  <div class="col repo-item" data-tags="mpc simulink flight-control">
+  <div class="col repo-item" data-tags="MPC, Simulink, Flight Control, Optimization">
     <div class="custom-repo-card">
       <div class="repo-card-header">
         <div class="repo-type-badge"><i class="fa-solid fa-cube"></i> Toolbox</div>
@@ -61,12 +63,12 @@ nav_order: 4
         Algebraic Model Predictive Control (A-MPC) toolbox developed for Linear Time-Invariant (LTI) systems with closed-form solution structures for fast, real-time embedded execution.
       </p>
       
-  <div class="repo-install-snippet">
+      <div class="repo-install-snippet">
         <code>git clone https://github.com/TalhaUlukir/AMPC.git</code>
         <button class="copy-btn" title="Copy to clipboard" onclick="navigator.clipboard.writeText('git clone https://github.com/TalhaUlukir/AMPC.git')"><i class="fa-regular fa-copy"></i></button>
       </div>
 
-  <div class="repo-tech-stack">
+      <div class="repo-tech-stack">
         <span class="tech-pill"><i class="fa-solid fa-circle" style="color: #e34c26;"></i> MATLAB</span>
         <span class="tech-pill"><i class="fa-solid fa-diagram-project"></i> Simulink Blockset</span>
         <span class="tech-pill">Predictive Control</span>
@@ -74,40 +76,75 @@ nav_order: 4
     </div>
   </div>
 
+
 </div>
 
-<!-- 4. CANLI FİLTRE VE ARAMA SCRIPT'İ -->
+<!-- 4. DİNAMİK DROPDOWN VE FİLTRELEME SCRIPT'İ -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const searchInput = document.getElementById('repo-search-input');
-    const filterBtns = document.querySelectorAll('.filter-btn');
+    const allBtn = document.getElementById('filter-all-btn');
+    const tagSelect = document.getElementById('repo-tag-select');
     const repoCards = document.querySelectorAll('.repo-item');
 
+    // 1. Sayfadaki kartlardan benzersiz tagleri toplayıp dropdown'a ekleme
+    const uniqueTags = new Set();
+    repoCards.forEach(card => {
+      const tagsAttr = card.getAttribute('data-tags');
+      if (tagsAttr) {
+        tagsAttr.split(',').forEach(tag => {
+          const cleanTag = tag.trim();
+          if (cleanTag) uniqueTags.add(cleanTag);
+        });
+      }
+    });
+
+    // Alfabetik sıralayıp option olarak ekle
+    Array.from(uniqueTags).sort().forEach(tag => {
+      const option = document.createElement('option');
+      option.value = tag.toLowerCase();
+      option.textContent = tag;
+      tagSelect.appendChild(option);
+    });
+
+    // 2. Filtre Uygulama Fonksiyonu
     function applyFilter() {
       const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
-      const activeBtn = document.querySelector('.filter-btn.active');
-      const filterValue = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
+      const selectedTag = tagSelect ? tagSelect.value.toLowerCase() : 'all';
 
       repoCards.forEach(card => {
         const text = card.textContent.toLowerCase();
         const tags = (card.getAttribute('data-tags') || '').toLowerCase();
         const matchesQuery = text.includes(query);
-        const matchesFilter = (filterValue === 'all') || tags.includes(filterValue);
+        const matchesTag = (selectedTag === 'all') || tags.includes(selectedTag);
 
-        card.style.display = (matchesQuery && matchesFilter) ? '' : 'none';
+        card.style.display = (matchesQuery && matchesTag) ? '' : 'none';
       });
+
+      // Buton Aktiflik Durumu
+      if (selectedTag === 'all') {
+        allBtn.classList.add('active');
+      } else {
+        allBtn.classList.remove('active');
+      }
     }
 
+    // Arama Kutusu Dinleyicisi
     if (searchInput) {
       searchInput.addEventListener('input', applyFilter);
     }
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', function() {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
+    // Dropdown Seçim Dinleyicisi
+    if (tagSelect) {
+      tagSelect.addEventListener('change', applyFilter);
+    }
+
+    // "All" Butonu Dinleyicisi
+    if (allBtn) {
+      allBtn.addEventListener('click', function() {
+        if (tagSelect) tagSelect.value = 'all';
         applyFilter();
       });
-    });
+    }
   });
 </script>
