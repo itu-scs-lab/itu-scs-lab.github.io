@@ -7,10 +7,7 @@ subtitle: Safety-Critical Systems Laboratory at Istanbul Technical University
 profile:
   align: right
   image: group_logo.png
-  image_circular: true # Logonun yuvarlak çerçeveye oturması için
-  more_info: >
-    <p>ITU Ayazağa Campus</p>
-    <p>Istanbul, Türkiye</p>
+  image_circular: true 
 
 selected_papers: true 
 social: false 
