@@ -616,246 +616,83 @@ html[data-theme='dark'] {
 }
 
 /* ==========================================================================
-   REPOSITORIES / CODE HUB STYLES
+   REPOSITORIES: DYNAMIC DROPDOWN & FILTER CONTROLS
    ========================================================================== */
 
-/* 1. Üst Metrik / Gösterge Paneli */
-.repo-dashboard-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
-  gap: 1.25rem !important;
-  margin-bottom: 2.5rem !important;
-}
-
-.repo-stat-card {
+.repo-filter-controls {
   display: flex !important;
   align-items: center !important;
-  gap: 1rem !important;
-  padding: 1.1rem 1.4rem !important;
-  background-color: var(--global-card-bg-color, #ffffff) !important;
-  border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.1)) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-
-  &:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06) !important;
-  }
-
-  .stat-icon {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 44px !important;
-    height: 44px !important;
-    border-radius: 10px !important;
-    background-color: rgba(2, 132, 199, 0.1) !important;
-    color: #0284c7 !important;
-    font-size: 1.35rem !important;
-    flex-shrink: 0 !important;
-  }
-
-  .stat-info {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  .stat-value {
-    font-weight: 700 !important;
-    font-size: 0.95rem !important;
-    color: var(--global-text-color, #1e293b) !important;
-  }
-
-  .stat-label {
-    font-size: 0.75rem !important;
-    color: var(--global-text-color-light, #64748b) !important;
-  }
-}
-
-/* 2. Filtre Butonları */
-.repo-filter-tags {
-  display: flex !important;
-  gap: 0.5rem !important;
+  gap: 0.6rem !important;
   flex-wrap: wrap !important;
+}
 
-  .filter-btn {
-    border: 1px solid var(--global-divider-color, #cbd5e1) !important;
-    background: transparent !important;
-    color: var(--global-text-color, #334155) !important;
-    font-size: 0.78rem !important;
-    font-weight: 600 !important;
-    padding: 0.35rem 0.9rem !important;
-    border-radius: 20px !important;
-    cursor: pointer !important;
-    transition: all 0.2s ease !important;
+/* All Butonu */
+.filter-all-btn {
+  border: 1px solid var(--global-divider-color, #cbd5e1) !important;
+  background: transparent !important;
+  color: var(--global-text-color, #334155) !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  padding: 0.42rem 1.1rem !important;
+  border-radius: 20px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
 
-    &:hover, &.active {
-      background-color: #0284c7 !important;
-      color: #ffffff !important;
-      border-color: #0284c7 !important;
-    }
+  &:hover, &.active {
+    background-color: #0284c7 !important;
+    color: #ffffff !important;
+    border-color: #0284c7 !important;
   }
 }
 
-/* 3. Repo Kartları */
-.custom-repo-card {
-  display: flex !important;
-  flex-direction: column !important;
-  height: 100% !important;
-  padding: 1.4rem !important;
+/* Dropdown Select Sarmalayıcısı ve Stili */
+.select-wrapper {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.repo-dropdown-select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
   background-color: var(--global-card-bg-color, #ffffff) !important;
-  border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.1)) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
-  transition: all 0.25s ease !important;
+  color: var(--global-text-color, #334155) !important;
+  border: 1px solid var(--global-divider-color, #cbd5e1) !important;
+  border-radius: 20px !important;
+  padding: 0.42rem 2.2rem 0.42rem 1rem !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230284c7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.8rem center !important;
+  background-size: 0.85em !important;
+  transition: all 0.2s ease !important;
 
-  &:hover {
-    transform: translateY(-4px) !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
-    border-color: rgba(2, 132, 199, 0.4) !important;
-  }
-
-  .repo-card-header {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    margin-bottom: 0.8rem !important;
-
-    .repo-type-badge {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 0.35rem !important;
-      font-size: 0.68rem !important;
-      font-weight: 700 !important;
-      text-transform: uppercase !important;
-      letter-spacing: 0.04em !important;
-      padding: 0.2rem 0.55rem !important;
-      border-radius: 4px !important;
-      background-color: rgba(2, 132, 199, 0.12) !important;
-      color: #0284c7 !important;
-      border: 1px solid rgba(2, 132, 199, 0.3) !important;
-    }
-
-    .repo-gh-link {
-      font-size: 1.3rem !important;
-      color: var(--global-text-color-light, #64748b) !important;
-      transition: color 0.2s !important;
-
-      &:hover {
-        color: #0284c7 !important;
-      }
-    }
-  }
-
-  .repo-title {
-    font-size: 1.2rem !important;
-    font-weight: 700 !important;
-    margin-bottom: 0.6rem !important;
-    line-height: 1.3 !important;
-
-    a {
-      color: #0284c7 !important;
-      text-decoration: none !important;
-
-      &:hover {
-        text-decoration: underline !important;
-      }
-    }
-  }
-
-  .repo-description {
-    font-size: 0.84rem !important;
-    color: var(--global-text-color, #475569) !important;
-    line-height: 1.5 !important;
-    margin-bottom: 1.2rem !important;
-    flex-grow: 1 !important;
-  }
-
-  /* Klonlama Kutusu */
-  .repo-install-snippet {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    background-color: rgba(0, 0, 0, 0.03) !important;
-    padding: 0.45rem 0.75rem !important;
-    border-radius: 6px !important;
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
-    font-size: 0.73rem !important;
-    margin-bottom: 1.2rem !important;
-    border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.08)) !important;
-
-    code {
-      background: transparent !important;
-      padding: 0 !important;
-      color: var(--global-text-color, #334155) !important;
-      overflow: hidden !important;
-      text-overflow: ellipsis !important;
-      white-space: nowrap !important;
-    }
-
-    .copy-btn {
-      background: transparent !important;
-      border: none !important;
-      color: var(--global-text-color-light, #64748b) !important;
-      cursor: pointer !important;
-      padding: 0 0.25rem !important;
-      font-size: 0.85rem !important;
-      transition: color 0.15s !important;
-
-      &:hover {
-        color: #0284c7 !important;
-      }
-    }
-  }
-
-  /* Teknoloji Rozetleri */
-  .repo-tech-stack {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 0.45rem !important;
-    margin-top: auto !important;
-
-    .tech-pill {
-      display: inline-flex !important;
-      align-items: center !important;
-      font-size: 0.68rem !important;
-      font-weight: 600 !important;
-      padding: 0.2rem 0.55rem !important;
-      border-radius: 12px !important;
-      background-color: rgba(100, 116, 139, 0.1) !important;
-      color: var(--global-text-color, #475569) !important;
-      border: 1px solid rgba(100, 116, 139, 0.2) !important;
-      white-space: nowrap !important;
-
-      i {
-        font-size: 0.55rem !important;
-        margin-right: 0.3rem !important;
-      }
-    }
+  &:hover, &:focus {
+    border-color: #0284c7 !important;
+    box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.15) !important;
   }
 }
 
-/* 4. Dark Mode Uyumu */
+/* Dark Mode Uyumu */
 html[data-theme='dark'] {
-  .repo-stat-card,
-  .custom-repo-card {
+  .repo-dropdown-select {
     background-color: #1e293b !important;
     border-color: #334155 !important;
+    color: #e2e8f0 !important;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
   }
 
-  .repo-install-snippet {
-    background-color: #0f172a !important;
+  .filter-all-btn {
     border-color: #334155 !important;
-  }
+    color: #e2e8f0 !important;
 
-  .repo-title a {
-    color: #38bdf8 !important;
-  }
-
-  .repo-card-header .repo-type-badge {
-    background-color: rgba(56, 189, 248, 0.15) !important;
-    color: #38bdf8 !important;
-    border-color: rgba(56, 189, 248, 0.3) !important;
+    &:hover, &.active {
+      background-color: #38bdf8 !important;
+      color: #0f172a !important;
+      border-color: #38bdf8 !important;
+    }
   }
 }
