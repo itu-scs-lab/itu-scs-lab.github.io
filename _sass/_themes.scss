@@ -1118,3 +1118,218 @@ html[data-theme='dark'] {
     border-color: rgba(251, 191, 36, 0.3) !important;
   }
 }
+
+/* ==========================================================================
+   TEAM / LAB MEMBERS MODERN STYLES
+   ========================================================================== */
+
+.team-section-title {
+  font-size: 1.6rem !important;
+  font-weight: 800 !important;
+  color: var(--global-text-color) !important;
+  margin: 2.2rem 0 1.2rem 0 !important;
+}
+
+/* 1. Principal Investigator Kartı */
+.team-pi-card {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 1.8rem 2rem !important;
+  background-color: var(--global-card-bg-color, #ffffff) !important;
+  border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.1)) !important;
+  border-left: 4px solid #0284c7 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+
+  &:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .pi-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    margin-bottom: 0.6rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  .pi-name {
+    font-size: 1.55rem !important;
+    font-weight: 800 !important;
+    color: var(--global-text-color) !important;
+    margin: 0 !important;
+  }
+
+  .pi-role-badge {
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    padding: 0.25rem 0.65rem !important;
+    border-radius: 6px !important;
+    background-color: rgba(2, 132, 199, 0.12) !important;
+    color: #0284c7 !important;
+    border: 1px solid rgba(2, 132, 199, 0.3) !important;
+  }
+
+  .pi-title-sub {
+    font-size: 0.92rem !important;
+    font-style: italic !important;
+    color: var(--global-text-color-light, #64748b) !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .pi-focus {
+    font-size: 0.88rem !important;
+    color: var(--global-text-color) !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.4rem !important;
+
+    strong {
+      color: var(--global-text-color) !important;
+    }
+  }
+}
+
+/* 2. Researchers Grid & Kartları */
+.team-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+  gap: 1.5rem !important;
+  margin-top: 1rem !important;
+}
+
+.team-member-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  padding: 1.6rem !important;
+  background-color: var(--global-card-bg-color, #ffffff) !important;
+  border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.1)) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+
+  &:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+    border-color: rgba(2, 132, 199, 0.4) !important;
+  }
+
+  .member-name {
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+    color: var(--global-text-color) !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .member-role {
+    font-size: 0.85rem !important;
+    font-style: italic !important;
+    color: var(--global-text-color-light, #64748b) !important;
+    margin-bottom: 1.1rem !important;
+  }
+
+  .member-tags-title {
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: var(--global-text-color-light, #64748b) !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .member-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.4rem !important;
+    margin-bottom: 1.4rem !important;
+    flex-grow: 1 !important;
+
+    .member-pill {
+      font-size: 0.72rem !important;
+      font-weight: 600 !important;
+      padding: 0.22rem 0.55rem !important;
+      border-radius: 6px !important;
+      background-color: rgba(100, 116, 139, 0.08) !important;
+      color: var(--global-text-color, #334155) !important;
+      border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.06)) !important;
+    }
+  }
+}
+
+/* 3. Sosyal / İletişim Buton Linkleri */
+.team-social-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  flex-wrap: wrap !important;
+  margin-top: auto !important;
+  padding-top: 0.9rem !important;
+  border-top: 1px dashed var(--global-divider-color, rgba(0, 0, 0, 0.08)) !important;
+
+  .team-social-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    padding: 0.3rem 0.65rem !important;
+    border-radius: 6px !important;
+    background-color: rgba(2, 132, 199, 0.08) !important;
+    color: #0284c7 !important;
+    border: 1px solid rgba(2, 132, 199, 0.2) !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+
+    &:hover {
+      background-color: #0284c7 !important;
+      color: #ffffff !important;
+      border-color: #0284c7 !important;
+    }
+
+    i {
+      font-size: 0.8rem !important;
+    }
+  }
+}
+
+/* Dark Mode Uyumu */
+html[data-theme='dark'] {
+  .team-pi-card,
+  .team-member-card {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+  }
+
+  .team-pi-card {
+    border-left-color: #38bdf8 !important;
+  }
+
+  .team-pi-card .pi-role-badge {
+    background-color: rgba(56, 189, 248, 0.15) !important;
+    color: #38bdf8 !important;
+    border-color: rgba(56, 189, 248, 0.3) !important;
+  }
+
+  .team-member-card .member-tags .member-pill {
+    background-color: #0f172a !important;
+    border-color: #334155 !important;
+    color: #cbd5e1 !important;
+  }
+
+  .team-social-links .team-social-btn {
+    background-color: rgba(56, 189, 248, 0.12) !important;
+    color: #38bdf8 !important;
+    border-color: rgba(56, 189, 248, 0.25) !important;
+
+    &:hover {
+      background-color: #38bdf8 !important;
+      color: #0f172a !important;
+      border-color: #38bdf8 !important;
+    }
+  }
+}
