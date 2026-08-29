@@ -350,65 +350,68 @@ html[data-theme='dark'] {
 }
 
 /* ==========================================================================
-   RESPONSIVE PUBLICATIONS DASHBOARD
+   PUBLICATIONS STACKED DASHBOARD (SEARCH TOP, FULL-WIDTH CHART BOTTOM)
    ========================================================================== */
 
-.pub-top-dashboard {
+.pub-dashboard-stacked {
   display: flex !important;
-  align-items: flex-end !important;
-  justify-content: space-between !important;
-  gap: 1.5rem !important;
-  margin-bottom: 2rem !important;
+  flex-direction: column !important;
+  gap: 1.25rem !important;
+  margin-bottom: 2.5rem !important;
   width: 100% !important;
 }
 
-/* Masaüstü: Arama kutusu sabit 280px */
-.pub-search-side {
-  flex: 0 0 280px !important;
-  width: 280px !important;
+/* 1. Üstteki Arama Çubuğu (Geniş) */
+.pub-search-top {
+  width: 100% !important;
 
   input {
     width: 100% !important;
-    margin-bottom: 0 !important;
+    max-width: 100% !important;
+    height: 42px !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--global-divider-color, #cbd5e1) !important;
+    background-color: var(--global-card-bg-color, #ffffff) !important;
+    color: var(--global-text-color) !important;
+    outline: none !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+
+    &:focus {
+      border-color: #0284c7 !important;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12) !important;
+    }
   }
 }
 
-/* Masaüstü: Grafik kutusu kalan boşluğu tam doldurur */
-.pub-chart-side {
-  flex: 1 1 auto !important;
-  min-width: 0 !important; /* Canvas tasmasini engeller */
-  background-color: var(--global-card-bg-color) !important;
-  border: 1px solid var(--global-divider-color) !important;
-  border-radius: 8px !important;
-  padding: 0.6rem 1rem !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
+/* 2. Alttaki Tam Genişlik Grafik Kartı */
+.pub-chart-full {
+  width: 100% !important;
+  background-color: var(--global-card-bg-color, #ffffff) !important;
+  border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.1)) !important;
+  border-radius: 12px !important;
+  padding: 1rem 1.4rem 0.8rem 1.4rem !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
 }
 
-.chart-wrapper {
+.chart-wrapper-full {
   width: 100% !important;
-  height: 120px !important;
+  height: 140px !important;
   position: relative !important;
 }
 
-/* MOBİL VE TABLET UYUMU (768px Altı) */
-@media (max-width: 768px) {
-  .pub-top-dashboard {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 1rem !important;
+/* Dark Mode Uyumu */
+html[data-theme='dark'] {
+  .pub-search-top input {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #f1f5f9 !important;
   }
 
-  .pub-search-side {
-    flex: 1 1 100% !important;
-    width: 100% !important;
-  }
-
-  .pub-chart-side {
-    width: 100% !important;
-  }
-
-  .chart-wrapper {
-    height: 140px !important; /* Mobilde dikey biraz daha rahat alan */
+  .pub-chart-full {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
   }
 }
 /* ==========================================================================
