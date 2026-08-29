@@ -6,7 +6,7 @@ img: assets/img/projects/gps_ins.png
 importance: 2
 category: Navigation & Estimation
 
-organization: TUSAŞ / ITU SCS Lab
+organization: Turkish Aerospace
 keywords: [GNSS/INS, Kalman Filter, Loosely Coupled, Sensor Fusion, DO-178C, Simulink, UAV Navigation]
 ---
 
