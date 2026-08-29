@@ -33,24 +33,25 @@ nav_order: 2
     var yearlyData = {};
 
     pubEntries.forEach(function(entry) {
-      var html = entry.innerHTML.toLowerCase();
-      var text = entry.textContent.toLowerCase();
+      // 1. İtalik yayın adı alanını (em / i) veya genel metni al
+      var emElem = entry.querySelector('em') || entry.querySelector('i');
+      var venueText = emElem ? emElem.textContent.toLowerCase() : '';
+      var fullText = entry.textContent.toLowerCase();
 
-      // 1. Konferans mı Dergi mi Kesin Belirleme
-      // (al-folio konferanslarda "In ..." / "proceedings" / "congress" / "conference" / "toplantı" basar)
-      var isConf = text.includes(' in ') || 
-                   text.includes('congress') || 
-                   text.includes('conference') || 
-                   text.includes('symposium') || 
-                   text.includes('proceedings') || 
-                   text.includes('toplantı') ||
-                   text.includes('toplantisi');
+      // 2. Konferans Tespiti: Yalnızca yayın yeri kısmında (venue) aranır
+      var isConf = venueText.startsWith('in ') || 
+                   venueText.includes('conference') || 
+                   venueText.includes('congress') || 
+                   venueText.includes('symposium') || 
+                   venueText.includes('proceedings') || 
+                   venueText.includes('toplantı') ||
+                   venueText.includes('toplantisi');
 
-      // (al-folio dergilerde "doi", "vol.", "no.", "pp.", "journal", "dergi" basar)
-      var isJournal = !isConf; 
+      // 3. Dergi Tespiti: Konferans değilse veya dergi ibaresi varsa
+      var isJournal = !isConf;
 
-      // 2. Yılı Yakala (2020-2029)
-      var yearMatch = text.match(/\b(20\d{2})\b/);
+      // 4. Yılı Yakala
+      var yearMatch = fullText.match(/\b(20\d{2})\b/);
       var year = yearMatch ? yearMatch[0] : '2025';
 
       if (!yearlyData[year]) {
@@ -67,7 +68,7 @@ nav_order: 2
         badgeHTML = '<span class="pub-badge pub-badge-conference"><i class="fa-solid fa-users"></i> Conference</span>';
       }
 
-      // Varsa eski rozeti kaldır veya güncelle
+      // Rozeti Güncelle / Ekle
       var existingWrapper = entry.querySelector('.pub-badge-wrapper');
       if (existingWrapper) {
         existingWrapper.innerHTML = badgeHTML;
@@ -79,7 +80,7 @@ nav_order: 2
       }
     });
 
-    // 3. Grafik Çizimi
+    // 5. Grafik Çizimi
     var years = Object.keys(yearlyData).sort();
     var journalCounts = years.map(function(y) { return yearlyData[y].journal; });
     var confCounts = years.map(function(y) { return yearlyData[y].conference; });
@@ -88,7 +89,6 @@ nav_order: 2
     if (!canvas) return;
     var ctx = canvas.getContext('2d');
 
-    // Varsa eski canvas chart objesini temizle
     if (window.myPubChart) {
       window.myPubChart.destroy();
     }
