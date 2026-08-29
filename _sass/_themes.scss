@@ -853,3 +853,159 @@ html[data-theme='dark'] {
     color: #38bdf8 !important;
   }
 }
+
+/* ==========================================================================
+   TEACHING / COURSES HUB MODERN STYLES
+   ========================================================================== */
+
+.courses-hub-container {
+  width: 100%;
+}
+
+.custom-course-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  padding: 1.5rem !important;
+  background-color: var(--global-card-bg-color, #ffffff) !important;
+  border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.1)) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.25s ease !important;
+
+  &:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+    border-color: rgba(2, 132, 199, 0.4) !important;
+  }
+
+  /* Üst Rozetler */
+  .course-card-top {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 0.9rem !important;
+    gap: 0.5rem !important;
+
+    .course-code-badge {
+      font-size: 0.72rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.04em !important;
+      padding: 0.22rem 0.6rem !important;
+      border-radius: 6px !important;
+      background-color: rgba(2, 132, 199, 0.12) !important;
+      color: #0284c7 !important;
+      border: 1px solid rgba(2, 132, 199, 0.3) !important;
+    }
+
+    .course-term-badge {
+      font-size: 0.72rem !important;
+      font-weight: 600 !important;
+      color: var(--global-text-color-light, #64748b) !important;
+      background-color: rgba(100, 116, 139, 0.08) !important;
+      padding: 0.22rem 0.55rem !important;
+      border-radius: 6px !important;
+    }
+  }
+
+  /* Başlık */
+  .course-title {
+    font-size: 1.22rem !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0.5rem !important;
+
+    a {
+      color: var(--global-text-color, #1e293b) !important;
+      text-decoration: none !important;
+      transition: color 0.2s ease !important;
+
+      &:hover {
+        color: #0284c7 !important;
+      }
+    }
+  }
+
+  /* Eğitmen Satırı */
+  .course-instructor {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.45rem !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    color: #0284c7 !important;
+    margin-bottom: 0.8rem !important;
+
+    i {
+      font-size: 0.85rem !important;
+    }
+  }
+
+  /* Açıklama */
+  .course-description {
+    font-size: 0.84rem !important;
+    color: var(--global-text-color-light, #475569) !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1.3rem !important;
+    flex-grow: 1 !important;
+  }
+
+  /* Footer Buton */
+  .course-card-footer {
+    margin-top: auto !important;
+    padding-top: 0.8rem !important;
+    border-top: 1px dashed var(--global-divider-color, rgba(0, 0, 0, 0.08)) !important;
+
+    .course-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      font-size: 0.8rem !important;
+      font-weight: 600 !important;
+      color: #0284c7 !important;
+      text-decoration: none !important;
+      transition: transform 0.2s ease, color 0.2s ease !important;
+
+      i {
+        transition: transform 0.2s ease !important;
+      }
+
+      &:hover {
+        color: #0369a1 !important;
+        i {
+          transform: translateX(4px) !important;
+        }
+      }
+    }
+  }
+}
+
+/* Dark Mode Uyumu */
+html[data-theme='dark'] {
+  .custom-course-card {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+  }
+
+  .custom-course-card .course-title a {
+    color: #f1f5f9 !important;
+    &:hover {
+      color: #38bdf8 !important;
+    }
+  }
+
+  .custom-course-card .course-instructor,
+  .custom-course-card .course-card-footer .course-btn {
+    color: #38bdf8 !important;
+  }
+
+  .custom-course-card .course-card-top .course-code-badge {
+    background-color: rgba(56, 189, 248, 0.15) !important;
+    color: #38bdf8 !important;
+    border-color: rgba(56, 189, 248, 0.3) !important;
+  }
+
+  .custom-course-card .course-card-top .course-term-badge {
+    background-color: #0f172a !important;
+    color: #94a3b8 !important;
+  }
+}
