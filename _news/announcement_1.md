@@ -1,8 +1,9 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+title: SCS Lab presents Algebraic MPC Toolbox at 23rd IFAC World Congress
+date: 2026-08-28 10:00:00-0400
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+SCS Lab presented the paper **Algebraic MPC Toolbox: Theory and Realization** at the **23rd IFAC World Congress** in Busan, South Korea.
