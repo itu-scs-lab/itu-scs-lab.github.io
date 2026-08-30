@@ -20,9 +20,9 @@ social: false
 ### Control • Safety • Reliability
 **From control theory to safety-critical implementation.**
 
-We develop deterministic control, robust estimation, and formal verification methodologies for safety-critical autonomous, robotic, and industrial systems. Operating at the convergence of modern control theory and high-integrity software engineering, our research bridges the gap between deep mathematical formulations and real-world-proven, real-time embedded deployment. Beyond conducting high-impact R&D compliant with rigorous safety standards (such as DO-178C and ISO 26262), the laboratory actively advances education through specialized university curricula and tailored industry training programs.
+We develop deterministic control, robust estimation, and formal verification methodologies for safety-critical autonomous, robotic, and industrial systems. Operating at the convergence of modern control theory and high-integrity software engineering, our research bridges the gap between deep mathematical formulations and flight-proven, real-time embedded deployment. Beyond conducting high-impact R&D compliant with rigorous safety standards (such as DO-178C and ISO 26262), the laboratory actively advances education through specialized university curricula and tailored industry training programs.
 
-<!-- BUTONLAR (NET & GÖRÜNÜR) -->
+<!-- HERO BUTONLARI -->
 <div class="about-cta-group">
   <a href="{{ '/projects/' | relative_url }}" class="hero-btn hero-btn-primary">
     <i class="fa-solid fa-diagram-project"></i> Explore Projects
@@ -78,15 +78,30 @@ We develop deterministic control, robust estimation, and formal verification met
   <span class="domain-pill"><i class="fa-solid fa-bolt me-1"></i> Energy Systems</span>
 </div>
 
-<!-- 3. SEÇİLİ YAYINLAR DİKEY ROZET SCRIPTI -->
+<!-- 3. AKILLI SEÇİLİ YAYINLAR ROZET MOTORU -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var pubEntries = document.querySelectorAll('.publications ol.bibliography > li');
     pubEntries.forEach(function(entry) {
-      if (!entry.querySelector('.pub-badge')) {
+      if (!entry.querySelector('.pub-badge-wrapper')) {
+        var emElem = entry.querySelector('em') || entry.querySelector('i');
+        var venueText = emElem ? emElem.textContent.toLowerCase() : '';
+        
+        var isConf = venueText.startsWith('in ') || 
+                     venueText.includes('conference') || 
+                     venueText.includes('congress') || 
+                     venueText.includes('symposium') || 
+                     venueText.includes('proceedings') || 
+                     venueText.includes('toplantı') ||
+                     venueText.includes('toplantisi');
+
+        var badgeHTML = isConf 
+          ? '<span class="pub-badge pub-badge-conference"><i class="fa-solid fa-users"></i> Conference</span>'
+          : '<span class="pub-badge pub-badge-journal"><i class="fa-solid fa-file-lines"></i> Journal</span>';
+
         var badgeContainer = document.createElement('div');
         badgeContainer.className = 'pub-badge-wrapper';
-        badgeContainer.innerHTML = '<span class="pub-badge pub-badge-journal"><i class="fa-solid fa-file-lines"></i> Journal</span>';
+        badgeContainer.innerHTML = badgeHTML;
         entry.insertBefore(badgeContainer, entry.firstChild);
       }
     });
