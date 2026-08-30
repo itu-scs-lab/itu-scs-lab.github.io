@@ -6,8 +6,11 @@ subtitle: Safety-Critical Systems Laboratory at Istanbul Technical University
 
 profile:
   align: right
-  image: group_logo.png
+  image: scs-lab-logo.png
   image_circular: true
+  more_info: >
+    <p>ITU Ayazağa Campus</p>
+    <p>Istanbul, Türkiye</p>
 
 news: true
 selected_papers: true
@@ -17,11 +20,16 @@ social: false
 ### Control • Safety • Reliability
 **From control theory to safety-critical implementation.**
 
-We develop deterministic control, robust estimation, and formal verification methodologies for safety-critical autonomous, robotic, and industrial systems. Operating at the convergence of modern control theory and high-integrity software engineering, our research bridges the gap between deep mathematical formulations and real world proven, real-time embedded deployment. Beyond conducting high-impact R&D compliant with rigorous safety standards (such as DO-178C and ISO 26262), the laboratory actively advances education through specialized university curricula and tailored industry training programs.
+We develop deterministic control, robust estimation, and formal verification methodologies for safety-critical autonomous, robotic, and industrial systems. Operating at the convergence of modern control theory and high-integrity software engineering, our research bridges the gap between deep mathematical formulations and real-world-proven, real-time embedded deployment. Beyond conducting high-impact R&D compliant with rigorous safety standards (such as DO-178C and ISO 26262), the laboratory actively advances education through specialized university curricula and tailored industry training programs.
 
-<div class="d-flex gap-2 my-3">
-  <a href="{{ '/projects/' | relative_url }}" class="btn btn-sm btn-outline-primary fw-bold" style="border-radius: 6px; padding: 0.35rem 0.85rem;">Explore Projects</a>
-  <a href="{{ '/team/' | relative_url }}" class="btn btn-sm btn-outline-secondary fw-bold" style="border-radius: 6px; padding: 0.35rem 0.85rem;">Meet the Team</a>
+<!-- BUTONLAR (NET & GÖRÜNÜR) -->
+<div class="about-cta-group">
+  <a href="{{ '/projects/' | relative_url }}" class="hero-btn hero-btn-primary">
+    <i class="fa-solid fa-diagram-project"></i> Explore Projects
+  </a>
+  <a href="{{ '/team/' | relative_url }}" class="hero-btn hero-btn-secondary">
+    <i class="fa-solid fa-users"></i> Meet the Team
+  </a>
 </div>
 
 <!-- 1. RESEARCH PILLARS -->
