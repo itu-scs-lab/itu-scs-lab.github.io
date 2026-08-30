@@ -17,9 +17,14 @@ nav_order: 6
   </div>
   <div class="pi-title-sub">Assoc. Professor / SCS Lab Director</div>
   
-  <p class="pi-focus">
-    <strong>Focus:</strong> Autonomous Flight Control, Safety-Critical Control Systems, Robust & Predictive Control.
-  </p>
+  <div class="member-tags-title">Research Focus</div>
+  <div class="member-focus-inline">
+    <span class="focus-item">Autonomous Flight Control</span>
+    <span class="focus-sep">•</span>
+    <span class="focus-item">Safety-Critical Control Systems</span>
+    <span class="focus-sep">•</span>
+    <span class="focus-item">Robust &amp; Predictive Control</span>
+  </div>
 
   <div class="team-social-links">
     <a href="mailto:ustoglu@itu.edu.tr" class="team-social-btn">
@@ -44,16 +49,20 @@ nav_order: 6
   <!-- Talha Ulukır -->
   <div class="team-member-card">
     <h3 class="member-name">Talha Ulukır, Ph.D.</h3>
-    <div class="member-role">Control Systems Engineer </div>
+    <div class="member-role">Control Systems Engineer</div>
     
-  <div class="member-tags-title">Research Specialization</div>
-    <div class="member-tags">
-      <span class="member-pill">Flight Control Law Design</span>
-      <span class="member-pill">Data-Driven MPC (DeePC)</span>
-      <span class="member-pill">A-MPC</span>
-      <span class="member-pill">INDI</span>
-      <span class="member-pill">Rotorcraft Dynamics</span>
-  </div>
+  <div class="member-tags-title">Research Focus</div>
+    <div class="member-focus-inline">
+      <span class="focus-item">Flight Control Law Design</span>
+      <span class="focus-sep">•</span>
+      <span class="focus-item">Data-Driven MPC (DeePC)</span>
+      <span class="focus-sep">•</span>
+      <span class="focus-item">A-MPC</span>
+      <span class="focus-sep">•</span>
+      <span class="focus-item">INDI</span>
+      <span class="focus-sep">•</span>
+      <span class="focus-item">Rotorcraft Dynamics</span>
+    </div>
 
   <div class="team-social-links">
       <a href="https://github.com/TalhaUlukir" target="_blank" class="team-social-btn">
@@ -73,11 +82,13 @@ nav_order: 6
     <h3 class="member-name">Ömer Faruk Polat</h3>
     <div class="member-role">Control Systems Researcher / M.Sc. Student</div>
     
-  <div class="member-tags-title">Research Specialization</div>
-    <div class="member-tags">
-      <span class="member-pill">Data-Driven MPC (DeePC)</span>
-      <span class="member-pill">Iterative Learning Control (ILC)</span>
-      <span class="member-pill">Repetitive Control</span>
+  <div class="member-tags-title">Research Focus</div>
+    <div class="member-focus-inline">
+      <span class="focus-item">Data-Driven MPC (DeePC)</span>
+      <span class="focus-sep">•</span>
+      <span class="focus-item">Iterative Learning Control (ILC)</span>
+      <span class="focus-sep">•</span>
+      <span class="focus-item">Repetitive Control</span>
     </div>
 
   <div class="team-social-links">
