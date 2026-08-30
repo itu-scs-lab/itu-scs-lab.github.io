@@ -7,6 +7,7 @@ importance: 2
 category: Navigation & Estimation
 
 organization: Turkish Aerospace
+status: ongoing
 keywords: [GNSS/INS, Kalman Filter, Loosely Coupled, Sensor Fusion, DO-178C, Simulink, UAV Navigation]
 ---
 
