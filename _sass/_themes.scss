@@ -1415,44 +1415,97 @@ html[data-theme='dark'] {
   }
 }
 
-/* Hedef Sektör Şeridi */
-.domains-container {
+/* ==========================================================================
+   APPLICATION DOMAINS MODERN SHOWCASE (SEÇENEK 1)
+   ========================================================================== */
+.domains-showcase-section {
   clear: both !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.5rem !important;
-  flex-wrap: wrap !important;
-  padding: 1rem 1.25rem !important;
-  background-color: rgba(2, 132, 199, 0.04) !important;
-  border: 1px dashed var(--global-divider-color, rgba(2, 132, 199, 0.25)) !important;
-  border-radius: 10px !important;
-  margin-bottom: 3rem !important;
+  width: 100% !important;
+  margin: 1rem 0 3rem 0 !important;
+}
 
-  .domains-label {
-    font-size: 0.75rem !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.05em !important;
-    color: #0284c7 !important;
-    margin-right: 0.3rem !important;
+.domains-cards-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) !important;
+  gap: 1rem !important;
+}
+
+.domain-interactive-card {
+  background-color: var(--global-card-bg-color, #ffffff) !important;
+  border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.08)) !important;
+  border-radius: 10px !important;
+  padding: 1.25rem 1rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease !important;
+
+  &:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(2, 132, 199, 0.1) !important;
+    border-color: rgba(2, 132, 199, 0.4) !important;
+
+    .domain-icon-box {
+      background-color: #0284c7 !important;
+      color: #ffffff !important;
+      transform: scale(1.08) !important;
+    }
   }
 
-  .domain-pill {
-    font-size: 0.72rem !important;
-    font-weight: 600 !important;
-    padding: 0.25rem 0.65rem !important;
-    border-radius: 20px !important;
-    background-color: var(--global-card-bg-color, #ffffff) !important;
-    border: 1px solid var(--global-divider-color, rgba(0,0,0,0.1)) !important;
+  .domain-icon-box {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 10px !important;
+    background-color: rgba(2, 132, 199, 0.08) !important;
+    color: #0284c7 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 0.75rem !important;
+    transition: all 0.22s ease !important;
+  }
+
+  .domain-card-name {
+    font-size: 0.84rem !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
     color: var(--global-text-color) !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02) !important;
+  }
+}
+
+/* News Callout Box */
+.lab-news-card {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  padding: 0.85rem 1.2rem !important;
+  background-color: rgba(2, 132, 199, 0.05) !important;
+  border: 1px solid rgba(2, 132, 199, 0.25) !important;
+  border-left: 4px solid #0284c7 !important;
+  border-radius: 8px !important;
+  font-size: 0.85rem !important;
+
+  .news-badge {
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 0.7rem !important;
+    color: #0284c7 !important;
+    white-space: nowrap !important;
+  }
+
+  .news-content {
+    color: var(--global-text-color) !important;
   }
 }
 
 /* Dark Mode Uyumu */
 html[data-theme='dark'] {
   .profile img,
-  .focus-card {
+  .focus-card,
+  .domain-interactive-card {
     background-color: #1e293b !important;
     border-color: #334155 !important;
   }
@@ -1462,50 +1515,30 @@ html[data-theme='dark'] {
     color: #38bdf8 !important;
   }
 
-  .domains-container {
-    background-color: rgba(15, 23, 42, 0.6) !important;
-    border-color: #334155 !important;
+  .domain-interactive-card {
+    .domain-icon-box {
+      background-color: rgba(56, 189, 248, 0.12) !important;
+      color: #38bdf8 !important;
+    }
 
-    .domain-pill {
-      background-color: #1e293b !important;
-      border-color: #334155 !important;
-      color: #e2e8f0 !important;
+    &:hover {
+      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.15) !important;
+      border-color: #38bdf8 !important;
+
+      .domain-icon-box {
+        background-color: #38bdf8 !important;
+        color: #0f172a !important;
+      }
     }
   }
-}
 
-/* News Callout Box */
-.lab-news-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.85rem 1.2rem;
-  background-color: rgba(2, 132, 199, 0.05);
-  border: 1px solid rgba(2, 132, 199, 0.25);
-  border-left: 4px solid #0284c7;
-  border-radius: 8px;
-  font-size: 0.85rem;
-
-  .news-badge {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    color: #0284c7;
-    white-space: nowrap;
-  }
-
-  .news-content {
-    color: var(--global-text-color);
+  .lab-news-card {
+    background-color: rgba(15, 23, 42, 0.6) !important;
+    border-color: #334155 !important;
+    border-left-color: #38bdf8 !important;
+    .news-badge { color: #38bdf8 !important; }
   }
 }
-
-html[data-theme='dark'] .lab-news-card {
-  background-color: rgba(15, 23, 42, 0.6);
-  border-color: #334155;
-  border-left-color: #38bdf8;
-  .news-badge { color: #38bdf8; }
-}
-
 /* ==========================================================================
    NAVBAR & BUTTONS HOTFIX
    ========================================================================== */
