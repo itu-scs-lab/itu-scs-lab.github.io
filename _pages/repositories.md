@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
+title: Software
 description: Open-source software toolboxes, algorithms, and research code developed by ITU SCS Lab.
 nav: true
 nav_order: 5
