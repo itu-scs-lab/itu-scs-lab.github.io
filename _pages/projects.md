@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: Ongoing and completed research projects on safety-critical control, predictive frameworks, and autonomous systems.
 nav: true
-nav_order: 3
+nav_order: 4
 display_categories: false
 horizontal: false
 ---
