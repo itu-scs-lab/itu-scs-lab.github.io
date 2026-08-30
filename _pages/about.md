@@ -32,13 +32,22 @@ The Safety-Critical Systems Laboratory (SCS Lab) develops advanced methods in co
   </a>
 </div>
 
-<!-- OTOMATİK HABER ÇEKİCİ (LATEST NEWS) -->
+<!-- OTOMATİK & HİBRİT HABER ÇEKİCİ -->
 {% assign latest_news = site.news | sort: "date" | reverse | first %}
 {% if latest_news %}
 <div class="lab-news-card my-3">
   <div class="news-badge"><i class="fa-solid fa-bullhorn me-1"></i> Latest News</div>
   <div class="news-content">
-    <strong>{{ latest_news.date | date: "%b %Y" }}:</strong> {{ latest_news.content | remove: '<p>' | remove: '</p>' | strip }}
+    {% if latest_news.inline %}
+      <!-- 1. Tıklanamayan Kısa Duyuru -->
+      <strong>{{ latest_news.date | date: "%b %Y" }}:</strong> {{ latest_news.content | remove: '<p>' | remove: '</p>' | strip }}
+    {% else %}
+      <!-- 2. Tıklanabilir Detaylı Haber / Dış Bağlantı -->
+      <a href="{% if latest_news.redirect %}{{ latest_news.redirect }}{% else %}{{ latest_news.url | relative_url }}{% endif %}" class="news-link"{% if latest_news.redirect %} target="_blank"{% endif %}>
+        <strong>{{ latest_news.date | date: "%b %Y" }}:</strong> {{ latest_news.title }}
+        <i class="fa-solid fa-arrow-right ms-1" style="font-size: 0.75rem;"></i>
+      </a>
+    {% endif %}
   </div>
 </div>
 {% endif %}
