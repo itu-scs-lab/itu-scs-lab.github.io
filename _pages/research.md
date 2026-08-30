@@ -7,285 +7,242 @@ nav: true
 nav_order: 2
 ---
 
-<div class="research-intro">
-  <p class="lead">
-    SCS Lab conducts research on the analysis, control, safety, and verification of
-    <strong>safety-critical dynamical systems</strong>. Our work is organized around
-    three complementary research pillars, spanning rigorous theoretical foundations,
-    system-level safety and reliability, and high-integrity implementation.
-  </p>
-</div>
+<div class="research-page-container">
 
-<hr class="research-divider">
-
-<!-- ========================================================= -->
-<!-- 01 — CONTROL SYSTEMS & AUTONOMY                           -->
-<!-- ========================================================= -->
-
-<section class="research-pillar" id="control-systems-autonomy">
-
-<div class="research-pillar-number">01</div>
-
-## Control Systems & Autonomy
-
-We develop advanced control and decision-making methods for complex dynamical systems
-operating under constraints, uncertainty, nonlinearities, and limited computational
-resources. Our research spans model-based and data-driven formulations, with emphasis
-on methods suitable for real-time and safety-critical operation.
-
-<div class="research-topics">
-
-  <div class="research-topic">
-    <h3>Predictive &amp; Constrained Control</h3>
-    <p>
-      Model Predictive Control (MPC), computationally efficient predictive formulations,
-      constraint handling, and real-time optimization for systems with demanding operational
-      and safety requirements.
+  <!-- GİRİŞ METNİ -->
+  <div class="research-hero-banner">
+    <p class="research-lead-text">
+      SCS Lab conducts cutting-edge research on the analysis, control, safety, and verification of
+      <strong>safety-critical dynamical systems</strong>. Our work is organized around three complementary pillars, spanning rigorous theoretical foundations, system-level safety and reliability, and high-integrity embedded implementation.
     </p>
   </div>
 
-  <div class="research-topic">
-    <h3>Data-Driven Control</h3>
-    <p>
-      Data-driven predictive control, behavioral and subspace-based formulations, numerical
-      conditioning, reduced-order representations, and computational methods for control
-      directly from measured system data.
+  <!-- ========================================================= -->
+  <!-- 01 — CONTROL SYSTEMS & AUTONOMY                           -->
+  <!-- ========================================================= -->
+  <section class="research-pillar-section" id="control-systems-autonomy">
+    <div class="pillar-header-group">
+      <span class="pillar-num-badge">01</span>
+      <div class="pillar-title-wrap">
+        <h2 class="pillar-main-title">Control Systems & Autonomy</h2>
+        <p class="pillar-sub-lead">
+          Advanced control, optimization, and decision-making for complex dynamical systems operating under strict physical constraints, severe uncertainties, and limited embedded compute.
+        </p>
+      </div>
+    </div>
+
+ <div class="research-cards-grid">
+      <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">Predictive & Constrained Control</h3>
+        <p class="topic-desc">
+          Model Predictive Control (MPC), closed-form Algebraic MPC, constraint handling, and real-time embedded quadratic programming for mission-critical regimes.
+        </p>
+      </div>
+
+  <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">Data-Driven Control</h3>
+        <p class="topic-desc">
+          Direct Data-Driven Predictive Control (DeePC), behavioral & subspace methods, numerical conditioning, and real-time control synthesis directly from input-output data.
+        </p>
+      </div>
+
+  <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">Robust & Nonlinear Control</h3>
+        <p class="topic-desc">
+          Adaptive control, Incremental Nonlinear Dynamic Inversion (INDI), and sliding mode/Lyapunov-based strategies resilient to modeling inaccuracies and atmospheric disturbances.
+        </p>
+      </div>
+
+  <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">Guidance & Autonomous Flight</h3>
+        <p class="topic-desc">
+          Constraint-aware trajectory generation, real-time lookahead adaptive L1 guidance, automatic landing architectures, and terrain-following guidance for autonomous vehicles.
+        </p>
+      </div>
+
+  <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">Real-Time Implementation</h3>
+        <p class="topic-desc">
+          Microsecond-level deterministic execution, embedded code generation, and fixed-point mathematical formulations tailored for flight controllers and mission computers.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 02 — SAFETY, RISK & RELIABILITY                           -->
+  <!-- ========================================================= -->
+  <section class="research-pillar-section" id="safety-risk-reliability">
+    <div class="pillar-header-group">
+      <span class="pillar-num-badge">02</span>
+      <div class="pillar-title-wrap">
+        <h2 class="pillar-main-title">Safety, Risk & Reliability</h2>
+        <p class="pillar-sub-lead">
+          Preserving stability, deterministic bounds, and functional integrity in the presence of sensor faults, actuator degradation, and extreme environmental uncertainties.
+        </p>
+      </div>
+    </div>
+
+  <div class="research-cards-grid">
+      <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">Fault Detection, Isolation & Diagnosis</h3>
+        <p class="topic-desc">
+          Model-based and statistical residual evaluation, sensor/actuator FDI, and active health monitoring to identify failures before unrecoverable loss of control occurs.
+        </p>
+      </div>
+
+  <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">Fault-Tolerant & Resilient Control</h3>
+        <p class="topic-desc">
+          Active control reconfiguration, control allocation under damaged surfaces, and degraded-mode supervisory logic ensuring safe return-to-base and mission survival.
+        </p>
+      </div>
+
+  <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">Safety-Aware Control & Barriers</h3>
+        <p class="topic-desc">
+          Control Barrier Functions (CBFs), reachability analysis, and flight envelope protection algorithms ensuring systems never exit verified safe operating subsets.
+        </p>
+      </div>
+
+  <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">Robust Estimation & Sensor Fusion</h3>
+        <p class="topic-desc">
+          Augmented-state Extended Kalman Filtering (EKF), robust fault exclusion for multi-constellation GNSS/INS systems, and multi-rate state estimation.
+        </p>
+      </div>
+
+  <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">Risk & Reliability Assessment</h3>
+        <p class="topic-desc">
+          Quantitative hazard evaluation, safety margins, Failure Modes and Effects Analysis (FMEA), and deterministic state machine safety monitors.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 03 — HIGH-INTEGRITY SOFTWARE & V&V                        -->
+  <!-- ========================================================= -->
+  <section class="research-pillar-section" id="high-integrity-software-vv">
+    <div class="pillar-header-group">
+      <span class="pillar-num-badge">03</span>
+      <div class="pillar-title-wrap">
+        <h2 class="pillar-main-title">High-Integrity Software & V&V</h2>
+        <p class="pillar-sub-lead">
+          Systematic workflows translating mathematical control laws into verified, deterministic, and safety-certifiable embedded software architectures.
+        </p>
+      </div>
+    </div>
+
+  <div class="research-cards-grid">
+      <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">Model-Based Development (MBD)</h3>
+        <p class="topic-desc">
+          Executable models, automated C/C++ code generation, bidirectional requirements traceability, and rigorous architecture definition in MATLAB/Simulink pipelines.
+        </p>
+      </div>
+
+  <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">Verification & Validation (V&V)</h3>
+        <p class="topic-desc">
+          Requirements-based testing, modified condition/decision coverage (MC/DC), static code analysis, and boundary numerical stress verification.
+        </p>
+      </div>
+
+  <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">SIL & HIL Real-Time Testing</h3>
+        <p class="topic-desc">
+          Software-in-the-Loop and Hardware-in-the-Loop testbeds with real-time target emulators evaluating jitter, latency, and fault-injection dynamics.
+        </p>
+      </div>
+
+  <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">Formal & Safety Verification</h3>
+        <p class="topic-desc">
+          Theorem proving, model checking, and mathematical property proofs ensuring safety invariants are preserved under all possible states.
+        </p>
+      </div>
+
+  <div class="research-subcard">
+        <div class="card-accent-bar"></div>
+        <h3 class="topic-title">Standards & Certification</h3>
+        <p class="topic-desc">
+          Aerospace (DO-178C / DO-331), automotive (ISO 26262), and industrial functional safety (IEC 61508) process compliance and artifact synthesis.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- CROSS-PILLAR RESEARCH PIPELINE                            -->
+  <!-- ========================================================= -->
+  <section class="research-pipeline-section">
+    <h2 class="pipeline-heading">From Theory to Safety-Critical Implementation</h2>
+    <p class="pipeline-sub">
+      The three pillars form an unbroken lifecycle: control algorithms are formulated with safety boundaries, realized with deterministic complexity, and verified under international compliance standards.
     </p>
-  </div>
 
-  <div class="research-topic">
-    <h3>Robust &amp; Nonlinear Control</h3>
-    <p>
-      Robust, adaptive, and nonlinear control methods for systems subject to uncertainty,
-      disturbances, nonlinear dynamics, and changing operating conditions.
-    </p>
-  </div>
+  <div class="pipeline-flow-container">
+      <div class="flow-step">
+        <span class="step-icon"><i class="fa-solid fa-square-root-variable"></i></span>
+        <span class="step-text">Theory & Modeling</span>
+      </div>
+      <span class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
 
-  <div class="research-topic">
-    <h3>Guidance, Autonomy &amp; Decision-Making</h3>
-    <p>
-      Guidance, trajectory generation, supervisory control, and autonomous decision-making
-      methods that explicitly account for dynamic, operational, and safety constraints.
-    </p>
-  </div>
+  <div class="flow-step">
+        <span class="step-icon"><i class="fa-solid fa-microchip"></i></span>
+        <span class="step-text">Control & Estimation</span>
+      </div>
+      <span class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
 
-  <div class="research-topic">
-    <h3>Real-Time Control Implementation</h3>
-    <p>
-      Control architectures and numerical methods designed with computational complexity,
-      determinism, embedded implementation, and real-time execution requirements in mind.
-    </p>
-  </div>
+  <div class="flow-step">
+        <span class="step-icon"><i class="fa-solid fa-shield-halved"></i></span>
+        <span class="step-text">Safety & Reliability</span>
+      </div>
+      <span class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
 
-</div>
+  <div class="flow-step">
+        <span class="step-icon"><i class="fa-solid fa-bolt"></i></span>
+        <span class="step-text">Real-Time Embedded</span>
+      </div>
+      <span class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
 
-</section>
+  <div class="flow-step">
+        <span class="step-icon"><i class="fa-solid fa-check-double"></i></span>
+        <span class="step-text">V&V & Certification</span>
+      </div>
+    </div>
+  </section>
 
-<hr class="research-divider">
+  <!-- ========================================================= -->
+  <!-- APPLICATION DOMAINS                                       -->
+  <!-- ========================================================= -->
+  <section class="research-domains-section">
+    <h2 class="domains-title">Application Domains</h2>
+    <p class="domains-sub">Our methodologies are applied across diverse high-consequence industries:</p>
 
-<!-- ========================================================= -->
-<!-- 02 — SAFETY, RISK & RELIABILITY                           -->
-<!-- ========================================================= -->
-
-<section class="research-pillar" id="safety-risk-reliability">
-
-<div class="research-pillar-number">02</div>
-
-## Safety, Risk & Reliability
-
-We investigate methods for maintaining safe and reliable operation in the presence of
-faults, uncertainty, disturbances, and degraded system conditions. The objective is to
-integrate safety and reliability considerations directly into estimation, control, and
-system-level decision-making.
-
-<div class="research-topics">
-
-  <div class="research-topic">
-    <h3>Fault Detection, Isolation &amp; Diagnosis</h3>
-    <p>
-      Model-based and data-driven methods for detecting, isolating, and diagnosing sensor,
-      actuator, and system faults while distinguishing faults from uncertainty and external
-      disturbances.
-    </p>
-  </div>
-
-  <div class="research-topic">
-    <h3>Fault-Tolerant &amp; Resilient Control</h3>
-    <p>
-      Active and passive fault-tolerant control, reconfiguration, degraded-mode operation,
-      and resilient control architectures that preserve critical functionality following
-      component or subsystem failures.
-    </p>
-  </div>
-
-  <div class="research-topic">
-    <h3>Safety-Aware Control</h3>
-    <p>
-      Control methods that explicitly incorporate safety constraints, safe operating regions,
-      and risk-related requirements into the control design and online decision-making process.
-    </p>
-  </div>
-
-  <div class="research-topic">
-    <h3>Robust Estimation &amp; Monitoring</h3>
-    <p>
-      State and parameter estimation, sensor fusion, consistency monitoring, residual
-      generation, and health-aware estimation for systems operating with uncertain or
-      degraded measurements.
-    </p>
-  </div>
-
-  <div class="research-topic">
-    <h3>Risk &amp; Reliability Assessment</h3>
-    <p>
-      Systematic assessment of failure mechanisms, operational risk, reliability, and
-      system-level safety margins to support the design and validation of safety-critical
-      architectures.
-    </p>
-  </div>
-
-</div>
-
-</section>
-
-<hr class="research-divider">
-
-<!-- ========================================================= -->
-<!-- 03 — HIGH-INTEGRITY SOFTWARE & V&V                        -->
-<!-- ========================================================= -->
-
-<section class="research-pillar" id="high-integrity-software-vv">
-
-<div class="research-pillar-number">03</div>
-
-## High-Integrity Software & V&V
-
-We study the transition from control and safety algorithms to dependable embedded
-implementations. Our work addresses model-based development, verification and
-validation, testing, and certification-oriented engineering for high-integrity
-software-intensive systems.
-
-<div class="research-topics">
-
-  <div class="research-topic">
-    <h3>Model-Based Development</h3>
-    <p>
-      Systematic development of control and safety functions from executable models,
-      including requirements traceability, architecture definition, implementation, and
-      verification workflows.
-    </p>
-  </div>
-
-  <div class="research-topic">
-    <h3>Verification &amp; Validation</h3>
-    <p>
-      Verification and validation strategies for control and embedded software, including
-      requirements-based testing, structural assessment, numerical validation, and
-      system-level acceptance criteria.
-    </p>
-  </div>
-
-  <div class="research-topic">
-    <h3>SIL &amp; HIL Testing</h3>
-    <p>
-      Software-in-the-Loop (SIL) and Hardware-in-the-Loop (HIL) environments for evaluating
-      functional behavior, timing, robustness, failure response, and real-time performance
-      under representative operating conditions.
-    </p>
-  </div>
-
-  <div class="research-topic">
-    <h3>Formal &amp; Safety-Oriented Verification</h3>
-    <p>
-      Formal and semi-formal techniques for reasoning about system properties, constraints,
-      failure behavior, and safety requirements throughout the development lifecycle.
-    </p>
-  </div>
-
-  <div class="research-topic">
-    <h3>Certification-Oriented Engineering</h3>
-    <p>
-      Development and assurance practices for high-integrity embedded systems with
-      consideration of applicable safety and software standards across safety-critical
-      application domains.
-    </p>
-  </div>
-
-</div>
-
-</section>
-
-<hr class="research-divider">
-
-<!-- ========================================================= -->
-<!-- CROSS-PILLAR RESEARCH                                     -->
-<!-- ========================================================= -->
-
-<section class="research-cross-pillar">
-
-## From Theory to Safety-Critical Implementation
-
-The three research pillars are intentionally interconnected. Control performance alone
-is insufficient for a safety-critical system; algorithms must also tolerate uncertainty
-and faults, satisfy explicit safety requirements, execute predictably in real time, and
-be supported by systematic verification and validation.
-
-Our research therefore aims to connect:
-
-<div class="research-flow">
-
-**Theory & Modeling**
-&nbsp; → &nbsp;
-**Control & Estimation**
-&nbsp; → &nbsp;
-**Safety & Reliability**
-&nbsp; → &nbsp;
-**Real-Time Implementation**
-&nbsp; → &nbsp;
-**Verification & Validation**
-
-</div>
-
-This integrated perspective enables research outcomes to progress from mathematical
-formulation toward dependable implementation in real safety-critical systems.
-
-</section>
-
-<hr class="research-divider">
-
-<!-- ========================================================= -->
-<!-- APPLICATION DOMAINS                                       -->
-<!-- ========================================================= -->
-
-<section class="research-applications">
-
-## Application Domains
-
-The laboratory's research pillars are domain-independent and are investigated across
-a range of safety-critical and high-integrity applications.
-
-<div class="domains-container">
-
-  <span class="domain-pill">
-    <i class="fa-solid fa-plane-up me-1"></i> Aerospace
-  </span>
-
-  <span class="domain-pill">
-    <i class="fa-solid fa-car me-1"></i> Automotive
-  </span>
-
-  <span class="domain-pill">
-    <i class="fa-solid fa-train me-1"></i> Rail Transportation
-  </span>
-
-  <span class="domain-pill">
-    <i class="fa-solid fa-robot me-1"></i> Robotics &amp; Mechatronics
-  </span>
-
-  <span class="domain-pill">
-    <i class="fa-solid fa-bolt me-1"></i> Energy &amp; Process Systems
-  </span>
+   <div class="domains-grid">
+      <div class="domain-card"><i class="fa-solid fa-plane-up"></i><span>Aerospace & Autonomous UAVs</span></div>
+      <div class="domain-card"><i class="fa-solid fa-car"></i><span>Automotive & ADAS</span></div>
+      <div class="domain-card"><i class="fa-solid fa-train"></i><span>Rail Transit Systems</span></div>
+      <div class="domain-card"><i class="fa-solid fa-robot"></i><span>Robotics & Mechatronics</span></div>
+      <div class="domain-card"><i class="fa-solid fa-bolt"></i><span>Energy & Process Infrastructure</span></div>
+    </div>
+  </section>
 
 </div>
-
-</section>
