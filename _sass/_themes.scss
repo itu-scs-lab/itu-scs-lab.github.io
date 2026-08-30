@@ -1610,421 +1610,52 @@ html[data-theme='dark'] {
   }
 }
 
-/* ==========================================================================
-   RESEARCH PAGE — PILLARS, TOPICS & CROSS-PILLAR FLOW
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   INTRO
-   -------------------------------------------------------------------------- */
-
-.research-intro {
-  margin: 0.5rem 0 2.5rem 0;
-  max-width: 900px;
-
-  .lead {
-    font-size: 1.08rem;
-    line-height: 1.75;
-    color: var(--global-text-color);
-    margin: 0;
-  }
-
-  strong {
-    color: var(--global-theme-color);
-    font-weight: 700;
-  }
-}
-
-
-/* --------------------------------------------------------------------------
-   SECTION DIVIDER
-   -------------------------------------------------------------------------- */
-
-.research-divider {
-  border: 0;
-  height: 1px;
-  margin: 3rem 0;
-  background: linear-gradient(
-    90deg,
-    var(--global-theme-color) 0%,
-    var(--global-divider-color) 35%,
-    transparent 100%
-  );
-  opacity: 0.65;
-}
-
-
-/* --------------------------------------------------------------------------
-   RESEARCH PILLAR
-   -------------------------------------------------------------------------- */
-
-.research-pillar {
-  position: relative;
-  margin-bottom: 1rem;
-
-  /* 01 / 02 / 03 */
-  .research-pillar-number {
-    display: inline-block;
-    margin-bottom: 0.35rem;
-
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.14em;
-
-    color: var(--global-theme-color);
-  }
-
-  > h2 {
-    margin-top: 0;
-    margin-bottom: 0.85rem;
-
-    font-size: 1.8rem;
-    font-weight: 750;
-    line-height: 1.25;
-
-    color: var(--global-text-color);
-  }
-
-  > p {
-    max-width: 920px;
-    margin-bottom: 1.7rem;
-
-    font-size: 1rem;
-    line-height: 1.7;
-
-    color: var(--global-text-color);
-    opacity: 0.92;
-  }
-}
-
-
-/* --------------------------------------------------------------------------
-   TOPIC GRID
-   -------------------------------------------------------------------------- */
-
 .research-topics {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 1.5rem;
-
-  /* Markdown h3 + paragraph çiftini kart gibi göstermek için */
-  h3 {
-    position: relative;
-
-    margin: 0;
-    padding: 1.15rem 1.2rem 0.4rem 1.2rem;
-
-    background-color: var(--global-card-bg-color);
-
-    border-top: 1px solid var(--global-divider-color);
-    border-left: 1px solid var(--global-divider-color);
-    border-right: 1px solid var(--global-divider-color);
-
-    border-radius: 9px 9px 0 0;
-
-    font-size: 1.03rem;
-    font-weight: 700;
-    line-height: 1.35;
-
-    color: var(--global-text-color);
-
-    transition:
-      border-color 0.2s ease,
-      color 0.2s ease;
-  }
-
-  /* Küçük turkuaz vurgu */
-  h3::before {
-    content: "";
-    display: block;
-
-    width: 28px;
-    height: 3px;
-
-    margin-bottom: 0.65rem;
-
-    background-color: var(--global-theme-color);
-    border-radius: 3px;
-  }
-
-  h3 + p {
-    margin: 0;
-    margin-top: -1px;
-
-    padding: 0.25rem 1.2rem 1.15rem 1.2rem;
-
-    background-color: var(--global-card-bg-color);
-
-    border-left: 1px solid var(--global-divider-color);
-    border-right: 1px solid var(--global-divider-color);
-    border-bottom: 1px solid var(--global-divider-color);
-
-    border-radius: 0 0 9px 9px;
-
-    font-size: 0.91rem;
-    line-height: 1.62;
-
-    color: var(--global-text-color);
-    opacity: 0.88;
-
-    transition:
-      border-color 0.2s ease,
-      box-shadow 0.2s ease,
-      transform 0.2s ease;
-  }
-
-  /*
-   * Markdown yapısında h3 ve p ayrı elemanlar olduğu için
-   * çok agresif "floating card" kullanmıyoruz.
-   * Hafif vurgu yeterli.
-   */
-  h3:hover {
-    border-color: var(--global-theme-color);
-    color: var(--global-theme-color);
-  }
-
-  h3:hover + p {
-    border-color: var(--global-theme-color);
-  }
 }
 
-
-/* --------------------------------------------------------------------------
-   CROSS-PILLAR SECTION
-   -------------------------------------------------------------------------- */
-
-.research-cross-pillar {
-  padding: 1.6rem 1.7rem;
-
-  background-color: rgba(0, 128, 128, 0.045);
-
+.research-topic {
+  background-color: var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
-  border-left: 4px solid var(--global-theme-color);
+  border-radius: 9px;
+  padding: 1.2rem;
 
-  border-radius: 10px;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
 
-  h2 {
-    margin-top: 0;
-    margin-bottom: 0.85rem;
+  &:hover {
+    transform: translateY(-3px);
+    border-color: var(--global-theme-color);
+    box-shadow: 0 8px 20px rgba(0, 33, 71, 0.07);
+  }
 
-    font-size: 1.55rem;
-    font-weight: 750;
-
+  h3 {
+    font-size: 1.03rem;
+    font-weight: 700;
+    margin: 0 0 0.6rem 0;
     color: var(--global-text-color);
+
+    &::before {
+      content: "";
+      display: block;
+      width: 28px;
+      height: 3px;
+      margin-bottom: 0.65rem;
+      background-color: var(--global-theme-color);
+      border-radius: 3px;
+    }
   }
 
   p {
-    line-height: 1.7;
-    margin-bottom: 1rem;
-
+    margin: 0;
+    font-size: 0.91rem;
+    line-height: 1.62;
     color: var(--global-text-color);
-  }
-}
-
-
-/* --------------------------------------------------------------------------
-   THEORY → IMPLEMENTATION FLOW
-   -------------------------------------------------------------------------- */
-
-.research-flow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  gap: 0.35rem;
-
-  margin: 1.5rem 0;
-  padding: 1rem 1.2rem;
-
-  text-align: center;
-
-  background-color: var(--global-card-bg-color);
-
-  border: 1px solid var(--global-divider-color);
-  border-radius: 8px;
-
-  color: var(--global-text-color);
-
-  strong {
-    color: var(--global-theme-color);
-    font-size: 0.88rem;
-    font-weight: 700;
-    white-space: nowrap;
-  }
-}
-
-
-/* --------------------------------------------------------------------------
-   APPLICATION DOMAINS
-   -------------------------------------------------------------------------- */
-
-.research-applications {
-  margin-bottom: 2rem;
-
-  h2 {
-    margin-bottom: 0.75rem;
-
-    font-size: 1.55rem;
-    font-weight: 750;
-
-    color: var(--global-text-color);
-  }
-
-  > p {
-    max-width: 900px;
-    line-height: 1.7;
-
-    color: var(--global-text-color);
-    opacity: 0.9;
-  }
-
-  .domains-container {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 0.55rem;
-
-    margin-top: 1.25rem;
-  }
-
-  .domain-pill {
-    display: inline-flex;
-    align-items: center;
-
-    padding: 0.4rem 0.75rem;
-
-    font-size: 0.78rem;
-    font-weight: 650;
-
-    color: var(--global-text-color);
-
-    background-color: var(--global-card-bg-color);
-
-    border: 1px solid var(--global-divider-color);
-    border-radius: 6px;
-
-    transition:
-      border-color 0.2s ease,
-      color 0.2s ease,
-      transform 0.2s ease;
-
-    i {
-      color: var(--global-theme-color);
-    }
-
-    &:hover {
-      color: var(--global-theme-color);
-      border-color: var(--global-theme-color);
-      transform: translateY(-2px);
-    }
-  }
-}
-
-
-/* ==========================================================================
-   RESEARCH PAGE — DARK MODE
-   ========================================================================== */
-
-html[data-theme="dark"] {
-
-  .research-cross-pillar {
-    background-color: rgba(45, 212, 191, 0.045);
-    border-color: rgba(45, 212, 191, 0.18);
-    border-left-color: var(--global-theme-color);
-  }
-
-  .research-topics {
-
-    h3,
-    h3 + p {
-      background-color: var(--global-card-bg-color);
-      border-color: rgba(148, 163, 184, 0.18);
-    }
-
-    h3:hover,
-    h3:hover + p {
-      border-color: var(--global-theme-color);
-    }
-  }
-
-  .research-flow {
-    background-color: rgba(15, 23, 42, 0.55);
-    border-color: rgba(148, 163, 184, 0.18);
-  }
-
-  .research-applications .domain-pill {
-    border-color: rgba(148, 163, 184, 0.2);
-
-    &:hover {
-      border-color: var(--global-theme-color);
-    }
-  }
-}
-
-
-/* ==========================================================================
-   RESEARCH PAGE — RESPONSIVE
-   ========================================================================== */
-
-@media (max-width: 768px) {
-
-  .research-intro {
-    margin-bottom: 2rem;
-
-    .lead {
-      font-size: 1rem;
-      line-height: 1.65;
-    }
-  }
-
-  .research-divider {
-    margin: 2.25rem 0;
-  }
-
-  .research-pillar {
-
-    > h2 {
-      font-size: 1.5rem;
-    }
-
-    > p {
-      font-size: 0.95rem;
-    }
-  }
-
-  .research-topics {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-  }
-
-  .research-cross-pillar {
-    padding: 1.25rem;
-
-    h2 {
-      font-size: 1.35rem;
-    }
-  }
-
-  .research-flow {
-    flex-direction: column;
-    gap: 0.5rem;
-
-    strong {
-      white-space: normal;
-    }
-  }
-
-  .research-applications {
-
-    .domains-container {
-      gap: 0.45rem;
-    }
-
-    .domain-pill {
-      font-size: 0.74rem;
-      padding: 0.35rem 0.65rem;
-    }
+    opacity: 0.88;
   }
 }
