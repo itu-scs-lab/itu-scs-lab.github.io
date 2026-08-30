@@ -8,9 +8,6 @@ profile:
   align: right
   image: group_logo.png
   image_circular: true
-  more_info: >
-    <p>ITU Ayazağa Campus</p>
-    <p>Istanbul, Türkiye</p>
 
 news: true
 selected_papers: true
@@ -20,8 +17,7 @@ social: false
 ### Control • Safety • Reliability
 **From control theory to safety-critical implementation.**
 
-The Safety-Critical Systems Laboratory (SCS Lab) develops advanced methods in control, autonomy, safety, reliability, and high-integrity software for complex dynamical systems.
-Our research bridges rigorous theoretical foundations with real-time implementation, addressing the challenges of constrained operation, uncertainty, faults, and verification in safety-critical systems.
+The Safety-Critical Systems Laboratory (SCS Lab) develops advanced methods in control, autonomy, safety, reliability, and high-integrity software for complex dynamical systems. Our research bridges rigorous theoretical foundations with real-time implementation, addressing constrained operation, uncertainty, faults, computational limitations, and verification challenges in safety-critical systems. By integrating control theory, system-level safety, and dependable embedded software, we aim to develop solutions that are robust, predictable, and suitable for deployment in demanding real-world applications.
 
 <!-- HERO BUTONLARI -->
 <div class="about-cta-group">
