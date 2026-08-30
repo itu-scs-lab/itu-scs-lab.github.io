@@ -4,7 +4,7 @@ permalink: /publications/
 title: publications
 description: Peer-reviewed journal articles, conference papers, and technical reports on safety-critical control systems.
 nav: true
-nav_order: 2
+nav_order: 3
 ---
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
