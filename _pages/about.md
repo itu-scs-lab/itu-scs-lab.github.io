@@ -7,63 +7,72 @@ subtitle: Safety-Critical Systems Laboratory at Istanbul Technical University
 profile:
   align: right
   image: group_logo.png
-  image_circular: true 
+  image_circular: true
 
-selected_papers: true 
-social: false 
+selected_papers: true
+social: false
 ---
 
-Welcome to the **Safety-Critical Systems Laboratory (SCS Lab)** at Istanbul Technical University.
+### Control • Safety • Reliability
+**From control theory to safety-critical implementation.**
 
-The **SCS Lab** is an advanced research, development, and training center dedicated to the theory, implementation, and verification of control engineering across all safety-critical applications. Operating at the intersection of Modern Control Theory, Dynamical Systems, Electrical & Electronics Engineering, and High-Integrity Software Architectures, our primary mission is to engineer deterministic, certifiable, and fault-tolerant solutions where system failure or performance degradation is not an option.
+We develop deterministic control, state estimation, and rigorous verification methods for safety-critical autonomous, robotic, and industrial systems.
 
-Our research spectrum spans the full continuum of control systems engineering—including classical control, state-space methods, optimal and adaptive control, robust control, nonlinear dynamics, modern data-driven methodologies, predictive control frameworks, and state estimation/sensor fusion architectures. We complement theoretical control synthesis with system identification, active fault detection and isolation (FDI), risk/reliability management, and certifiable model-based development pipelines complying with international safety standards (such as DO-178C, ISO 26262, and IEC 61508). These capabilities serve a broad domain of critical engineering fields, including autonomous aerial/ground/marine vehicles, robotics and mechatronics, rail transit, automotive systems, defense platforms, energy networks, and process automation.
+<div class="d-flex gap-2 my-3">
+  <a href="{{ '/projects/' | relative_url }}" class="btn btn-sm btn-outline-primary fw-bold" style="border-radius: 6px; padding: 0.35rem 0.85rem;">Explore Projects</a>
+  <a href="{{ '/team/' | relative_url }}" class="btn btn-sm btn-outline-secondary fw-bold" style="border-radius: 6px; padding: 0.35rem 0.85rem;">Meet the Team</a>
+</div>
 
-Beyond academic research and high-impact R&D projects funded nationally and internationally, SCS Lab actively drives knowledge transfer to academia and industry. The laboratory develops and delivers comprehensive curricula across undergraduate, M.Sc., and Ph.D. levels, while also designing customized, high-level corporate training programs and technical workshops tailored to the specialized needs of industry partners and technology companies.
+<!-- LATEST NEWS -->
+<div class="lab-news-card my-4">
+  <div class="news-badge"><i class="fa-solid fa-bullhorn me-1"></i> Latest News</div>
+  <div class="news-content">
+    <strong>August 2026:</strong> SCS Lab presented the <em>Algebraic MPC Toolbox: Theory and Realization</em> at the <strong>23rd IFAC World Congress</strong> in Busan, South Korea.
+  </div>
+</div>
 
-<!-- 1. CORE RESEARCH FOCUS -->
-<h2 class="about-section-heading">Core Research Focus</h2>
+<!-- 3 RESEARCH PILLARS -->
+<h2 class="about-section-heading">Research Pillars</h2>
 
 <div class="research-focus-grid">
-  <!-- Focus 1 -->
   <div class="focus-card">
     <div class="focus-icon-box"><i class="fa-solid fa-microchip"></i></div>
-    <h3 class="focus-title">Control Theory & Applications</h3>
+    <h3 class="focus-title">01. Control & Autonomous Systems</h3>
     <p class="focus-desc">
-      Advanced Predictive Control frameworks (Model Predictive Control - MPC, Data-Driven Predictive Control - DeePC), Incremental Nonlinear Dynamic Inversion (INDI), Control Barrier Functions (CBF), and robust control strategies for complex dynamic systems.
+      Constrained predictive control (MPC, DeePC, Algebraic MPC), adaptive guidance, INDI, and real-time flight control law synthesis.
     </p>
   </div>
 
-  <!-- Focus 2 -->
   <div class="focus-card">
     <div class="focus-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-    <h3 class="focus-title">Risk & Reliability Management</h3>
+    <h3 class="focus-title">02. Safety, Risk & Reliability</h3>
     <p class="focus-desc">
-      Risk assessment methodologies, safety margin analysis, fault detection strategies, and deterministic state machine architectures designed to preserve overall system integrity.
+      Active Fault Detection and Isolation (FDI), robust state estimation (EKF), safety margins, and resilient deterministic architectures.
     </p>
   </div>
 
-  <!-- Focus 3 -->
   <div class="focus-card">
     <div class="focus-icon-box"><i class="fa-solid fa-list-check"></i></div>
-    <h3 class="focus-title">Software Quality Assurance</h3>
+    <h3 class="focus-title">03. High-Integrity Software & V&V</h3>
     <p class="focus-desc">
-      High-integrity software design, verification and validation strategies, and rigorous testing methodologies tailored specifically for safety-critical domains.
+      Model-based development workflows, formal verification, Hardware-in-the-Loop (HIL) testing, and DO-178C / ISO 26262 compliance.
     </p>
   </div>
 </div>
 
-<!-- 2. APPLICATION DOMAINS -->
+<!-- APPLICATION DOMAINS HIERARCHY -->
+<h2 class="about-section-heading">Application Domains</h2>
 <div class="domains-container">
-  <span class="domains-label"><i class="fa-solid fa-crosshairs me-1"></i> Target Domains:</span>
-  <span class="domain-pill"><i class="fa-solid fa-plane-up me-1"></i> Aerospace Engineering</span>
-  <span class="domain-pill"><i class="fa-solid fa-car me-1"></i> Automotive Systems</span>
-  <span class="domain-pill"><i class="fa-solid fa-train me-1"></i> Railway Systems</span>
-  <span class="domain-pill"><i class="fa-solid fa-atom me-1"></i> Nuclear Systems</span>
-  <span class="domain-pill"><i class="fa-solid fa-flask me-1"></i> Chemical Processes</span>
+  <span class="domains-label"><i class="fa-solid fa-crosshairs me-1"></i> Primary:</span>
+  <span class="domain-pill"><i class="fa-solid fa-plane-up me-1"></i> Aerospace & Autonomous Systems</span>
+  <span class="domain-pill"><i class="fa-solid fa-robot me-1"></i> Robotics & Mechatronics</span>
+  
+  <span class="domains-label ms-3"><i class="fa-solid fa-layer-group me-1"></i> Critical Sectors:</span>
+  <span class="domain-pill"><i class="fa-solid fa-train me-1"></i> Rail Transit</span>
+  <span class="domain-pill"><i class="fa-solid fa-car me-1"></i> Automotive</span>
+  <span class="domain-pill"><i class="fa-solid fa-bolt me-1"></i> Energy Systems</span>
 </div>
 
-<!-- 3. SEÇİLİ YAYINLAR İÇİN DİKEY ROZET SCRİPT'İ -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var pubEntries = document.querySelectorAll('.publications ol.bibliography > li');
