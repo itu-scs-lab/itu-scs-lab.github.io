@@ -4,7 +4,7 @@ permalink: /team/
 title: team
 description: Members and researchers at ITU SCS Lab.
 nav: true
-nav_order: 5
+nav_order: 6
 ---
 
 <!-- 1. PRINCIPAL INVESTIGATOR -->
