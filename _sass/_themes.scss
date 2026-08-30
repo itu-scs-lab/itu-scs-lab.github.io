@@ -1609,53 +1609,254 @@ html[data-theme='dark'] {
     }
   }
 }
+/* ==========================================================================
+   RESEARCH PAGE MODERN LAYOUT & CARDS
+   ========================================================================== */
 
-.research-topics {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
+.research-page-container {
+  width: 100% !important;
+  margin-top: 1rem !important;
 }
 
-.research-topic {
-  background-color: var(--global-card-bg-color);
-  border: 1px solid var(--global-divider-color);
-  border-radius: 9px;
-  padding: 1.2rem;
+/* Giriş Banner'ı */
+.research-hero-banner {
+  background-color: rgba(2, 132, 199, 0.05);
+  border-left: 4px solid #0284c7;
+  border-radius: 8px;
+  padding: 1.25rem 1.6rem;
+  margin-bottom: 2.5rem;
 
-  transition:
-    transform 0.22s ease,
-    box-shadow 0.22s ease,
-    border-color 0.22s ease;
+  .research-lead-text {
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: var(--global-text-color);
+    margin: 0;
+  }
+}
 
-  &:hover {
-    transform: translateY(-3px);
-    border-color: var(--global-theme-color);
-    box-shadow: 0 8px 20px rgba(0, 33, 71, 0.07);
+/* Pillar Bölümleri */
+.research-pillar-section {
+  margin-bottom: 3.5rem;
+  padding-top: 1rem;
+}
+
+.pillar-header-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+
+  .pillar-num-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background-color: #0284c7;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 800;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.25);
+    flex-shrink: 0;
   }
 
-  h3 {
-    font-size: 1.03rem;
-    font-weight: 700;
-    margin: 0 0 0.6rem 0;
-    color: var(--global-text-color);
-
-    &::before {
-      content: "";
-      display: block;
-      width: 28px;
-      height: 3px;
-      margin-bottom: 0.65rem;
-      background-color: var(--global-theme-color);
-      border-radius: 3px;
+  .pillar-title-wrap {
+    .pillar-main-title {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--global-text-color);
+      margin: 0 0 0.4rem 0;
+      line-height: 1.25;
+    }
+    .pillar-sub-lead {
+      font-size: 0.92rem;
+      color: var(--global-text-color-light, #64748b);
+      line-height: 1.55;
+      margin: 0;
     }
   }
+}
 
-  p {
-    margin: 0;
-    font-size: 0.91rem;
-    line-height: 1.62;
+/* 2 Sütunlu Responsive Kart Gridi */
+.research-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+
+  .research-subcard {
+    background-color: var(--global-card-bg-color, #ffffff);
+    border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.1));
+    border-radius: 10px;
+    padding: 1.3rem 1.4rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      border-color: rgba(2, 132, 199, 0.4);
+    }
+
+    .card-accent-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background-color: #0284c7;
+      border-radius: 0 0 4px 0;
+    }
+
+    .topic-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--global-text-color);
+      margin: 0.3rem 0 0.5rem 0;
+      line-height: 1.35;
+    }
+
+    .topic-desc {
+      font-size: 0.84rem;
+      color: var(--global-text-color-light, #64748b);
+      line-height: 1.55;
+      margin: 0;
+    }
+  }
+}
+
+/* Akış / Pipeline Şeridi */
+.research-pipeline-section {
+  background-color: rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--global-divider-color, rgba(0,0,0,0.08));
+  border-radius: 12px;
+  padding: 1.8rem 1.5rem;
+  margin: 3rem 0;
+
+  .pipeline-heading {
+    font-size: 1.35rem;
+    font-weight: 800;
     color: var(--global-text-color);
-    opacity: 0.88;
+    margin-bottom: 0.4rem;
+    text-align: center;
+  }
+
+  .pipeline-sub {
+    font-size: 0.88rem;
+    color: var(--global-text-color-light, #64748b);
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.5;
+  }
+
+  .pipeline-flow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+
+    .flow-step {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background-color: var(--global-card-bg-color, #ffffff);
+      border: 1px solid var(--global-divider-color, rgba(0,0,0,0.1));
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--global-text-color);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+
+      .step-icon {
+        color: #0284c7;
+      }
+    }
+
+    .flow-arrow {
+      color: var(--global-text-color-light, #94a3b8);
+      font-size: 0.75rem;
+    }
+  }
+}
+
+/* Application Domains Izgarası */
+.research-domains-section {
+  margin-top: 2rem;
+
+  .domains-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--global-text-color);
+    margin-bottom: 0.2rem;
+  }
+
+  .domains-sub {
+    font-size: 0.86rem;
+    color: var(--global-text-color-light, #64748b);
+    margin-bottom: 1.2rem;
+  }
+
+  .domains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.85rem;
+
+    .domain-card {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.75rem 1rem;
+      background-color: var(--global-card-bg-color, #ffffff);
+      border: 1px solid var(--global-divider-color, rgba(0,0,0,0.1));
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--global-text-color);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+
+      i {
+        color: #0284c7;
+        font-size: 0.95rem;
+      }
+    }
+  }
+}
+
+/* Dark Mode */
+html[data-theme='dark'] {
+  .research-hero-banner {
+    background-color: rgba(15, 23, 42, 0.6);
+    border-left-color: #38bdf8;
+  }
+
+  .pillar-header-group .pillar-num-badge {
+    background-color: #38bdf8;
+    color: #0f172a;
+  }
+
+  .research-cards-grid .research-subcard,
+  .pipeline-flow-container .flow-step,
+  .domains-grid .domain-card {
+    background-color: #1e293b;
+    border-color: #334155;
+  }
+
+  .research-cards-grid .research-subcard .card-accent-bar {
+    background-color: #38bdf8;
+  }
+
+  .research-pipeline-section {
+    background-color: #0f172a;
+    border-color: #334155;
+  }
+
+  .pipeline-flow-container .flow-step .step-icon,
+  .domains-grid .domain-card i {
+    color: #38bdf8;
   }
 }
