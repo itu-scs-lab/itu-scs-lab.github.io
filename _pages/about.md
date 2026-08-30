@@ -11,6 +11,7 @@ profile:
 
 selected_papers: true
 social: false
+news: true
 ---
 
 ### Control • Safety • Reliability
