@@ -35,27 +35,47 @@ on methods suitable for real-time and safety-critical operation.
 
 <div class="research-topics">
 
-### Predictive & Constrained Control
-Model Predictive Control (MPC), computationally efficient predictive formulations,
-constraint handling, and real-time optimization for systems with demanding operational
-and safety requirements.
+  <div class="research-topic">
+    <h3>Predictive &amp; Constrained Control</h3>
+    <p>
+      Model Predictive Control (MPC), computationally efficient predictive formulations,
+      constraint handling, and real-time optimization for systems with demanding operational
+      and safety requirements.
+    </p>
+  </div>
 
-### Data-Driven Control
-Data-driven predictive control, behavioral and subspace-based formulations, numerical
-conditioning, reduced-order representations, and computational methods for control
-directly from measured system data.
+  <div class="research-topic">
+    <h3>Data-Driven Control</h3>
+    <p>
+      Data-driven predictive control, behavioral and subspace-based formulations, numerical
+      conditioning, reduced-order representations, and computational methods for control
+      directly from measured system data.
+    </p>
+  </div>
 
-### Robust & Nonlinear Control
-Robust, adaptive, and nonlinear control methods for systems subject to uncertainty,
-disturbances, nonlinear dynamics, and changing operating conditions.
+  <div class="research-topic">
+    <h3>Robust &amp; Nonlinear Control</h3>
+    <p>
+      Robust, adaptive, and nonlinear control methods for systems subject to uncertainty,
+      disturbances, nonlinear dynamics, and changing operating conditions.
+    </p>
+  </div>
 
-### Guidance, Autonomy & Decision-Making
-Guidance, trajectory generation, supervisory control, and autonomous decision-making
-methods that explicitly account for dynamic, operational, and safety constraints.
+  <div class="research-topic">
+    <h3>Guidance, Autonomy &amp; Decision-Making</h3>
+    <p>
+      Guidance, trajectory generation, supervisory control, and autonomous decision-making
+      methods that explicitly account for dynamic, operational, and safety constraints.
+    </p>
+  </div>
 
-### Real-Time Control Implementation
-Control architectures and numerical methods designed with computational complexity,
-determinism, embedded implementation, and real-time execution requirements in mind.
+  <div class="research-topic">
+    <h3>Real-Time Control Implementation</h3>
+    <p>
+      Control architectures and numerical methods designed with computational complexity,
+      determinism, embedded implementation, and real-time execution requirements in mind.
+    </p>
+  </div>
 
 </div>
 
@@ -80,29 +100,49 @@ system-level decision-making.
 
 <div class="research-topics">
 
-### Fault Detection, Isolation & Diagnosis
-Model-based and data-driven methods for detecting, isolating, and diagnosing sensor,
-actuator, and system faults while distinguishing faults from uncertainty and external
-disturbances.
+  <div class="research-topic">
+    <h3>Fault Detection, Isolation &amp; Diagnosis</h3>
+    <p>
+      Model-based and data-driven methods for detecting, isolating, and diagnosing sensor,
+      actuator, and system faults while distinguishing faults from uncertainty and external
+      disturbances.
+    </p>
+  </div>
 
-### Fault-Tolerant & Resilient Control
-Active and passive fault-tolerant control, reconfiguration, degraded-mode operation,
-and resilient control architectures that preserve critical functionality following
-component or subsystem failures.
+  <div class="research-topic">
+    <h3>Fault-Tolerant &amp; Resilient Control</h3>
+    <p>
+      Active and passive fault-tolerant control, reconfiguration, degraded-mode operation,
+      and resilient control architectures that preserve critical functionality following
+      component or subsystem failures.
+    </p>
+  </div>
 
-### Safety-Aware Control
-Control methods that explicitly incorporate safety constraints, safe operating regions,
-and risk-related requirements into the control design and online decision-making process.
+  <div class="research-topic">
+    <h3>Safety-Aware Control</h3>
+    <p>
+      Control methods that explicitly incorporate safety constraints, safe operating regions,
+      and risk-related requirements into the control design and online decision-making process.
+    </p>
+  </div>
 
-### Robust Estimation & Monitoring
-State and parameter estimation, sensor fusion, consistency monitoring, residual
-generation, and health-aware estimation for systems operating with uncertain or
-degraded measurements.
+  <div class="research-topic">
+    <h3>Robust Estimation &amp; Monitoring</h3>
+    <p>
+      State and parameter estimation, sensor fusion, consistency monitoring, residual
+      generation, and health-aware estimation for systems operating with uncertain or
+      degraded measurements.
+    </p>
+  </div>
 
-### Risk & Reliability Assessment
-Systematic assessment of failure mechanisms, operational risk, reliability, and
-system-level safety margins to support the design and validation of safety-critical
-architectures.
+  <div class="research-topic">
+    <h3>Risk &amp; Reliability Assessment</h3>
+    <p>
+      Systematic assessment of failure mechanisms, operational risk, reliability, and
+      system-level safety margins to support the design and validation of safety-critical
+      architectures.
+    </p>
+  </div>
 
 </div>
 
@@ -127,29 +167,49 @@ software-intensive systems.
 
 <div class="research-topics">
 
-### Model-Based Development
-Systematic development of control and safety functions from executable models,
-including requirements traceability, architecture definition, implementation, and
-verification workflows.
+  <div class="research-topic">
+    <h3>Model-Based Development</h3>
+    <p>
+      Systematic development of control and safety functions from executable models,
+      including requirements traceability, architecture definition, implementation, and
+      verification workflows.
+    </p>
+  </div>
 
-### Verification & Validation
-Verification and validation strategies for control and embedded software, including
-requirements-based testing, structural assessment, numerical validation, and
-system-level acceptance criteria.
+  <div class="research-topic">
+    <h3>Verification &amp; Validation</h3>
+    <p>
+      Verification and validation strategies for control and embedded software, including
+      requirements-based testing, structural assessment, numerical validation, and
+      system-level acceptance criteria.
+    </p>
+  </div>
 
-### SIL & HIL Testing
-Software-in-the-Loop (SIL) and Hardware-in-the-Loop (HIL) environments for evaluating
-functional behavior, timing, robustness, failure response, and real-time performance
-under representative operating conditions.
+  <div class="research-topic">
+    <h3>SIL &amp; HIL Testing</h3>
+    <p>
+      Software-in-the-Loop (SIL) and Hardware-in-the-Loop (HIL) environments for evaluating
+      functional behavior, timing, robustness, failure response, and real-time performance
+      under representative operating conditions.
+    </p>
+  </div>
 
-### Formal & Safety-Oriented Verification
-Formal and semi-formal techniques for reasoning about system properties, constraints,
-failure behavior, and safety requirements throughout the development lifecycle.
+  <div class="research-topic">
+    <h3>Formal &amp; Safety-Oriented Verification</h3>
+    <p>
+      Formal and semi-formal techniques for reasoning about system properties, constraints,
+      failure behavior, and safety requirements throughout the development lifecycle.
+    </p>
+  </div>
 
-### Certification-Oriented Engineering
-Development and assurance practices for high-integrity embedded systems with
-consideration of applicable safety and software standards across safety-critical
-application domains.
+  <div class="research-topic">
+    <h3>Certification-Oriented Engineering</h3>
+    <p>
+      Development and assurance practices for high-integrity embedded systems with
+      consideration of applicable safety and software standards across safety-critical
+      application domains.
+    </p>
+  </div>
 
 </div>
 
@@ -219,11 +279,11 @@ a range of safety-critical and high-integrity applications.
   </span>
 
   <span class="domain-pill">
-    <i class="fa-solid fa-robot me-1"></i> Robotics & Mechatronics
+    <i class="fa-solid fa-robot me-1"></i> Robotics &amp; Mechatronics
   </span>
 
   <span class="domain-pill">
-    <i class="fa-solid fa-bolt me-1"></i> Energy & Process Systems
+    <i class="fa-solid fa-bolt me-1"></i> Energy &amp; Process Systems
   </span>
 
 </div>
