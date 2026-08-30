@@ -32,6 +32,17 @@ We develop deterministic control, robust estimation, and formal verification met
   </a>
 </div>
 
+<!-- OTOMATİK HABER ÇEKİCİ (LATEST NEWS) -->
+{% assign latest_news = site.news | sort: "date" | reverse | first %}
+{% if latest_news %}
+<div class="lab-news-card my-3">
+  <div class="news-badge"><i class="fa-solid fa-bullhorn me-1"></i> Latest News</div>
+  <div class="news-content">
+    <strong>{{ latest_news.date | date: "%b %Y" }}:</strong> {{ latest_news.content | remove: '<p>' | remove: '</p>' | strip }}
+  </div>
+</div>
+{% endif %}
+
 <!-- 1. RESEARCH PILLARS -->
 <h2 class="about-section-heading">Research Pillars</h2>
 
