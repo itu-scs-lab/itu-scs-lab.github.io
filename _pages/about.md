@@ -32,22 +32,29 @@ The Safety-Critical Systems Laboratory (SCS Lab) develops advanced methods in co
   </a>
 </div>
 
-<!-- OTOMATİK & HİBRİT HABER ÇEKİCİ -->
-{% assign latest_news = site.news | sort: "date" | reverse | first %}
-{% if latest_news %}
+<!-- OTOMATİK HABER LİSTESİ (LATEST NEWS - SON 3 HABER) -->
+{% assign recent_news = site.news | sort: "date" | reverse %}
+{% if recent_news.size > 0 %}
 <div class="lab-news-card my-3">
   <div class="news-badge"><i class="fa-solid fa-bullhorn me-1"></i> Latest News</div>
-  <div class="news-content">
-    {% if latest_news.inline %}
-      <!-- 1. Tıklanamayan Kısa Duyuru -->
-      <strong>{{ latest_news.date | date: "%b %Y" }}:</strong> {{ latest_news.content | remove: '<p>' | remove: '</p>' | strip }}
-    {% else %}
-      <!-- 2. Tıklanabilir Detaylı Haber / Dış Bağlantı -->
-      <a href="{% if latest_news.redirect %}{{ latest_news.redirect }}{% else %}{{ latest_news.url | relative_url }}{% endif %}" class="news-link"{% if latest_news.redirect %} target="_blank"{% endif %}>
-        <strong>{{ latest_news.date | date: "%b %Y" }}:</strong> {{ latest_news.title }}
-        <i class="fa-solid fa-arrow-right ms-1" style="font-size: 0.75rem;"></i>
-      </a>
-    {% endif %}
+  <div class="news-list-container">
+    <ul class="news-list">
+      {% for item in recent_news limit: 3 %}
+      <li class="news-item">
+        <span class="news-date">{{ item.date | date: "%b %Y" }}:</span>
+        <span class="news-text">
+          {% if item.inline %}
+            {{ item.content | remove: '<p>' | remove: '</p>' | strip }}
+          {% else %}
+            <a href="{% if item.redirect %}{{ item.redirect }}{% else %}{{ item.url | relative_url }}{% endif %}" class="news-link"{% if item.redirect %} target="_blank"{% endif %}>
+              {{ item.title }}
+              <i class="fa-solid fa-arrow-right ms-1" style="font-size: 0.7rem;"></i>
+            </a>
+          {% endif %}
+        </span>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 {% endif %}
