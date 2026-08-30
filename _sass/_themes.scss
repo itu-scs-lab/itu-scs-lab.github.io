@@ -1133,6 +1133,36 @@ html[data-theme='dark'] {
   margin: 2.2rem 0 1.2rem 0 !important;
 }
 
+/* Ortak Research Focus Başlığı */
+.member-tags-title {
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: var(--global-text-color-light, #64748b) !important;
+  margin-bottom: 0.45rem !important;
+}
+
+/* Noktalı / Inline Liste Stili */
+.member-focus-inline {
+  font-size: 0.84rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1.3rem !important;
+  flex-grow: 1 !important;
+
+  .focus-item {
+    color: var(--global-text-color) !important;
+    font-weight: 500 !important;
+  }
+
+  .focus-sep {
+    color: #0284c7 !important;
+    margin: 0 0.35rem !important;
+    font-weight: 700 !important;
+    opacity: 0.75 !important;
+  }
+}
+
 /* 1. Principal Investigator Kartı */
 .team-pi-card {
   display: flex !important;
@@ -1155,7 +1185,7 @@ html[data-theme='dark'] {
     justify-content: space-between !important;
     align-items: flex-start !important;
     gap: 1rem !important;
-    margin-bottom: 0.6rem !important;
+    margin-bottom: 0.4rem !important;
     flex-wrap: wrap !important;
   }
 
@@ -1182,18 +1212,7 @@ html[data-theme='dark'] {
     font-size: 0.92rem !important;
     font-style: italic !important;
     color: var(--global-text-color-light, #64748b) !important;
-    margin-bottom: 1rem !important;
-  }
-
-  .pi-focus {
-    font-size: 0.88rem !important;
-    color: var(--global-text-color) !important;
-    line-height: 1.6 !important;
-    margin-bottom: 1.4rem !important;
-
-    strong {
-      color: var(--global-text-color) !important;
-    }
+    margin-bottom: 1.1rem !important;
   }
 }
 
@@ -1234,33 +1253,6 @@ html[data-theme='dark'] {
     font-style: italic !important;
     color: var(--global-text-color-light, #64748b) !important;
     margin-bottom: 1.1rem !important;
-  }
-
-  .member-tags-title {
-    font-size: 0.72rem !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.05em !important;
-    color: var(--global-text-color-light, #64748b) !important;
-    margin-bottom: 0.5rem !important;
-  }
-
-  .member-tags {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 0.4rem !important;
-    margin-bottom: 1.4rem !important;
-    flex-grow: 1 !important;
-
-    .member-pill {
-      font-size: 0.72rem !important;
-      font-weight: 600 !important;
-      padding: 0.22rem 0.55rem !important;
-      border-radius: 6px !important;
-      background-color: rgba(100, 116, 139, 0.08) !important;
-      color: var(--global-text-color, #334155) !important;
-      border: 1px solid var(--global-divider-color, rgba(0, 0, 0, 0.06)) !important;
-    }
   }
 }
 
@@ -1318,10 +1310,8 @@ html[data-theme='dark'] {
     border-color: rgba(56, 189, 248, 0.3) !important;
   }
 
-  .team-member-card .member-tags .member-pill {
-    background-color: #0f172a !important;
-    border-color: #334155 !important;
-    color: #cbd5e1 !important;
+  .member-focus-inline .focus-sep {
+    color: #38bdf8 !important;
   }
 
   .team-social-links .team-social-btn {
