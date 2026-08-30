@@ -76,46 +76,33 @@ Our research bridges rigorous theoretical foundations with real-time implementat
   </div>
 </div>
 
-<!-- ========================================================= -->
-<!-- APPLICATION DOMAINS                                       -->
-<!-- ========================================================= -->
-<section class="research-domains-section">
-  <h2 class="domains-title">Application Domains</h2>
-  <p class="domains-sub">
-    Our core methodologies are evaluated and deployed across high-consequence industries:
-  </p>
+<!-- 2. APPLICATION DOMAINS HIERARCHY -->
+<h2 class="about-section-heading">Application Domains</h2>
 
-  <div class="domains-showcase-section">
-    <div class="domains-cards-grid">
-      
-  <div class="domain-interactive-card">
-        <div class="domain-icon-box"><i class="fa-solid fa-plane-up"></i></div>
-        <div class="domain-card-name">Aerospace &amp; Flight Systems</div>
-      </div>
-
-  <div class="domain-interactive-card">
-        <div class="domain-icon-box"><i class="fa-solid fa-car"></i></div>
-        <div class="domain-card-name">Automotive &amp; ADAS</div>
-      </div>
-
-  <div class="domain-interactive-card">
-        <div class="domain-icon-box"><i class="fa-solid fa-train"></i></div>
-        <div class="domain-card-name">Rail &amp; Guided Transit</div>
-      </div>
-
-  <div class="domain-interactive-card">
-        <div class="domain-icon-box"><i class="fa-solid fa-robot"></i></div>
-        <div class="domain-card-name">Robotics &amp; Mechatronics</div>
-      </div>
-
-   <div class="domain-interactive-card">
-        <div class="domain-icon-box"><i class="fa-solid fa-bolt"></i></div>
-        <div class="domain-card-name">Energy &amp; Process Systems</div>
-      </div>
-
-   </div>
+<div class="domains-showcase-section">
+  <div class="domains-cards-grid">
+    <div class="domain-interactive-card">
+      <div class="domain-icon-box"><i class="fa-solid fa-plane-up"></i></div>
+      <div class="domain-card-name">Aerospace & Flight Systems</div>
+    </div>
+    <div class="domain-interactive-card">
+      <div class="domain-icon-box"><i class="fa-solid fa-car"></i></div>
+      <div class="domain-card-name">Automotive & ADAS</div>
+    </div>
+    <div class="domain-interactive-card">
+      <div class="domain-icon-box"><i class="fa-solid fa-train"></i></div>
+      <div class="domain-card-name">Rail & Guided Transit</div>
+    </div>
+    <div class="domain-interactive-card">
+      <div class="domain-icon-box"><i class="fa-solid fa-robot"></i></div>
+      <div class="domain-card-name">Robotics & Mechatronics</div>
+    </div>
+    <div class="domain-interactive-card">
+      <div class="domain-icon-box"><i class="fa-solid fa-bolt"></i></div>
+      <div class="domain-card-name">Energy & Process Systems</div>
+    </div>
   </div>
-</section>
+</div>
 <!-- 3. AKILLI SEÇİLİ YAYINLAR ROZET MOTORU -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
