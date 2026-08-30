@@ -20,7 +20,8 @@ social: false
 ### Control • Safety • Reliability
 **From control theory to safety-critical implementation.**
 
-We develop deterministic control, robust estimation, and formal verification methodologies for safety-critical autonomous, robotic, and industrial systems. Operating at the convergence of modern control theory and high-integrity software engineering, our research bridges the gap between deep mathematical formulations and flight-proven, real-time embedded deployment. Beyond conducting high-impact R&D compliant with rigorous safety standards (such as DO-178C and ISO 26262), the laboratory actively advances education through specialized university curricula and tailored industry training programs.
+The Safety-Critical Systems Laboratory (SCS Lab) develops advanced methods in control, autonomy, safety, reliability, and high-integrity software for complex dynamical systems.
+Our research bridges rigorous theoretical foundations with real-time implementation, addressing the challenges of constrained operation, uncertainty, faults, and verification in safety-critical systems.
 
 <!-- HERO BUTONLARI -->
 <div class="about-cta-group">
@@ -75,20 +76,33 @@ We develop deterministic control, robust estimation, and formal verification met
   </div>
 </div>
 
-<!-- 2. APPLICATION DOMAINS HIERARCHY -->
+<!-- 2. APPLICATION DOMAINS -->
+
 <h2 class="about-section-heading">Application Domains</h2>
 
 <div class="domains-container">
-  <span class="domains-label"><i class="fa-solid fa-crosshairs me-1"></i> Primary:</span>
-  <span class="domain-pill"><i class="fa-solid fa-plane-up me-1"></i> Aerospace & Autonomous Systems</span>
-  <span class="domain-pill"><i class="fa-solid fa-robot me-1"></i> Robotics & Mechatronics</span>
-  
-  <span class="domains-label ms-3"><i class="fa-solid fa-layer-group me-1"></i> Critical Sectors:</span>
-  <span class="domain-pill"><i class="fa-solid fa-train me-1"></i> Rail Transit</span>
-  <span class="domain-pill"><i class="fa-solid fa-car me-1"></i> Automotive</span>
-  <span class="domain-pill"><i class="fa-solid fa-bolt me-1"></i> Energy Systems</span>
-</div>
 
+  <span class="domain-pill">
+    <i class="fa-solid fa-plane-up me-1"></i> Aerospace
+  </span>
+
+  <span class="domain-pill">
+    <i class="fa-solid fa-car me-1"></i> Automotive
+  </span>
+
+  <span class="domain-pill">
+    <i class="fa-solid fa-train me-1"></i> Rail Transportation
+  </span>
+
+  <span class="domain-pill">
+    <i class="fa-solid fa-robot me-1"></i> Robotics & Mechatronics
+  </span>
+
+  <span class="domain-pill">
+    <i class="fa-solid fa-bolt me-1"></i> Energy & Process Systems
+  </span>
+
+</div>
 <!-- 3. AKILLI SEÇİLİ YAYINLAR ROZET MOTORU -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
