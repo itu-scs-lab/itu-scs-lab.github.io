@@ -17,7 +17,7 @@ social: false
 ### Control • Safety • Reliability
 **From control theory to safety-critical implementation.**
 
-We develop deterministic control, robust estimation, and verification methods for safety-critical autonomous, robotic, and industrial systems.
+We develop deterministic control, robust estimation, and formal verification methodologies for safety-critical autonomous, robotic, and industrial systems. Operating at the convergence of modern control theory and high-integrity software engineering, our research bridges the gap between deep mathematical formulations and flight-proven, real-time embedded deployment. Beyond conducting high-impact R&D compliant with rigorous safety standards (such as DO-178C and ISO 26262), the laboratory actively advances education through specialized university curricula and tailored industry training programs.
 
 <div class="d-flex gap-2 my-3">
   <a href="{{ '/projects/' | relative_url }}" class="btn btn-sm btn-outline-primary fw-bold" style="border-radius: 6px; padding: 0.35rem 0.85rem;">Explore Projects</a>
