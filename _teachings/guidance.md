@@ -8,7 +8,7 @@ term: Fall
 location: XXX
 time: TBA
 course_id: MTHXXX
-level: Graduate
+level: Undergraduate
 schedule:
   - week: 1
     date: Week 1
