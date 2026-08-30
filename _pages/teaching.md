@@ -4,7 +4,7 @@ permalink: /teaching/
 title: teaching
 description: Undergraduate and graduate courses offered at ITU SCS Lab.
 nav: true
-nav_order: 6
+nav_order: 7
 ---
 
 <!-- 1. DİNAMİK SEVİYE FİLTRE BUTONLARI -->
