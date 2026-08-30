@@ -7,7 +7,7 @@ importance: 3
 category: Predictive Control & Safety
 
 # Rozetler, Durum ve Arama Metadata
-organization: Special Defence Company
+organization: Confidential Defence Industry Partner
 status: ongoing
 keywords: [Algebraic MPC, DEM, Terrain Following, Real-Time Optimization, 6-DOF, Hardware-in-the-Loop, Radar Stealth]
 ---
