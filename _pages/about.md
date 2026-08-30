@@ -26,7 +26,7 @@ Our research bridges rigorous theoretical foundations with real-time implementat
 <!-- HERO BUTONLARI -->
 <div class="about-cta-group">
   <a href="{{ '/research/' | relative_url }}" class="hero-btn hero-btn-primary">
-    <i class="fa-solid fa-diagram-project"></i> Explore Research
+    <i class="fa-solid fa-flask"></i> Explore Research
   </a>
   <a href="{{ '/projects/' | relative_url }}" class="hero-btn hero-btn-secondary">
     <i class="fa-solid fa-diagram-project"></i> Explore Projects
