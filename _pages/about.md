@@ -9,33 +9,26 @@ profile:
   image: group_logo.png
   image_circular: true
 
+news: true
 selected_papers: true
 social: false
-news: true
 ---
 
 ### Control • Safety • Reliability
 **From control theory to safety-critical implementation.**
 
-We develop deterministic control, state estimation, and rigorous verification methods for safety-critical autonomous, robotic, and industrial systems.
+We develop deterministic control, robust estimation, and verification methods for safety-critical autonomous, robotic, and industrial systems.
 
 <div class="d-flex gap-2 my-3">
   <a href="{{ '/projects/' | relative_url }}" class="btn btn-sm btn-outline-primary fw-bold" style="border-radius: 6px; padding: 0.35rem 0.85rem;">Explore Projects</a>
   <a href="{{ '/team/' | relative_url }}" class="btn btn-sm btn-outline-secondary fw-bold" style="border-radius: 6px; padding: 0.35rem 0.85rem;">Meet the Team</a>
 </div>
 
-<!-- LATEST NEWS -->
-<div class="lab-news-card my-4">
-  <div class="news-badge"><i class="fa-solid fa-bullhorn me-1"></i> Latest News</div>
-  <div class="news-content">
-    <strong>August 2026:</strong> SCS Lab presented the <em>Algebraic MPC Toolbox: Theory and Realization</em> at the <strong>23rd IFAC World Congress</strong> in Busan, South Korea.
-  </div>
-</div>
-
-<!-- 3 RESEARCH PILLARS -->
+<!-- 1. RESEARCH PILLARS -->
 <h2 class="about-section-heading">Research Pillars</h2>
 
 <div class="research-focus-grid">
+  <!-- Pillar 1 -->
   <div class="focus-card">
     <div class="focus-icon-box"><i class="fa-solid fa-microchip"></i></div>
     <h3 class="focus-title">01. Control & Autonomous Systems</h3>
@@ -44,6 +37,7 @@ We develop deterministic control, state estimation, and rigorous verification me
     </p>
   </div>
 
+  <!-- Pillar 2 -->
   <div class="focus-card">
     <div class="focus-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
     <h3 class="focus-title">02. Safety, Risk & Reliability</h3>
@@ -52,6 +46,7 @@ We develop deterministic control, state estimation, and rigorous verification me
     </p>
   </div>
 
+  <!-- Pillar 3 -->
   <div class="focus-card">
     <div class="focus-icon-box"><i class="fa-solid fa-list-check"></i></div>
     <h3 class="focus-title">03. High-Integrity Software & V&V</h3>
@@ -61,8 +56,9 @@ We develop deterministic control, state estimation, and rigorous verification me
   </div>
 </div>
 
-<!-- APPLICATION DOMAINS HIERARCHY -->
+<!-- 2. APPLICATION DOMAINS HIERARCHY -->
 <h2 class="about-section-heading">Application Domains</h2>
+
 <div class="domains-container">
   <span class="domains-label"><i class="fa-solid fa-crosshairs me-1"></i> Primary:</span>
   <span class="domain-pill"><i class="fa-solid fa-plane-up me-1"></i> Aerospace & Autonomous Systems</span>
@@ -74,6 +70,7 @@ We develop deterministic control, state estimation, and rigorous verification me
   <span class="domain-pill"><i class="fa-solid fa-bolt me-1"></i> Energy Systems</span>
 </div>
 
+<!-- 3. SEÇİLİ YAYINLAR DİKEY ROZET SCRIPTI -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var pubEntries = document.querySelectorAll('.publications ol.bibliography > li');
