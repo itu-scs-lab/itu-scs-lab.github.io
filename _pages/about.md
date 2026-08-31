@@ -60,36 +60,67 @@ The Safety-Critical Systems Laboratory (SCS Lab) develops advanced methods in co
 {% endif %}
 
 <!-- 1. RESEARCH PILLARS -->
-<h2 class="about-section-heading">Research Pillars</h2>
+<section class="research-pillars-section">
 
-<div class="research-focus-grid">
-  <!-- Pillar 1 -->
-  <div class="focus-card">
-    <div class="focus-icon-box"><i class="fa-solid fa-microchip"></i></div>
-    <h3 class="focus-title">01. Control & Autonomous Systems</h3>
-    <p class="focus-desc">
-      Constrained predictive control (MPC, DeePC, Algebraic MPC), adaptive guidance, INDI, and real-time flight control law synthesis.
+  <div class="research-pillars-header">
+    <h2 class="about-section-heading">Research Pillars</h2>
+    <p class="research-pillars-intro">
+      Our research is organized around three complementary pillars that connect
+      control theory, system-level safety, and high-integrity implementation.
     </p>
   </div>
 
-  <!-- Pillar 2 -->
+  <div class="research-focus-grid">
+
+    <!-- Pillar 1 -->
   <div class="focus-card">
-    <div class="focus-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-    <h3 class="focus-title">02. Safety, Risk & Reliability</h3>
-    <p class="focus-desc">
-      Active Fault Detection and Isolation (FDI), robust state estimation (EKF), safety margins, and resilient deterministic architectures.
-    </p>
+      <div class="focus-number">01</div>
+      <div class="focus-accent"></div>
+
+  <h3 class="focus-title">Control Systems & Autonomy</h3>
+
+  <p class="focus-desc">
+        Predictive, data-driven, robust, and nonlinear control for constrained
+        and complex dynamical systems.
+      </p>
+    </div>
+
+    <!-- Pillar 2 -->
+  <div class="focus-card">
+      <div class="focus-number">02</div>
+      <div class="focus-accent"></div>
+
+  <h3 class="focus-title">Safety, Risk & Reliability</h3>
+
+  <p class="focus-desc">
+        Fault diagnosis, resilient control, robust estimation, and safety-aware
+        methods for dependable operation.
+      </p>
+    </div>
+
+    <!-- Pillar 3 -->
+  <div class="focus-card">
+      <div class="focus-number">03</div>
+      <div class="focus-accent"></div>
+
+  <h3 class="focus-title">High-Integrity Software & V&V</h3>
+
+  <p class="focus-desc">
+        Model-based development, verification, testing, and certification-oriented
+        engineering for high-integrity systems.
+      </p>
+    </div>
+
   </div>
 
-  <!-- Pillar 3 -->
-  <div class="focus-card">
-    <div class="focus-icon-box"><i class="fa-solid fa-list-check"></i></div>
-    <h3 class="focus-title">03. High-Integrity Software & V&V</h3>
-    <p class="focus-desc">
-      Model-based development workflows, formal verification, Hardware-in-the-Loop (HIL) testing, and DO-178C / ISO 26262 compliance.
-    </p>
+  <div class="research-pillars-link">
+    <a href="{{ '/research/' | relative_url }}">
+      Explore Our Research
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
   </div>
-</div>
+
+</section>
 
 <!-- 2. APPLICATION DOMAINS HIERARCHY -->
 <h2 class="about-section-heading">Application Domains</h2>
