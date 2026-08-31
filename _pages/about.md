@@ -21,10 +21,7 @@ The Safety-Critical Systems Laboratory (SCS Lab) develops advanced methods in co
 
 <!-- HERO BUTONLARI -->
 <div class="about-cta-group">
-  <a href="{{ '/research/' | relative_url }}" class="hero-btn hero-btn-primary">
-    <i class="fa-solid fa-flask"></i> Explore Research
-  </a>
-  <a href="{{ '/projects/' | relative_url }}" class="hero-btn hero-btn-secondary">
+  <a href="{{ '/projects/' | relative_url }}" class="hero-btn hero-btn-primary">
     <i class="fa-solid fa-diagram-project"></i> Explore Projects
   </a>
   <a href="{{ '/team/' | relative_url }}" class="hero-btn hero-btn-secondary">
@@ -113,12 +110,12 @@ The Safety-Critical Systems Laboratory (SCS Lab) develops advanced methods in co
 
   </div>
 
-  <div class="research-pillars-link">
-    <a href="{{ '/research/' | relative_url }}">
-      Explore Our Research
-      <i class="fa-solid fa-arrow-right"></i>
-    </a>
-  </div>
+
+<div class="about-cta-group">
+  <a href="{{ '/research/' | relative_url }}" class="hero-btn hero-btn-primary">
+    <i class="fa-solid fa-flask"></i> Explore Research
+  </a>
+</div>
 
 </section>
 
