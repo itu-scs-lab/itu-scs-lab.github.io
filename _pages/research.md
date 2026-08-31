@@ -188,61 +188,92 @@ nav_order: 2
     </div>
   </section>
 
-  <!-- ========================================================= -->
+    <!-- ========================================================= -->
   <!-- CROSS-PILLAR RESEARCH PIPELINE                            -->
   <!-- ========================================================= -->
   <section class="research-pipeline-section">
     <h2 class="pipeline-heading">From Theory to Safety-Critical Implementation</h2>
     <p class="pipeline-sub">
-      The three pillars form an unbroken lifecycle: control algorithms are formulated with safety boundaries, realized with deterministic complexity, and verified under international compliance standards.
+      The three pillars form an integrated research lifecycle, connecting rigorous theory
+      with dependable real-time implementation and verification.
     </p>
 
   <div class="pipeline-flow-container">
-      <div class="flow-step">
+
+  <div class="flow-step">
         <span class="step-icon"><i class="fa-solid fa-square-root-variable"></i></span>
         <span class="step-text">Theory & Modeling</span>
       </div>
-      <span class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+
+  <span class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
 
   <div class="flow-step">
         <span class="step-icon"><i class="fa-solid fa-microchip"></i></span>
         <span class="step-text">Control & Estimation</span>
       </div>
-      <span class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+
+  <span class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
 
   <div class="flow-step">
         <span class="step-icon"><i class="fa-solid fa-shield-halved"></i></span>
         <span class="step-text">Safety & Reliability</span>
       </div>
-      <span class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+
+  <span class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
 
   <div class="flow-step">
         <span class="step-icon"><i class="fa-solid fa-bolt"></i></span>
-        <span class="step-text">Real-Time Embedded</span>
+        <span class="step-text">Real-Time Implementation</span>
       </div>
-      <span class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+
+  <span class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></span>
 
   <div class="flow-step">
         <span class="step-icon"><i class="fa-solid fa-check-double"></i></span>
         <span class="step-text">V&V & Certification</span>
       </div>
-    </div>
+
+  </div>
   </section>
+
 
   <!-- ========================================================= -->
   <!-- APPLICATION DOMAINS                                       -->
   <!-- ========================================================= -->
   <section class="research-domains-section">
     <h2 class="domains-title">Application Domains</h2>
-    <p class="domains-sub">Our methodologies are applied across diverse high-consequence industries:</p>
+    <p class="domains-sub">
+      Our methodologies are developed for safety-critical systems across multiple engineering domains.
+    </p>
 
-   <div class="domains-grid">
-      <div class="domain-card"><i class="fa-solid fa-plane-up"></i><span>Aerospace & Autonomous UAVs</span></div>
-      <div class="domain-card"><i class="fa-solid fa-car"></i><span>Automotive & ADAS</span></div>
-      <div class="domain-card"><i class="fa-solid fa-train"></i><span>Rail Transit Systems</span></div>
-      <div class="domain-card"><i class="fa-solid fa-robot"></i><span>Robotics & Mechatronics</span></div>
-      <div class="domain-card"><i class="fa-solid fa-bolt"></i><span>Energy & Process Infrastructure</span></div>
-    </div>
+  <div class="domains-grid">
+
+  <div class="domain-card">
+        <i class="fa-solid fa-plane-up"></i>
+        <span>Aerospace & Flight Systems</span>
+      </div>
+
+  <div class="domain-card">
+        <i class="fa-solid fa-car"></i>
+        <span>Automotive & ADAS</span>
+      </div>
+
+  <div class="domain-card">
+        <i class="fa-solid fa-train"></i>
+        <span>Rail Transportation</span>
+      </div>
+
+  <div class="domain-card">
+        <i class="fa-solid fa-robot"></i>
+        <span>Robotics & Mechatronics</span>
+      </div>
+
+  <div class="domain-card">
+        <i class="fa-solid fa-bolt"></i>
+        <span>Energy & Process Systems</span>
+      </div>
+
+  </div>
   </section>
 
 </div>
