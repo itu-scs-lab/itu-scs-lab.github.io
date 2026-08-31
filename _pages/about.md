@@ -111,9 +111,10 @@ The Safety-Critical Systems Laboratory (SCS Lab) develops advanced methods in co
   </div>
 
 
-<div class="about-cta-group">
-  <a href="{{ '/research/' | relative_url }}" class="hero-btn hero-btn-primary">
-    <i class="fa-solid fa-flask"></i> Explore Research
+<div class="research-pillars-link">
+  <a href="{{ '/research/' | relative_url }}">
+    Explore Research
+    <i class="fa-solid fa-arrow-right"></i>
   </a>
 </div>
 
